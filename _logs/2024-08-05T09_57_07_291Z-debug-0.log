@@ -1,0 +1,39 @@
+0 verbose cli D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.7.0
+2 info using node@v18.20.3
+3 silly config:load:file:d:\Users\marco\AppData\Roaming\nvm\v18.20.3\node_modules\npm\npmrc
+4 silly config:load:file:d:\Users\marco\Documents\GitHub\charsheet\.npmrc
+5 silly config:load:file:C:\Users\marco\.npmrc
+6 silly config:load:file:D:\Program Files\nodejs\etc\npmrc
+7 verbose title npm outdated
+8 verbose argv "outdated" "--json"
+9 verbose logfile logs-max:10 dir:d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-05T09_57_07_291Z-
+10 verbose logfile d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-05T09_57_07_291Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/@angular%2felements 1031ms (cache revalidated)
+13 http fetch GET 200 https://registry.npmjs.org/@angular%2fanimations 1082ms (cache revalidated)
+14 http fetch GET 200 https://registry.npmjs.org/@angular%2fcompiler 1129ms (cache revalidated)
+15 http fetch GET 200 https://registry.npmjs.org/@angular%2fcore 1177ms (cache revalidated)
+16 http fetch GET 200 https://registry.npmjs.org/rxjs 1245ms (cache revalidated)
+17 http fetch GET 200 https://registry.npmjs.org/@angular%2fplatform-browser 1311ms (cache revalidated)
+18 http fetch GET 200 https://registry.npmjs.org/@angular%2fforms 1355ms (cache revalidated)
+19 http fetch GET 200 https://registry.npmjs.org/@angular%2frouter 1400ms (cache revalidated)
+20 http fetch GET 200 https://registry.npmjs.org/karma-chrome-launcher 1411ms (cache revalidated)
+21 http fetch GET 200 https://registry.npmjs.org/karma-coverage 1413ms (cache revalidated)
+22 http fetch GET 200 https://registry.npmjs.org/zone.js 1432ms (cache revalidated)
+23 http fetch GET 200 https://registry.npmjs.org/karma 1435ms (cache revalidated)
+24 http fetch GET 200 https://registry.npmjs.org/@types%2fjasmine 1454ms (cache revalidated)
+25 http fetch GET 200 https://registry.npmjs.org/@angular%2fcommon 1493ms (cache revalidated)
+26 http fetch GET 200 https://registry.npmjs.org/jasmine-core 1486ms (cache revalidated)
+27 http fetch GET 200 https://registry.npmjs.org/tslib 1502ms (cache revalidated)
+28 http fetch GET 200 https://registry.npmjs.org/@angular%2fcli 1510ms (cache revalidated)
+29 http fetch GET 200 https://registry.npmjs.org/@angular%2fcompiler-cli 1542ms (cache revalidated)
+30 http fetch GET 200 https://registry.npmjs.org/@angular%2fplatform-browser-dynamic 1587ms (cache revalidated)
+31 http fetch GET 200 https://registry.npmjs.org/karma-jasmine-html-reporter 1589ms (cache revalidated)
+32 http fetch GET 200 https://registry.npmjs.org/karma-jasmine 1597ms (cache revalidated)
+33 http fetch GET 200 https://registry.npmjs.org/@angular-devkit%2fbuild-angular 1661ms (cache revalidated)
+34 http fetch GET 200 https://registry.npmjs.org/@angular%2fcdk 1806ms (cache miss)
+35 http fetch GET 200 https://registry.npmjs.org/@angular%2fmaterial 1819ms (cache miss)
+36 http fetch GET 200 https://registry.npmjs.org/typescript 1917ms (cache updated)
+37 verbose exit 1
+38 verbose code 1

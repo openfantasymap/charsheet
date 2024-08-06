@@ -1,0 +1,17 @@
+{
+    "game": "coriolis2e",
+    "type" :"character",
+    "fields": [
+        {"name": "name", "type": "string"},
+        {"name": "archetype", "type": "string"},
+        {"name": "talents", "type": "table", "subtype":{
+            "name": "talent",
+            "fields" :[
+                {"name":"description", "type": "string"},
+                {"name":"name", "type": "string"},
+                {"name":"level", "type": "int"}
+            ],
+            "source": "talents"
+        }}
+    ]
+}

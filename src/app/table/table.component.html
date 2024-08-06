@@ -1,0 +1,5 @@
+<div>
+    <div *ngFor="let row of items">
+        <slot (slotchange)="slotChange($event)"></slot>
+    </div>
+</div>

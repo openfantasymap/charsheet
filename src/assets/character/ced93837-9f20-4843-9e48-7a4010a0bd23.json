@@ -1,0 +1,642 @@
+{
+    "name": "dsfss",
+    "type": "character",
+    "game": "sta1e",
+    "extensions": [],
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+        "notes": "",
+        "assignment": "Operations Manager",
+        "attributes": {
+            "control": {
+                "label": "sta.actor.character.attribute.control",
+                "value": "10",
+                "selected": false
+            },
+            "daring": {
+                "label": "sta.actor.character.attribute.daring",
+                "value": "10",
+                "selected": false
+            },
+            "fitness": {
+                "label": "sta.actor.character.attribute.fitness",
+                "value": "9",
+                "selected": false
+            },
+            "insight": {
+                "label": "sta.actor.character.attribute.insight",
+                "value": "10",
+                "selected": false
+            },
+            "presence": {
+                "label": "sta.actor.character.attribute.presence",
+                "value": "10",
+                "selected": false
+            },
+            "reason": {
+                "label": "sta.actor.character.attribute.reason",
+                "value": "7",
+                "selected": false
+            }
+        },
+        "determination": {
+            "value": 1,
+            "max": 3
+        },
+        "disciplines": {
+            "command": {
+                "label": "sta.actor.character.discipline.command",
+                "value": "2",
+                "selected": false
+            },
+            "conn": {
+                "label": "sta.actor.character.discipline.conn",
+                "value": "3",
+                "selected": false
+            },
+            "engineering": {
+                "label": "sta.actor.character.discipline.engineering",
+                "value": "3",
+                "selected": false
+            },
+            "security": {
+                "label": "sta.actor.character.discipline.security",
+                "value": "3",
+                "selected": false
+            },
+            "science": {
+                "label": "sta.actor.character.discipline.science",
+                "value": "3",
+                "selected": false
+            },
+            "medicine": {
+                "label": "sta.actor.character.discipline.medicine",
+                "value": "2",
+                "selected": false
+            }
+        },
+        "milestones": "",
+        "rank": "Ensign",
+        "reputation": 10,
+        "stress": {
+            "value": 12,
+            "max": 12
+        },
+        "traits": "Tamarian, Augment",
+        "environment": "Homeworld",
+        "species": "Tamarian",
+        "upbringing": "Business or Trade (A)"
+    },
+    "items": [
+        {
+            "name": "Conflict should always be the last resort",
+            "type": "value",
+            "img": "modules/sta-compendia/assets/icons/values-core/value-core.svg",
+            "system": {
+                "description": "",
+                "used": false
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "There's more to life than molecules",
+            "type": "value",
+            "img": "modules/sta-compendia/assets/icons/values-core/value-core.svg",
+            "system": {
+                "description": "",
+                "used": false
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Life finds a way",
+            "type": "value",
+            "img": "modules/sta-compendia/assets/icons/values-core/value-core.svg",
+            "system": {
+                "description": "",
+                "used": false
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "A good mystery is irresistible",
+            "type": "value",
+            "img": "modules/sta-compendia/assets/icons/values-core/value-core.svg",
+            "system": {
+                "description": "",
+                "used": false
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Manufacturing",
+            "type": "focus",
+            "img": "modules/sta-compendia/assets/icons/focuses-core/focus-core.svg",
+            "system": {
+                "description": ""
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Virology",
+            "type": "focus",
+            "img": "modules/sta-compendia/assets/icons/focuses-core/focus-core.svg",
+            "system": {
+                "description": ""
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Subspace Theory",
+            "type": "focus",
+            "img": "modules/sta-compendia/assets/icons/focuses-core/focus-core.svg",
+            "system": {
+                "description": ""
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Trauma Surgery",
+            "type": "focus",
+            "img": "modules/sta-compendia/assets/icons/focuses-core/focus-core.svg",
+            "system": {
+                "description": ""
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Force Fields",
+            "type": "focus",
+            "img": "modules/sta-compendia/assets/icons/focuses-core/focus-core.svg",
+            "system": {
+                "description": ""
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Shipboard Tactical Systems",
+            "type": "focus",
+            "img": "modules/sta-compendia/assets/icons/focuses-core/focus-core.svg",
+            "system": {
+                "description": ""
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Uniform",
+            "type": "item",
+            "img": "modules/sta-compendia/assets/icons/items-core/placeholder.webp",
+            "system": {
+                "description": "",
+                "quantity": 1,
+                "opportunity": 0,
+                "escalation": 0
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Communicator",
+            "type": "item",
+            "img": "modules/sta-compendia/assets/icons/items-core/communicator.webp",
+            "system": {
+                "description": "",
+                "quantity": 1,
+                "opportunity": 0,
+                "escalation": 0
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Tricorder",
+            "type": "item",
+            "img": "modules/sta-compendia/assets/icons/items-core/tricorder.webp",
+            "system": {
+                "description": "",
+                "quantity": 1,
+                "opportunity": 0,
+                "escalation": 0
+            },
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Cautious: Conn",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>Whenever you attempt a Task with Conn, and you buy one or more d20s by spending Momentum, you may re-roll a single d20.</p><p><strong>Conflicts with \"Bold: Conn\" Talent</strong></p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "An Answer for Everything",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>You relish intense debate, where you can see your opponent’s argument unfold, then turn it back against them. When you succeed at a task as part of an extended task in a social conflict, you may reroll a number of CD up to your Command score.</p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Applied Research",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>You’re a practical scientist, always looking to see how your knowledge can be put into practice. Once per scene, when you attempt a task which relates to information you received earlier that scene from an Obtain Information question, you may roll an additional d20.</p><p><strong>Requires Science 3+</strong></p>",
+                "talenttype": {
+                    "typeenum": "discipline",
+                    "description": "science",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Augmented Ability (Fitness)",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>You gain the Extraordinary Attribute 1 special rule for the Fitness Attribute. When the character uses this ability, they increase their Complication Range by 2 for that Task.</p>",
+                "talenttype": {
+                    "typeenum": "species",
+                    "description": "Enhancement",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Unarmed Strike",
+            "type": "characterweapon",
+            "img": "modules/sta-compendia/assets/icons/weapons-core/unarmed-strike.webp",
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "system": {
+                "description": "",
+                "damage": 1,
+                "range": "Melee",
+                "hands": 1,
+                "qualities": {
+                    "area": false,
+                    "intense": false,
+                    "knockdown": true,
+                    "accurate": false,
+                    "charge": false,
+                    "cumbersome": false,
+                    "deadly": false,
+                    "debilitating": false,
+                    "grenade": false,
+                    "inaccurate": false,
+                    "nonlethal": true,
+                    "hiddenx": 0,
+                    "piercingx": 0,
+                    "viciousx": 0,
+                    "opportunity": 0,
+                    "escalation": 0
+                },
+                "opportunity": null,
+                "escalation": null
+            },
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Phaser type-1",
+            "type": "characterweapon",
+            "img": "modules/sta-compendia/assets/icons/weapons-core/phaser-type-1.webp",
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "system": {
+                "description": "",
+                "damage": 2,
+                "range": "Ranged",
+                "hands": 1,
+                "qualities": {
+                    "area": false,
+                    "intense": false,
+                    "knockdown": false,
+                    "accurate": false,
+                    "charge": true,
+                    "cumbersome": false,
+                    "deadly": false,
+                    "debilitating": false,
+                    "grenade": false,
+                    "inaccurate": false,
+                    "nonlethal": false,
+                    "hiddenx": 1,
+                    "piercingx": 0,
+                    "viciousx": 0,
+                    "opportunity": 0,
+                    "escalation": 0
+                },
+                "opportunity": null,
+                "escalation": null
+            },
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1722843474054,
+                "modifiedTime": 1722843474054,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        }
+    ],
+    "effects": [],
+    "flags": {
+        "exportSource": {
+            "world": "sta-bcholmes-org",
+            "system": "sta",
+            "coreVersion": "10.291",
+            "systemVersion": "1.1.9"
+        }
+    },
+    "_stats": {
+        "systemId": "sta",
+        "systemVersion": "1.1.9",
+        "coreVersion": "10.291",
+        "createdTime": 1722843474054,
+        "modifiedTime": 1722843474054,
+        "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+    }
+}

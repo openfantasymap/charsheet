@@ -1,0 +1,14 @@
+0 verbose cli D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.7.0
+2 info using node@v18.20.3
+3 silly config:load:file:d:\Users\marco\AppData\Roaming\nvm\v18.20.3\node_modules\npm\npmrc
+4 silly config:load:file:d:\Users\marco\Documents\GitHub\charsheet\.npmrc
+5 silly config:load:file:C:\Users\marco\.npmrc
+6 silly config:load:file:D:\Program Files\nodejs\etc\npmrc
+7 verbose title npm list
+8 verbose argv "list" "--json"
+9 verbose logfile logs-max:10 dir:d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-02T15_57_29_968Z-
+10 verbose logfile d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-02T15_57_29_968Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose exit 0
+13 info ok
