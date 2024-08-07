@@ -1,7 +1,7 @@
 [
-    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd25", "name": "Messima Kander-Mal", "game":"coriolis2e", "game_label": "Coriolis 2e"},
-    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd23", "name": "Tamarian guy", "game":"sta1e", "game_label":"Star Trek Adventures 1e"},
-    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd24", "name": "Other Guy", "game":"deltagreen", "game_label":"Delta Green"},
-    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd22", "name": "Simba", "game":"armakitten", "game_label":"ArmaKitten"},
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd25", "name": "Messima Kander-Mal", "game":"coriolis2e", "family":"MYZE", "game_label": "Coriolis 2e"},
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd23", "name": "Tamarian ensign", "game":"sta1e", "family":"2d20","game_label":"Star Trek Adventures 1e"},
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd24", "name": "Other Guy", "game":"deltagreen", "family":"CoC", "game_label":"Delta Green"},
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd22", "name": "Simba", "game":"armakitten", "family": "armakitten", "game_label":"ArmaKitten"},
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd26", "name": "Clinical Test Subject", "game":"fallout", "game_label":"Fallout"}
   ]
