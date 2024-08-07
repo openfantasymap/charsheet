@@ -8,11 +8,13 @@ import { RollablefieldComponent } from './rollablefield/rollablefield.component'
 import { TableComponent } from './table/table.component';
 import { DiceTowerService } from './dice-tower.service';
 import { CommonModule } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FieldComponent, FormsModule, CommonModule],
+  imports: [RouterOutlet, FieldComponent, FormsModule, CommonModule, MatToolbarModule, MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
