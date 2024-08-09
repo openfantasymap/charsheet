@@ -1,0 +1,72 @@
+{
+    "game": "drukmahora",
+    "type": "character",
+    "extensions": ["quickstart"],
+    "id": "ced93837-9f20-4843-9e48-7a4010a0bd27",
+    "name": "Oghel",
+    "nickname": "L'implacabile",
+    "swear": {
+        "horde": {
+            "motto": "Giuro di progteggere gli oscuri in difficoltà",
+            "advancement":0 
+        },
+        "personal": {
+            "motto": "Giuro di non risparmiare mai la vita agli avversari vili",
+            "advancement":0
+        }
+    },
+    "origin": "Giganti",
+    "bloodline": "Grancrani",
+    "talents": [
+        {"description": "You get +2 dice when using explosive weapons, including hand grenades and improvised explosives.", "applies_to": {"type": "item", "tags": ["explosive"]}, "name": "Demolitions Expert", "level": 2},
+        {"description": "You get +1 die to AGILITY or STRENGTH when handling an exo of some kind - from loaders to battle exos.", "name": "Exo Specialist", "level": 1},
+        {"description": "", "name": "Burglar", "level": 1},
+        {"description": "", "name": "Mechanic", "level": 1}
+    ],
+    "inventory": [
+        {"name": "Repair Tools", "bonus": 2},
+        {"name": "Winch", "bonus": 2},
+        {"name": "Breach Charge", "tags": ["explosive"]},
+        {"name": "Bomb", "tags": ["explosive"]},
+        {"name": "supply", "amount": 12},
+        {"name": "Ammo", "amount": 2}
+    ],
+    "armor":{
+        "name": "Delving Suit",
+        "rating": 2,
+        "blight_protection": 5,
+        "features": [
+            "Comlink",
+            "electric lantern"
+        ]
+    },
+    "appearence":[],
+    "keepsake":"",
+    "hope": 7,
+    "health": 9,
+    "heart": 8,
+    "experience": null,
+    "tiny_items": [
+        "small tin with Dr Zvago's Fungus Jerky"
+    ],
+    "weapons": [
+        {"name": "Grape Rifle", "bonus": 3, "damage":2, "crit_threshold": 4, "range": "short", "features":[], "reloads":2},
+        {"name": "Cutting Torch", "bonus": 1, "damage":3, "crit_threshold": 4, "range": null, "features":[], "reloads":2},
+        {"name": "Pickaxe", "bonus": 2, "damage":2, "crit_threshold": 3, "range": null, "features":[], "reloads":2}
+    ],
+    "attributes": {
+        "strength":5,
+        "exhausted": false,
+        "agility": 4,
+        "dazed": false,
+        "logic": 5,
+        "confused":false,
+        "perception":4,
+        "distracted":false,
+        "empathy":2,
+        "disheartened":false,
+        "insight":4,
+        "shaken":false
+    }
+    
+}

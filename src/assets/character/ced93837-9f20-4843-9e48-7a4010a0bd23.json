@@ -5,6 +5,7 @@
     "extensions": [],
     "img": "icons/svg/mystery-man.svg",
     "system": {
+        "dice": "OPS",
         "notes": "",
         "assignment": "Operations Manager",
         "attributes": {

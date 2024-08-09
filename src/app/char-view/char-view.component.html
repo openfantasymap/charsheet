@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar *ngIf="charData">
     <button mat-icon-button routerLink="/sheets"><mat-icon>arrow_left</mat-icon></button>
     <h1>CharVault</h1>
     <span class="spacer26"></span>
@@ -8,6 +8,7 @@
     <span class="spacer"></span>
     <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
+<div *ngIf="rolling" id="dicebox" (click)="close()"></div>
 <div id="scrollable">
 <div class="{{charId}}" id="rollcontainer" [innerHtml]="content"></div>
 </div>

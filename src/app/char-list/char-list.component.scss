@@ -2,4 +2,8 @@
 
 .mdc-list-item{
     flex-direction: row-reverse;
+    color: black !important;
 }
+
+.mat-mdc-list-item-title{color:black;}
+.mat-mdc-list-item-line{color:rgb(137, 137, 137);}

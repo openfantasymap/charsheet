@@ -1,5 +1,6 @@
 import { Component, Injector, Input, OnInit } from '@angular/core';
 import { CharacterService } from '../character.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'charsheet-field',
@@ -14,7 +15,8 @@ export class FieldComponent implements OnInit {
   public value?: string;
 
   constructor(
-    private char: CharacterService
+    private char: CharacterService,
+    private ar: ActivatedRoute
   ){}
 
   ngOnInit(){

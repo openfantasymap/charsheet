@@ -3,6 +3,7 @@ import { Observable, of, from } from 'rxjs';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 //@ts-ignore
 import DiceBox from '@3d-dice/dice-box';
+import { GamerulesService } from './gamerules.service';
 
 
 
@@ -11,38 +12,39 @@ import DiceBox from '@3d-dice/dice-box';
 })
 export class DiceTowerService {
   diceBox: DiceBox;
+  selector?: string;
   public rolling: EventEmitter<boolean> = new EventEmitter<boolean>();
+  public result: EventEmitter<any> = new EventEmitter<any>();
   constructor(
-    private sb: MatSnackBar
-
+    private sb: MatSnackBar,
+    private gr: GamerulesService
   ){
   }
 
 
-  initialize(){
-    this.diceBox = new DiceBox("#dice-box", {
-      assetPath: '/assets/dice-box/',
-      offscreen: true,
-    })
-    this.diceBox.init().then(()=>{
-      this.rolling.emit(false);
-    });
+  initialize(box: string){
+    this.selector = box;
+    this.rolling.emit(true);
+    
   }
   display(result: any) {
     console.log(result);
-    //this.sb.open('rolled: '+ result.results.join(", "))
+    this.sb.open('rolled: ' + result.value + "(" + result.rolls.map((x:any)=>x.value).join(", ") + ")");
   }
-  roll(roll: string, value: string | undefined): Observable<any> {
-    this.rolling.emit(true)
-    
-  
-    this.diceBox.show();
-    this.diceBox.roll(roll);
+  roll(roll: string, set:string = "default") {
     setTimeout(()=>{
-      this.rolling.emit(false);
-    }, 10000)
-  
-    return of(this.diceBox.getRollResults());
+      this.diceBox = new DiceBox(this.selector, {
+        assetPath: '/assets/dice-box/',
+        offscreen: true,
+        themeColor: this.gr.getDice(set),
+      })
+      this.diceBox.init().then(()=>{
+        this.diceBox.roll(roll).then(()=>{
+          this.rolling.emit(false);
+          this.result.emit(this.diceBox.getRollResults()[0]);
+        });
+      });
+    }, 250);
   
     
     //return of({
@@ -50,6 +52,10 @@ export class DiceTowerService {
     //  "value": value,
     //  "results": [1,12]
     //});
+  }
+
+  close(){
+    this.diceBox.hide();
   }
 
 }

@@ -1,0 +1,38 @@
+{
+    "version": "1.0",
+    "name": "Star Trek Adventures 1ed.",
+    "base": "Modiphius 2d20",
+    "rules": {
+        "roll": {
+            "default": {
+                "mode": "separate",
+                "criteria": "lower",
+                "notable": ["critical", "failure"],
+                "critical": {"value": 1, "mode": "count"},
+                "failure": {"value": 20, "mode": "count"}
+            }
+        },
+        "dice": {
+            "roll":"2d20",
+            "modifiers": [{
+                "name": "support",
+                "player": "others",
+                "roll": "1d20",
+                "min": 0,
+                "max": 1
+            },{
+                "name": "momentum",
+                "player": "self",
+                "roll": "1d20",
+                "min": 0,
+                "max": 2
+            },{
+                "name": "determination",
+                "player": "self",
+                "roll": "1d20",
+                "min": 0,
+                "max": 1
+            }]
+        }
+    }
+}

@@ -1,0 +1,57 @@
+0 verbose cli D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.7.0
+2 info using node@v18.20.3
+3 silly config:load:file:d:\Users\marco\AppData\Roaming\nvm\v18.20.3\node_modules\npm\npmrc
+4 silly config:load:file:d:\Users\marco\Documents\GitHub\charsheet\.npmrc
+5 silly config:load:file:C:\Users\marco\.npmrc
+0 verbose cli D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+6 silly config:load:file:D:\Program Files\nodejs\etc\npmrc
+7 verbose title npm list
+1 info using npm@10.7.0
+8 verbose argv "list" "--json"
+9 verbose logfile logs-max:10 dir:d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-08T13_06_51_211Z-
+2 info using node@v18.20.3
+3 silly config:load:file:d:\Users\marco\AppData\Roaming\nvm\v18.20.3\node_modules\npm\npmrc
+4 silly config:load:file:d:\Users\marco\Documents\GitHub\charsheet\.npmrc
+10 verbose logfile d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-08T13_06_51_211Z-debug-0.log
+5 silly config:load:file:C:\Users\marco\.npmrc
+6 silly config:load:file:D:\Program Files\nodejs\etc\npmrc
+7 verbose title npm outdated
+8 verbose argv "outdated" "--json"
+9 verbose logfile logs-max:10 dir:d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-08T13_06_51_211Z-
+10 verbose logfile d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-08T13_06_51_211Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+12 silly logfile done cleaning log files
+13 verbose exit 0
+14 info ok
+13 http fetch GET 200 https://registry.npmjs.org/zone.js 2756ms (cache revalidated)
+14 http fetch GET 200 https://registry.npmjs.org/rxjs 2787ms (cache revalidated)
+15 http fetch GET 200 https://registry.npmjs.org/tslib 2841ms (cache revalidated)
+16 http fetch GET 200 https://registry.npmjs.org/karma-chrome-launcher 2807ms (cache revalidated)
+17 http fetch GET 200 https://registry.npmjs.org/karma 2834ms (cache revalidated)
+18 http fetch GET 200 https://registry.npmjs.org/jasmine-core 2893ms (cache revalidated)
+19 http fetch GET 200 https://registry.npmjs.org/karma-jasmine 2878ms (cache revalidated)
+20 http fetch GET 200 https://registry.npmjs.org/karma-coverage 2898ms (cache revalidated)
+21 http fetch GET 200 https://registry.npmjs.org/@types%2fjasmine 2943ms (cache revalidated)
+22 http fetch GET 200 https://registry.npmjs.org/karma-jasmine-html-reporter 2913ms (cache revalidated)
+23 http fetch GET 200 https://registry.npmjs.org/ngx-gravatar 3246ms (cache miss)
+24 http fetch GET 200 https://registry.npmjs.org/@3d-dice%2fdice-box 3354ms (cache revalidated)
+25 http fetch GET 200 https://registry.npmjs.org/@angular%2fforms 3728ms (cache updated)
+26 http fetch GET 200 https://registry.npmjs.org/@angular%2fcore 3820ms (cache updated)
+27 http fetch GET 200 https://registry.npmjs.org/@angular%2fcompiler-cli 3921ms (cache updated)
+28 http fetch GET 200 https://registry.npmjs.org/@angular%2fcdk 4299ms (cache updated)
+29 http fetch GET 200 https://registry.npmjs.org/@angular%2felements 4456ms (cache updated)
+30 http fetch GET 200 https://registry.npmjs.org/@angular%2fanimations 4546ms (cache updated)
+31 http fetch GET 200 https://registry.npmjs.org/@angular%2fcompiler 4606ms (cache updated)
+32 http fetch GET 200 https://registry.npmjs.org/@angular%2fcommon 4683ms (cache updated)
+33 http fetch GET 200 https://registry.npmjs.org/@angular%2fmaterial 4713ms (cache updated)
+34 http fetch GET 200 https://registry.npmjs.org/@angular%2frouter 4738ms (cache updated)
+35 http fetch GET 200 https://registry.npmjs.org/@angular%2fplatform-browser-dynamic 4793ms (cache updated)
+36 http fetch GET 200 https://registry.npmjs.org/@angular%2fplatform-browser 4861ms (cache updated)
+37 http fetch GET 200 https://registry.npmjs.org/@angular%2fcli 4900ms (cache updated)
+38 http fetch GET 200 https://registry.npmjs.org/@angular-devkit%2fbuild-angular 5062ms (cache updated)
+39 http fetch GET 200 https://registry.npmjs.org/typescript 5540ms (cache updated)
+40 verbose exit 1
+41 verbose code 1
