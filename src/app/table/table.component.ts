@@ -8,8 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './table.component.html',
-  styleUrl: './table.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom
+  styleUrl: './table.component.scss'
 })
 export class TableComponent implements OnInit {
   @Input() field: string = "";

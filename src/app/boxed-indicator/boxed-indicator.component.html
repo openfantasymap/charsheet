@@ -10,4 +10,7 @@
         <div class="indicator empty itm-{{item-1}}" (click)="set(item)" *ngFor="let item of items_empty"></div>
     </ng-container>
   </div>
+  <div *ngIf="dice" class="roll">
+    <div (click)="doRoll()">Roll</div>
+  </div>
 </div>

@@ -1,13 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { CharacterService } from '../character.service';
+import { RollableComponent } from '../rollable/rollable.component';
+import { DiceTowerService } from '../dice-tower.service';
+import { GamerulesService } from '../gamerules.service';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-boxed-indicator',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RollableComponent],
   templateUrl: './boxed-indicator.component.html',
-  styleUrl: './boxed-indicator.component.scss',
+  styleUrl: './boxed-indicator.component.scss'
 })
 export class BoxedIndicatorComponent {
   @Input() min = "";
@@ -24,12 +28,16 @@ export class BoxedIndicatorComponent {
 
   @Input() interactive: boolean|string = true;
 
-
   items_empty: number[] = [];
   items_full: number[] = [];
 
+  @Input() dice?: string;
+  @Input() rollvalue?: boolean|string = true;
+
   constructor(
     private char: CharacterService,
+    private dt: DiceTowerService,
+    private gr: GamerulesService
   ) {}
 
   ngOnInit() {
@@ -45,6 +53,7 @@ export class BoxedIndicatorComponent {
 
     this.showtitle = this.showtitle === 'false'?false:true;
     this.interactive = this.interactive === 'false'?false:true;
+    this.rollvalue = this.rollvalue === 'false'?false:true;
   }
 
   set(value:number){
@@ -58,6 +67,21 @@ export class BoxedIndicatorComponent {
         let s = this.items_empty[this.items_empty.length];
         this.items_full = Array(this.value).fill(1).map((e,i)=>e+((i+s)*1));
       }
+    }
+  }
+
+  
+  doRoll(){
+    if(this.dice){
+      this.dt.initialize('#dicebox');
+      this.dt.result.pipe(take(1)).subscribe(result=>{
+        this.gr.evaluateRoll(result, this.value);
+        this.gr.display(result);
+      });
+      if (this.rollvalue)
+        this.dt.roll(this.value+this.dice, this.char.getDice());
+      else 
+        this.dt.roll(this.dice, this.char.getDice());
     }
   }
 
