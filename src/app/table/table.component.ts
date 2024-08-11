@@ -14,6 +14,10 @@ import { CommonModule } from '@angular/common';
 export class TableComponent implements OnInit {
   @Input() field: string = "";
 
+  @Input() namefield: string="";
+  @Input() descriptionfield: string = "";
+  @Input() classfields: string="";
+
   public items?: any[];
 
   constructor(
@@ -24,11 +28,18 @@ export class TableComponent implements OnInit {
     this.items = this.char.getField(this.field);
   }
 
-  slotChange($event:any) {
-    const assigned = $event.target.assignedNodes();
-    if (assigned.length > 0) {
-      console.debug('shotchange', assigned[0]);
+  getField(field: string, row: any){
+    return this.char.getFieldUtil(field, row);
+  }
+
+  getFields(fields: string[] = [], row: any = {}){
+    let ret =[];
+    for (let field of fields){
+      if(field){
+        ret.push(this.getField(field, row));
+      }
     }
+    return ret;
   }
 
 

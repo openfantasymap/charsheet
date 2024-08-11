@@ -1,13 +1,8 @@
 {
     "version": "1.0",
-    "name": "Armakitten",
-    "base": "armakitten",
+    "name": "Star Trek Adventures 1ed.",
+    "base": "Modiphius 2d20",
     "rules": {
-        "style" :{
-            "dice": {
-                "default" :"#e6ccef"
-            }
-        },
         "roll": {
             "default": {
                 "mode": "separate",

@@ -8,7 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class GamerulesService {
   getDice(arg0: string) {
     try{
-      let ret = this.rules.style.dice[arg0];
+      let ret = this.rules.rules.style.dice[arg0];
       return ret;
     } catch(e){
       return '#2e8555'

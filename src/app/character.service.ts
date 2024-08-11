@@ -26,8 +26,14 @@ export class CharacterService {
       steps = field.split('.')
     }
     for(let field of steps){
-      ret = ret[field];
-    }
+      if (ret.length === undefined)
+        ret = ret[field];
+      else{
+        ret = ret.filter((x:any)=>x.type===field);
+        if (ret.length === 1)
+          ret = ret[0];
+      }
+    } 
     return ret;
   }
   setData(charData: any) {
@@ -40,6 +46,25 @@ export class CharacterService {
     } catch(e){
       return 'default';
     }
+  }
+
+  
+  getFieldUtil(field: string, data: any) {
+    let ret = data;
+    let steps = [field];
+    if (field.indexOf(".") >= 0){
+      steps = field.split('.')
+    }
+    for(let field of steps){
+      if (ret.length === undefined)
+        ret = ret[field];
+      else{
+        ret = ret.filter((x:any)=>x.type===field);
+        if (ret.length === 1)
+          ret = ret[0];
+      }
+    } 
+    return ret;
   }
 
 }

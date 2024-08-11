@@ -56,7 +56,8 @@
           <div class="col mb-2">
             <charsheet-rollable
               roll="2d20"
-              field="syste.attrubutes.control.value"
+              field="system.attrubutes.control.value"
+              tags="attribute,control"
             >
               <div class="stat-pill" slot>
                 <div class="stat-name purple">Control</div>
@@ -71,7 +72,8 @@
           <div class="col mb-2">
             <charsheet-rollable
               roll="2d20"
-              field="syste.attrubutes.control.value"
+              field="system.attrubutes.fitness.value"
+              tags="attribute,fitness"
             >
               <div class="stat-pill" slot>
                 <div class="stat-name purple">Fitness</div>
@@ -84,28 +86,68 @@
             </charsheet-rollable>
           </div>
           <div class="col mb-2">
-            <div class="stat-pill">
-              <div class="stat-name purple">Presence</div>
-              <div class="stat-value purple">10</div>
-            </div>
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attrubutes.presence.value"
+              tags="attribute,presence"
+            >
+              <div class="stat-pill" slot>
+                <div class="stat-name purple">Presence</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.presence.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
           </div>
           <div class="col mb-2">
-            <div class="stat-pill">
-              <div class="stat-name purple">Daring</div>
-              <div class="stat-value purple">10</div>
-            </div>
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attrubutes.daring.value"
+              tags="attribute,daring"
+            >
+              <div class="stat-pill" slot>
+                <div class="stat-name purple">Daring</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.daring.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
           </div>
           <div class="col mb-2">
-            <div class="stat-pill">
-              <div class="stat-name purple">Insight</div>
-              <div class="stat-value purple">10</div>
-            </div>
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attrubutes.insight.value"
+              tags="attribute,insight"
+            >
+              <div class="stat-pill">
+                <div class="stat-name purple">Insight</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.insight.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
           </div>
           <div class="col mb-2">
-            <div class="stat-pill">
-              <div class="stat-name purple">Reason</div>
-              <div class="stat-value purple">7</div>
-            </div>
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attrubutes.reason.value"
+              tags="attribute,reason"
+            >
+              <div class="stat-pill">
+                <div class="stat-name purple">Reason</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.reason.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
           </div>
         </div>
         <h2 class="header-text mt-4"><div>Disciplines</div></h2>
@@ -221,28 +263,10 @@
         <div class="row">
           <div class="col-xl-6 mt-4">
             <h2 class="header-text"><div>Stress</div></h2>
-            <div class="d-flex flex-wrap mt-3 mb-2">
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-              <div class="empty-pill solid mb-2"></div>
-            </div>
+            <charsheet-boxed-indicator class="d-flex flex-wrap mt-3 mb-2" field="">
+              <div slot="empty" class="empty-pill mb-2"></div>
+              <div slot="full" class="empty-pill solid mb-2"></div>
+            </charsheet-boxed-indicator>
           </div>
           <div class="col-xl-6 mt-4">
             <h2 class="header-text"><div>Focuses</div></h2>

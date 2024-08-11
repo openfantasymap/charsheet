@@ -4,5 +4,7 @@
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd24", "name": "Other Guy", "game":"deltagreen", "family":"CoC", "game_label":"Delta Green"},
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd22", "name": "Simba", "game":"armakitten", "family": "armakitten", "game_label":"ArmaKitten"},
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd27", "name": "Oghel", "game":"drukmahora", "family": "dukmahora", "game_label":"Drukmahora"},
-    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd26", "name": "Clinical Test Subject", "game":"fallout", "game_label":"Fallout"}
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd26", "name": "Clinical Test Subject", "game":"fallout", "game_label":"Fallout"},
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd28", "name": "Leech", "game":"bitd", "game_label":"Blades in the Dark"},
+    {"id": "ced93837-9f20-4843-9e48-7a4010a0bd29", "name": "1920", "game":"coc7", "game_label":"Call of Cthulhu 7th Edition"}
   ]

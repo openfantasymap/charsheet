@@ -10,6 +10,9 @@ import { DiceTowerService } from './dice-tower.service';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { ImagefieldComponent } from './imagefield/imagefield.component';
+import { ToggleComponent } from './toggle/toggle.component';
+import { BoxedIndicatorComponent } from './boxed-indicator/boxed-indicator.component';
 
 @Component({
   selector: 'app-root',
@@ -38,5 +41,11 @@ export class AppComponent {
     customElements.define('charsheet-rollable-field', csrollablefield);
     const cstable = createCustomElement(TableComponent, { injector: this.injector });
     customElements.define('charsheet-table', cstable);
+    const cimg = createCustomElement(ImagefieldComponent, { injector: this.injector });
+    customElements.define('charsheet-image', cimg);
+    const ctoggle = createCustomElement(ToggleComponent, { injector: this.injector });
+    customElements.define('charsheet-toggle', ctoggle);
+    const cboxed = createCustomElement(BoxedIndicatorComponent, { injector: this.injector });
+    customElements.define('charsheet-boxed', cboxed);
   }
 }

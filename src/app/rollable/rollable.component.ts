@@ -16,6 +16,7 @@ export class RollableComponent {
 
   @Input() field: string = "";
   @Input() roll: string = "";
+  @Input() tags: string = "";
   public value: string = "";
 
 
