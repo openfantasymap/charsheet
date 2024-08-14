@@ -4,7 +4,8 @@ import { CharacterService } from '../character.service';
 import { RollableComponent } from '../rollable/rollable.component';
 import { DiceTowerService } from '../dice-tower.service';
 import { GamerulesService } from '../gamerules.service';
-import { take } from 'rxjs';
+import { Subscription, take } from 'rxjs';
+import { ConnectionService } from '../connection.service';
 
 @Component({
   selector: 'app-boxed-indicator',
@@ -33,11 +34,15 @@ export class BoxedIndicatorComponent {
 
   @Input() dice?: string;
   @Input() rollvalue?: boolean|string = true;
+  highlight = false;
+  fieldsub?: Subscription;
 
   constructor(
     private char: CharacterService,
     private dt: DiceTowerService,
-    private gr: GamerulesService
+    private gr: GamerulesService,
+    private conn: ConnectionService
+
   ) {}
 
   ngOnInit() {
@@ -54,6 +59,26 @@ export class BoxedIndicatorComponent {
     this.showtitle = this.showtitle === 'false'?false:true;
     this.interactive = this.interactive === 'false'?false:true;
     this.rollvalue = this.rollvalue === 'false'?false:true;
+
+
+    console.log(this.field);
+    this.fieldsub = this.conn.observe(this.field).subscribe(data=>{
+      if(data.op === 'roll'){
+        this.highlight =true;
+        setTimeout(()=>{
+          this.highlight = false;
+        }, 1000);
+      }
+      if(data.op === 'set'){
+        this.set(data.value);
+      }
+      if(data.op === 'forceroll'){
+        setTimeout(()=>{
+          this.doRoll();
+        }, 250);
+      }
+    });
+
   }
 
   set(value:number){

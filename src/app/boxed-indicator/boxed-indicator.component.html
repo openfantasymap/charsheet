@@ -1,16 +1,16 @@
-<div class="charsheet-boxed">
+<div class="charsheet-boxed" [ngClass]="{highlight:highlight}">
   <div class="title" *ngIf="showtitle"><button *ngIf="interactive" mat-button class="clear" (click)="set(0)" type="button">Clear</button> {{ title }}</div>
   <button class="clear" *ngIf="interactive && !showtitle" mat-button (click)="set(0)" type="button">Clear</button>
+  <div *ngIf="dice" class="roll">
+    <div (click)="doRoll()">Roll</div>
+  </div>
   <div class="indicators">  
     <ng-container *ngIf="mode === 'empty'">
         <div class="indicator empty itm-{{item-1}}" (click)="set(item)" *ngFor="let item of items_empty"></div>
     </ng-container>
     <div class="indicator full itm-{{item-1}}" (click)="set(item)" *ngFor="let item of items_full"></div>
     <ng-container *ngIf="mode === 'fill'">
-        <div class="indicator empty itm-{{item-1}}" (click)="set(item)" *ngFor="let item of items_empty"></div>
+      <div class="indicator empty itm-{{item-1}}" (click)="set(item)" *ngFor="let item of items_empty"></div>
     </ng-container>
-  </div>
-  <div *ngIf="dice" class="roll">
-    <div (click)="doRoll()">Roll</div>
   </div>
 </div>

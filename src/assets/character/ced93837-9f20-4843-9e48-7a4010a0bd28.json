@@ -1,6 +1,7 @@
 {
   "name": "New Actor",
   "game": "bitd",
+  "aotm": "ced93837-9f20-4843-9e48-7a4010a0bd28",
   "type": "character",
   "prototypeToken": {
     "actorLink": true,

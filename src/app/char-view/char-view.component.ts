@@ -10,6 +10,8 @@ import { CharacterService } from '../character.service';
 import { DiceTowerService } from '../dice-tower.service';
 import { GamerulesService } from '../gamerules.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { ConnectionService } from '../connection.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-char-view',
@@ -31,6 +33,11 @@ export class CharViewComponent implements OnDestroy {
   styleElement?: HTMLStyleElement;
   scriptElement?: HTMLScriptElement;
 
+  partyId?: string|null;
+  partySubMaster?: Subscription;
+  partySubGlobal?: Subscription;
+  partySubRooms: Map<string, Subscription> = new Map<string, Subscription>();
+
   charData: any;
 
   rolling = false;
@@ -44,6 +51,8 @@ export class CharViewComponent implements OnDestroy {
     private dt: DiceTowerService,
     private sb: MatSnackBar,
     private gr: GamerulesService,
+    private conn: ConnectionService,
+
     @Inject(DOCUMENT) private document: HTMLDocument
 
 
@@ -53,6 +62,7 @@ export class CharViewComponent implements OnDestroy {
       this.rolling = true;
     })
     this.charId = ar.snapshot.paramMap.get('character');
+    this.partyId = ar.snapshot.paramMap.get('party');
     
     //this.dt.initialize();
   }
@@ -85,10 +95,26 @@ export class CharViewComponent implements OnDestroy {
         });
       })
     }
+    if(this.partyId && this.charId) { //it's play time!
+      setInterval(()=>{
+        if(this.partyId && this.charId)
+          this.conn.ping(this.charId, this.partyId);
+      }, 2500);
+      this.partySubMaster = this.conn.getMasterConnection(this.charId, this.partyId).subscribe(message=>{
+        const msg = JSON.parse(message.payload.toString());
+        console.log(msg);
+        this.conn.emit(msg.field, msg);
+      });
+    }
   }
   ngOnDestroy(): void {
     this.scriptElement?.remove();
     this.styleElement?.remove();
+    if(this.charId && this.partyId){
+      this.conn.disconnect(this.charId, this.partyId);
+      this.partySubMaster?.unsubscribe();
+      this.partySubGlobal?.unsubscribe();
+    }
   }
 
   close(){

@@ -1,0 +1,16 @@
+<mat-toolbar>
+    
+    <button mat-icon-button routerLink="/"><mat-icon>arrow_left</mat-icon></button>
+    <h1>CharVault</h1>
+    <span class="spacer26"></span>
+    <button mat-button routerLink="/sheets">Sheets</button>
+    <button mat-button routerLink="/parties">Parties</button>
+    <span class="spacer"></span>
+    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+</mat-toolbar>
+<ag-grid-angular id="chars"
+class="ag-theme-quartz"
+(gridReady)="onGridReady($event)"
+[columnTypes]="colTypes"
+[rowData]="chars"
+[columnDefs]="colDefs" />

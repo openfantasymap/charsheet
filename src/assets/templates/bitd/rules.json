@@ -1,19 +1,40 @@
 {
     "version": "1.0",
-    "name": "Star Trek Adventures 1ed.",
-    "base": "Modiphius 2d20",
+    "name": "Blades in the Dark",
+    "base": "FitD",
+    
+    "style" :{
+        "dice": {
+            "default" :"#000000"
+        }
+    },
+
+    "master": [
+        {"field": "name"},
+        {"width": 90, "type": ["rollable"], "headerName": "hunt", "field": "system.attributes.insight.skills.hunt.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "study", "field": "system.attributes.insight.skills.study.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "survey", "field": "system.attributes.insight.skills.survey.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "tinker", "field": "system.attributes.insight.skills.tinker.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "finesse", "field": "system.attributes.prowess.skills.finesse.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "prowl", "field": "system.attributes.prowess.skills.prowl.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "skirmish", "field": "system.attributes.prowess.skills.skirmish.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "wreck", "field": "system.attributes.prowess.skills.wreck.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "attune", "field": "system.attributes.resolve.skills.attune.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "command", "field": "system.attributes.resolve.skills.command.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "consort", "field": "system.attributes.resolve.skills.consort.value"},
+        {"width": 90, "type": ["rollable"], "headerName": "sway", "field": "system.attributes.resolve.skills.sway.value"}    ],
+
     "rules": {
         "roll": {
             "default": {
-                "mode": "separate",
-                "criteria": "lower",
-                "notable": ["critical", "failure"],
-                "critical": {"value": 1, "mode": "count"},
-                "failure": {"value": 20, "mode": "count"}
+                "mode": "highest",
+                "criteria": "value",
+                "notable": ["success"],
+                "success": {"value": 6, "mode": "count"}
             }
         },
         "dice": {
-            "roll":"2d20",
+            "roll":"d6",
             "modifiers": [{
                 "name": "support",
                 "player": "others",

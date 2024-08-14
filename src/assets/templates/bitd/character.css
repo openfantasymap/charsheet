@@ -321,3 +321,9 @@ td {
 .portrait{
   width:200px;
 }
+
+
+
+.highlight{
+  border: 1px solid red;
+}
