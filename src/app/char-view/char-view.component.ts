@@ -38,6 +38,8 @@ export class CharViewComponent implements OnDestroy {
   partySubGlobal?: Subscription;
   partySubRooms: Map<string, Subscription> = new Map<string, Subscription>();
 
+  pinger?: NodeJS.Timeout;
+
   charData: any;
 
   rolling = false;
@@ -96,7 +98,7 @@ export class CharViewComponent implements OnDestroy {
       })
     }
     if(this.partyId && this.charId) { //it's play time!
-      setInterval(()=>{
+      this.pinger = setInterval(()=>{
         if(this.partyId && this.charId)
           this.conn.ping(this.charId, this.partyId);
       }, 2500);
@@ -114,6 +116,7 @@ export class CharViewComponent implements OnDestroy {
       this.conn.disconnect(this.charId, this.partyId);
       this.partySubMaster?.unsubscribe();
       this.partySubGlobal?.unsubscribe();
+      clearInterval(this.pinger);
     }
   }
 
