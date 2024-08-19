@@ -15,6 +15,7 @@ export class DiceTowerService {
   selector?: string;
   public rolling: EventEmitter<boolean> = new EventEmitter<boolean>();
   public result: EventEmitter<any> = new EventEmitter<any>();
+  public rolled: EventEmitter<any> = new EventEmitter<any>();
   constructor(
     private sb: MatSnackBar,
     private gr: GamerulesService

@@ -6,11 +6,27 @@
     <button mat-button routerLink="/sheets">Sheets</button>
     <button mat-button routerLink="/parties">Parties</button>
     <span class="spacer"></span>
-    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+    <button mat-icon-button (click)="showJoinLink(partyId)"><mat-icon>qrcode</mat-icon></button>
+    <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
+        <h1>Chat</h1>
+        <mat-list>
+            <mat-list-item *ngFor="let message of messages">
+                <div matListItemTitle>{{getCharacter(message.character).name}}</div>
+                <ng-container *ngIf="message.op==='roll'">
+                    <i class="ra ra-fw  ra-perspective-dice-random"></i>
+                    {{getResult(message)}}
+                </ng-container>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+
 <ag-grid-angular id="chars"
 class="ag-theme-quartz"
 (gridReady)="onGridReady($event)"
 [columnTypes]="colTypes"
 [rowData]="chars"
 [columnDefs]="colDefs" />
+</mat-drawer-container>

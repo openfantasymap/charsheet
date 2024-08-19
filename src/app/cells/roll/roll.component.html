@@ -1,3 +1,6 @@
-<span class="value">{{value}}</span>
-<button (click)="doRoll()" type="button" class="">r</button>
-<button (click)="edit()" type="button" class="">e</button>
+<div [matMenuTriggerFor]="menu" class="value" matTooltip="" #tooltip="matTooltip" [matTooltipDisabled]="rolled">{{value}}</div>
+<mat-menu #menu="matMenu">
+<button mat-menu-item (click)="doRoll()" type="button" class=""><i class="ra ra-fw ra-perspective-dice-random"></i>Roll</button>
+<button mat-menu-item (click)="edit()" type="button" class=""><i class="fa fa-fw fa-edit"></i>Edit</button>
+
+</mat-menu>

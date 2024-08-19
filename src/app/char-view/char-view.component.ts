@@ -44,6 +44,8 @@ export class CharViewComponent implements OnDestroy {
 
   rolling = false;
 
+  messages: any[] = [];
+
   constructor(
     private ar: ActivatedRoute,
     private h: HttpClient,
@@ -62,6 +64,10 @@ export class CharViewComponent implements OnDestroy {
 
     this.dt.rolling.subscribe(roll => {
       this.rolling = true;
+    });
+    this.dt.rolled.subscribe(roll=>{
+      if(this.partyId && this.charId)
+        this.messages.unshift(this.conn.sendRoll(this.charId, this.partyId, roll.field, roll.result));
     })
     this.charId = ar.snapshot.paramMap.get('character');
     this.partyId = ar.snapshot.paramMap.get('party');
@@ -106,6 +112,10 @@ export class CharViewComponent implements OnDestroy {
         const msg = JSON.parse(message.payload.toString());
         console.log(msg);
         this.conn.emit(msg.field, msg);
+      });
+      this.partySubGlobal = this.conn.getChatConnection(this.charId, this.partyId).subscribe(message=>{
+        const msg = JSON.parse(message.payload.toString());
+        this.messages.unshift(msg);
       });
     }
   }

@@ -23,7 +23,7 @@ export class ActionsComponent implements ICellRendererAngularComp{
     this.value = params.value;
     return true;
   }
-  doRoll() {
-    this.dt.roll(this.value+"d6");
+  sendMessage(){
+    
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
 import { DiceTowerService } from '../../dice-tower.service';
@@ -6,24 +6,40 @@ import { MatButtonModule } from '@angular/material/button';
 import { MqttService } from 'ngx-mqtt';
 import { ConnectionService } from '../../connection.service';
 import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import { MasterSheetService } from '../../master-sheet.service';
+import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-roll',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule, MatMenuModule, MatTooltipModule],
   templateUrl: './roll.component.html',
   styleUrl: './roll.component.scss'
 })
 export class RollComponent implements ICellRendererAngularComp{
   value?: number;
   params: any;
+  @ViewChild('tooltip') tooltip?:MatTooltip;
+  rolled = false;
   constructor(
-    private conn: ConnectionService
-  ){}
+    private conn: ConnectionService,
+    private ms: MasterSheetService,
+  ){
+    
+  }
   agInit(params: ICellRendererParams): void {
-    console.log(params);
     this.params = params;
     this.value = params.value;
+    //@ts-ignore
+    this.ms.observe(this.params.data.aotm, this.params.colDef.field).subscribe(roll=>{
+      if(this.tooltip){
+        this.tooltip.message=JSON.stringify(roll);
+        this.tooltip.show();
+        this.rolled = true;
+        setTimeout(()=>{this.rolled = false}, 2000)
+      }
+    })
   }
   refresh(params: ICellRendererParams) {
     this.params = params;

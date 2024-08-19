@@ -102,6 +102,7 @@ export class BoxedIndicatorComponent {
       this.dt.result.pipe(take(1)).subscribe(result=>{
         this.gr.evaluateRoll(result, this.value);
         this.gr.display(result);
+        this.dt.rolled.emit({field: this.field, result: result});
       });
       if (this.rollvalue)
         this.dt.roll(this.value+this.dice, this.char.getDice());

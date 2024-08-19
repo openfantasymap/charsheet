@@ -2,6 +2,13 @@
     {
         "id": "4130ca0d-3d62-4ddf-9c3a-7daf5ac540ae",
         "name": "Strahd facendo vedrai",
-        "game": "bitd"
+        "game": "bitd",
+        "type": "private"
+    },
+    {
+        "id": "ff3a2907-2f75-4746-a179-473a6a11febc",
+        "name": "Fiera del divertimento",
+        "game": "bitd",
+        "type": "opentable"
     }
 ]

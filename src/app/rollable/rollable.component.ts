@@ -30,7 +30,7 @@ export class RollableComponent {
     private char: CharacterService,
     private dt: DiceTowerService,
     private gr: GamerulesService,
-    private conn: ConnectionService
+    private conn: ConnectionService,
   ){}
 
   ngOnInit(){

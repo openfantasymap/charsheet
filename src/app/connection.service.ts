@@ -1,11 +1,20 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
 import { Observable, Subscription } from 'rxjs';
+import { CharacterService } from './character.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConnectionService {
+  getChatConnection(charId: string, partyId: string): Observable<IMqttMessage> {
+    return this.mqtt.observe('aotm/parties/'+partyId+'/chat');
+  }
+  sendRoll(characterId: string, partyId: string, field: string, result: any) {
+    const snd = {"op":"roll", "character": characterId, "field": field, "result": result};
+    this.mqtt.unsafePublish('aotm/parties/'+partyId+'/chat', JSON.stringify(snd));
+    return snd;
+  }
 
   obs: Map<string, EventEmitter<any>> = new Map<string, EventEmitter<any>>();
 
@@ -35,7 +44,7 @@ export class ConnectionService {
   ping(characterId: string, partyId: string) {
     this.mqtt.unsafePublish('aotm/parties/'+partyId+'/status', JSON.stringify({"status":"up", "character": characterId}))
   }
-
+  
   constructor(
     private mqtt: MqttService
   ) { }
