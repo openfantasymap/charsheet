@@ -139,7 +139,7 @@ export class PartyMasterComponent {
 
   showJoinLink(party:string){
     this.d.open(QrComponent, {data: {
-      url: "https://charsheet-demo.netlify.com/parties/"+party+"/join"
+      url: "https://charsheet-demo.netlify.app/parties/"+party+"/join"
     }})
   }
 }

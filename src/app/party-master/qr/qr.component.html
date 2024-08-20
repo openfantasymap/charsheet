@@ -3,3 +3,6 @@
 <qrcode [qrdata]="data.url" [width]="512" [errorCorrectionLevel]="'M'"></qrcode>
 {{data.url}}
 </mat-dialog-content>
+<mat-dialog-actions>
+    <a [href]="data.url" target="_blank" mat-button>Join</a>
+</mat-dialog-actions>
