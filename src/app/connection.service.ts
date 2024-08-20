@@ -44,6 +44,9 @@ export class ConnectionService {
   ping(characterId: string, partyId: string) {
     this.mqtt.unsafePublish('aotm/parties/'+partyId+'/status', JSON.stringify({"status":"up", "character": characterId}))
   }
+  joinParty(characterId: string, partyId: string, char:any) {
+    this.mqtt.unsafePublish('aotm/parties/'+partyId+'/status', JSON.stringify({"status":"join", "character": characterId, "data": char}))
+  }
   
   constructor(
     private mqtt: MqttService

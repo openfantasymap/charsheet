@@ -1,0 +1,167 @@
+'Log files:
+D:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-20T14_28_21_902Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: angularx-qrcode@18.0.1
+Found: @angular/core@17.3.12
+node_modules/@angular/core
+  @angular/core@"^17.3.0" from the root project
+  peer @angular/core@"17.3.12" from @angular/animations@17.3.12
+  node_modules/@angular/animations
+    @angular/animations@"^17.3.0" from the root project
+    peer @angular/animations@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+    node_modules/@angular/material
+      @angular/material@"^17.3.10" from the root project
+    peerOptional @angular/animations@"17.3.12" from @angular/platform-browser@17.3.12
+    node_modules/@angular/platform-browser
+      @angular/platform-browser@"^17.3.0" from the root project
+      peer @angular/platform-browser@"17.3.12" from @angular/forms@17.3.12
+      node_modules/@angular/forms
+        @angular/forms@"^17.3.0" from the root project
+        peer @angular/forms@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+        node_modules/@angular/material
+          @angular/material@"^17.3.10" from the root project
+      peer @angular/platform-browser@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+      node_modules/@angular/material
+        @angular/material@"^17.3.10" from the root project
+      peer @angular/platform-browser@"17.3.12" from @angular/platform-browser-dynamic@17.3.12
+      node_modules/@angular/platform-browser-dynamic
+        @angular/platform-browser-dynamic@"^17.3.0" from the root project
+      peer @angular/platform-browser@"17.3.12" from @angular/router@17.3.12
+      node_modules/@angular/router
+        @angular/router@"^17.3.0" from the root project
+  peer @angular/core@"^17.0.0 || ^18.0.0" from @angular/cdk@17.3.10
+  node_modules/@angular/cdk
+    @angular/cdk@"^17.3.10" from the root project
+    peer @angular/cdk@"17.3.10" from @angular/material@17.3.10
+    node_modules/@angular/material
+      @angular/material@"^17.3.10" from the root project
+  peer @angular/core@"17.3.12" from @angular/common@17.3.12
+  node_modules/@angular/common
+    @angular/common@"^17.3.0" from the root project
+    peer @angular/common@"^17.0.0 || ^18.0.0" from @angular/cdk@17.3.10
+    node_modules/@angular/cdk
+      @angular/cdk@"^17.3.10" from the root project
+      peer @angular/cdk@"17.3.10" from @angular/material@17.3.10
+      node_modules/@angular/material
+        @angular/material@"^17.3.10" from the root project
+    peer @angular/common@"17.3.12" from @angular/forms@17.3.12
+    node_modules/@angular/forms
+      @angular/forms@"^17.3.0" from the root project
+      peer @angular/forms@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+      node_modules/@angular/material
+        @angular/material@"^17.3.10" from the root project
+    peer @angular/common@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+    node_modules/@angular/material
+      @angular/material@"^17.3.10" from the root project
+    peer @angular/common@"17.3.12" from @angular/platform-browser@17.3.12
+    node_modules/@angular/platform-browser
+      @angular/platform-browser@"^17.3.0" from the root project
+      peer @angular/platform-browser@"17.3.12" from @angular/forms@17.3.12
+      node_modules/@angular/forms
+        @angular/forms@"^17.3.0" from the root project
+        peer @angular/forms@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+        node_modules/@angular/material
+          @angular/material@"^17.3.10" from the root project
+      peer @angular/platform-browser@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+      node_modules/@angular/material
+        @angular/material@"^17.3.10" from the root project
+      peer @angular/platform-browser@"17.3.12" from @angular/platform-browser-dynamic@17.3.12
+      node_modules/@angular/platform-browser-dynamic
+        @angular/platform-browser-dynamic@"^17.3.0" from the root project
+      peer @angular/platform-browser@"17.3.12" from @angular/router@17.3.12
+      node_modules/@angular/router
+        @angular/router@"^17.3.0" from the root project
+    peer @angular/common@"17.3.12" from @angular/platform-browser-dynamic@17.3.12
+    node_modules/@angular/platform-browser-dynamic
+      @angular/platform-browser-dynamic@"^17.3.0" from the root project
+    peer @angular/common@"17.3.12" from @angular/router@17.3.12
+    node_modules/@angular/router
+      @angular/router@"^17.3.0" from the root project
+    peer @angular/common@">= 16.0.0" from ag-grid-angular@32.1.0
+    node_modules/ag-grid-angular
+      ag-grid-angular@"^32.1.0" from the root project
+    peer @angular/common@">=13.0.0" from ngx-gravatar@13.0.0
+    node_modules/ngx-gravatar
+      ngx-gravatar@"^13.0.0" from the root project
+    peer @angular/common@">=14" from ngx-mqtt@17.0.0
+    node_modules/ngx-mqtt
+      ngx-mqtt@"^17.0.0" from the root project
+  peerOptional @angular/core@"17.3.12" from @angular/compiler@17.3.12
+  node_modules/@angular/compiler
+    @angular/compiler@"^17.3.0" from the root project
+    peer @angular/compiler@"17.3.12" from @angular/compiler-cli@17.3.12
+    node_modules/@angular/compiler-cli
+      dev @angular/compiler-cli@"^17.3.0" from the root project
+      peer @angular/compiler-cli@"^17.0.0" from @angular-devkit/build-angular@17.3.8
+      node_modules/@angular-devkit/build-angular
+        dev @angular-devkit/build-angular@"^17.3.8" from the root project
+      peer @angular/compiler-cli@"^17.0.0" from @ngtools/webpack@17.3.8
+      node_modules/@ngtools/webpack
+        @ngtools/webpack@"17.3.8" from @angular-devkit/build-angular@17.3.8
+        node_modules/@angular-devkit/build-angular
+          dev @angular-devkit/build-angular@"^17.3.8" from the root project
+    peer @angular/compiler@"17.3.12" from @angular/platform-browser-dynamic@17.3.12
+    node_modules/@angular/platform-browser-dynamic
+      @angular/platform-browser-dynamic@"^17.3.0" from the root project
+  peer @angular/core@"17.3.12" from @angular/elements@17.3.12
+  node_modules/@angular/elements
+    @angular/elements@"^17.3.12" from the root project
+  peer @angular/core@"17.3.12" from @angular/forms@17.3.12
+  node_modules/@angular/forms
+    @angular/forms@"^17.3.0" from the root project
+    peer @angular/forms@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+    node_modules/@angular/material
+      @angular/material@"^17.3.10" from the root project
+  peer @angular/core@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+  node_modules/@angular/material
+    @angular/material@"^17.3.10" from the root project
+  peer @angular/core@"17.3.12" from @angular/platform-browser@17.3.12
+  node_modules/@angular/platform-browser
+    @angular/platform-browser@"^17.3.0" from the root project
+    peer @angular/platform-browser@"17.3.12" from @angular/forms@17.3.12
+    node_modules/@angular/forms
+      @angular/forms@"^17.3.0" from the root project
+      peer @angular/forms@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+      node_modules/@angular/material
+        @angular/material@"^17.3.10" from the root project
+    peer @angular/platform-browser@"^17.0.0 || ^18.0.0" from @angular/material@17.3.10
+    node_modules/@angular/material
+      @angular/material@"^17.3.10" from the root project
+    peer @angular/platform-browser@"17.3.12" from @angular/platform-browser-dynamic@17.3.12
+    node_modules/@angular/platform-browser-dynamic
+      @angular/platform-browser-dynamic@"^17.3.0" from the root project
+    peer @angular/platform-browser@"17.3.12" from @angular/router@17.3.12
+    node_modules/@angular/router
+      @angular/router@"^17.3.0" from the root project
+  peer @angular/core@"17.3.12" from @angular/platform-browser-dynamic@17.3.12
+  node_modules/@angular/platform-browser-dynamic
+    @angular/platform-browser-dynamic@"^17.3.0" from the root project
+  peer @angular/core@"17.3.12" from @angular/router@17.3.12
+  node_modules/@angular/router
+    @angular/router@"^17.3.0" from the root project
+  peer @angular/core@">= 16.0.0" from ag-grid-angular@32.1.0
+  node_modules/ag-grid-angular
+    ag-grid-angular@"^32.1.0" from the root project
+  peer @angular/core@">=13.0.0" from ngx-gravatar@13.0.0
+  node_modules/ngx-gravatar
+    ngx-gravatar@"^13.0.0" from the root project
+  peer @angular/core@">=14" from ngx-mqtt@17.0.0
+  node_modules/ngx-mqtt
+    ngx-mqtt@"^17.0.0" from the root project
+
+Could not resolve dependency:
+peer @angular/core@"^18.1.0" from angularx-qrcode@18.0.1
+node_modules/angularx-qrcode
+  angularx-qrcode@"^18.0.1" from the root project
+
+Conflicting peer dependency: @angular/core@18.2.0
+node_modules/@angular/core
+  peer @angular/core@"^18.1.0" from angularx-qrcode@18.0.1
+  node_modules/angularx-qrcode
+    angularx-qrcode@"^18.0.1" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

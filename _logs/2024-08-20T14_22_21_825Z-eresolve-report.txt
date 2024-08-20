@@ -1,0 +1,18 @@
+'Log files:
+D:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-20T14_22_21_825Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: charsheet@0.0.0
+Found: @angular/core@17.3.12
+node_modules/@angular/core
+  @angular/core@"^17.3.0" from the root project
+
+Could not resolve dependency:
+peer @angular/core@"^18.1.0" from angularx-qrcode@18.0.1
+node_modules/angularx-qrcode
+  angularx-qrcode@"*" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

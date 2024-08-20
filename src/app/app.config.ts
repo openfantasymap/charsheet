@@ -5,6 +5,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { IMqttServiceOptions, MqttModule } from 'ngx-mqtt';
+import { QRCodeModule } from 'angularx-qrcode';
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'broker.hivemq.com',
@@ -20,6 +21,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     importProvidersFrom(MqttModule.forRoot(MQTT_SERVICE_OPTIONS)),
+    importProvidersFrom(QRCodeModule),
   ],
 
 };

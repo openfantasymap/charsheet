@@ -5,10 +5,12 @@ import { DefaultComponent } from './default/default.component';
 import { PartyListComponent } from './party-list/party-list.component';
 import { PartyDetailComponent } from './party-detail/party-detail.component';
 import { PartyMasterComponent } from './party-master/party-master.component';
+import { PartyJoinComponent } from './party-join/party-join.component';
 
 export const routes: Routes = [
     {path: 'parties/:party/master', component: PartyMasterComponent},
     {path: 'parties/:party', component: PartyDetailComponent},
+    {path: 'parties/:party/join', component: PartyJoinComponent},
     {path: 'parties/:party/:character', component: CharViewComponent},
     {path: 'parties', component: PartyListComponent},
     {path: 'sheets/:character', component: CharViewComponent},

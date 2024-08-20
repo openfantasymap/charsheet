@@ -7,9 +7,10 @@
 6 silly config:load:file:D:\Program Files\nodejs\etc\npmrc
 7 verbose title npm list
 8 verbose argv "list" "--json"
-9 verbose logfile logs-max:10 dir:d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-08T14_34_41_826Z-
-10 verbose logfile d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-08T14_34_41_826Z-debug-0.log
-11 silly logfile start cleaning logs, removing 1 files
+9 verbose logfile logs-max:10 dir:d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-20T14_26_38_068Z-
+10 verbose logfile d:\Users\marco\Documents\GitHub\charsheet\_logs\2024-08-20T14_26_38_068Z-debug-0.log
+11 silly logfile start cleaning logs, removing 2 files
 12 silly logfile done cleaning log files
-13 verbose exit 0
-14 info ok
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 verbose exit 0
+15 info ok

@@ -1,1 +1,33 @@
-<p>party-join works!</p>
+<mat-toolbar>
+    
+    <button mat-icon-button routerLink="/"><mat-icon>arrow_left</mat-icon></button>
+    <h1>CharVault</h1>
+    <span class="spacer26"></span>
+    <button mat-button routerLink="/sheets">Sheets</button>
+    <button mat-button routerLink="/parties">Parties</button>
+    <span class="spacer"></span>
+    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+</mat-toolbar>
+<h1>Pregenerated Characters</h1>
+<mat-list>
+    <mat-list-item *ngFor="let char of pchars" (click)="joinChar(char)">
+        <div class="row">
+            <img class="left" src="/assets/templates/{{char.game}}/icon.webp" (error)="altImg($event, '/assets/templates/'+char.game+'/icon.png')" height="62">
+            <div class="column"> 
+                <span matListItemLine class="">Join as </span>
+                <span matListItemTitle>{{char.name}}</span>
+            </div>
+        </div>
+    </mat-list-item>
+    </mat-list>
+<h1>Your Own characters that can join</h1>
+    <mat-list>
+    <mat-list-item *ngFor="let char of chars" [routerLink]="['/parties', char.id]">
+        <div class="row">
+            <img class="left" src="/assets/templates/{{char.game}}/icon.webp" (error)="altImg($event, '/assets/templates/'+char.game+'/icon.png')" height="62">
+            <div class="column">
+                <span matListItemTitle>{{char.name}}</span>
+            </div>
+        </div>
+    </mat-list-item>
+</mat-list>

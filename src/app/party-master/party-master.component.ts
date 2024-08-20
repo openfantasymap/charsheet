@@ -77,6 +77,7 @@ export class PartyMasterComponent {
 
   ngOnInit(){
     this.g.loaded.subscribe(data=>{
+      this.colDefs = [];
       this.colDefs = this.g.masterView(this.colTypes);
       this.colDefs.map(x=>{
         x['cellRendererParams'] = {"partyId": this.partyId}
@@ -93,8 +94,14 @@ export class PartyMasterComponent {
       this.mqtt.observe('aotm/parties/'+this.partyId+'/status').subscribe((message: IMqttMessage) =>{
         const data = JSON.parse(message.payload.toString());
         console.log(data);
-        this.chars.filter(x=>x['aotm']===data.character)[0].connection = data.status;
-        this.gridApi.setGridOption("rowData", this.chars);
+        if(data.status !== 'join'){
+          this.chars.filter(x=>x['aotm']===data.character)[0].connection = data.status;
+          this.gridApi.setGridOption("rowData", this.chars);
+        } else {
+          this.chars.push(data.data);
+          this.gridApi.setGridOption("rowData", this.chars);
+
+        }
 
       });
 
