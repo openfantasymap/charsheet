@@ -1,14 +1,14 @@
 {
-    "name": "dsfss",
-    "aotm": "ced93837-9f20-4843-9e48-7a4010a0bd23",
+    "name": "dadafasfasd",
+    "aotm": "d11d8d8a-9fd6-4e3a-8af1-2478af3e5680",
     "type": "character",
     "game": "sta1e",
     "extensions": [],
     "img": "icons/svg/mystery-man.svg",
     "system": {
-        "dice": "OPS",
+        "dice": "CONN",
         "notes": "",
-        "assignment": "Operations Manager",
+        "assignment": "Conn",
         "attributes": {
             "control": {
                 "label": "sta.actor.character.attribute.control",

@@ -10,5 +10,11 @@
         "name": "Fiera del divertimento",
         "game": "bitd",
         "type": "opentable"
+    },
+    {
+        "id": "8b52ddb1-a0ff-4a65-951a-a4bf804eb215",
+        "name": "For a few Parsecs more",
+        "game": "sta1e",
+        "type": "private"
     }
 ]

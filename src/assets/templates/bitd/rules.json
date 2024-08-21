@@ -10,19 +10,29 @@
     },
 
     "master": [
-        {"field": "name"},
-        {"width": 90, "type": ["rollable"], "headerName": "hunt", "field": "system.attributes.insight.skills.hunt.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "study", "field": "system.attributes.insight.skills.study.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "survey", "field": "system.attributes.insight.skills.survey.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "tinker", "field": "system.attributes.insight.skills.tinker.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "finesse", "field": "system.attributes.prowess.skills.finesse.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "prowl", "field": "system.attributes.prowess.skills.prowl.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "skirmish", "field": "system.attributes.prowess.skills.skirmish.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "wreck", "field": "system.attributes.prowess.skills.wreck.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "attune", "field": "system.attributes.resolve.skills.attune.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "command", "field": "system.attributes.resolve.skills.command.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "consort", "field": "system.attributes.resolve.skills.consort.value"},
-        {"width": 90, "type": ["rollable"], "headerName": "sway", "field": "system.attributes.resolve.skills.sway.value"}    ],
+        {"field": "name", "pinned": "left"},
+        {"width": 90, "type": ["editable"], "headerName": "Stress", "field": "system.stress.value"},
+        {"width": 90, "type": ["editable"], "headerName": "Coin", "field": "system.coins"},
+        {"width": 90, "type": ["editable"], "headerName": "Stash", "field": "system.coins_stashed"},
+        {"headerName":"Insight", "children":[
+            {"width": 90, "type": ["rollable"], "headerName": "Hunt", "field": "system.attributes.insight.skills.hunt.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Study", "field": "system.attributes.insight.skills.study.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Survey", "field": "system.attributes.insight.skills.survey.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Tinker", "field": "system.attributes.insight.skills.tinker.value"}
+        ]},
+        {"headerName": "Prowess", "children":[
+            {"width": 90, "type": ["rollable"], "headerName": "Finesse", "field": "system.attributes.prowess.skills.finesse.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Prowl", "field": "system.attributes.prowess.skills.prowl.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Skirmish", "field": "system.attributes.prowess.skills.skirmish.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Wreck", "field": "system.attributes.prowess.skills.wreck.value"}
+        ]},
+        {"headerName": "Resolve", "children":[
+            {"width": 90, "type": ["rollable"], "headerName": "Attune", "field": "system.attributes.resolve.skills.attune.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Command", "field": "system.attributes.resolve.skills.command.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Consort", "field": "system.attributes.resolve.skills.consort.value"},
+            {"width": 90, "type": ["rollable"], "headerName": "Sway", "field": "system.attributes.resolve.skills.sway.value"}    
+        ]}
+    ],
 
     "rules": {
         "roll": {

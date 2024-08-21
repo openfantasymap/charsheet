@@ -1,0 +1,5 @@
+<div [matMenuTriggerFor]="menu" class="value" matTooltip="" #tooltip="matTooltip" [matTooltipDisabled]="rolled">{{value}}</div>
+<mat-menu #menu="matMenu">
+<button mat-menu-item (click)="edit()" type="button" class=""><i class="fa fa-fw fa-edit"></i>Edit</button>
+
+</mat-menu>

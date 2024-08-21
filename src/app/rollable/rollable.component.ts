@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 import { CharacterService } from '../character.service';
 import { DiceTowerService } from '../dice-tower.service';
 import { Subscription, take } from 'rxjs';
@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './rollable.component.html',
   styleUrl: './rollable.component.scss',
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RollableComponent {
 
@@ -21,6 +22,8 @@ export class RollableComponent {
   @Input() field: string = "";
   @Input() roll: string = "";
   @Input() tags: string = "";
+  @Input() rollvalue?: boolean|string = true;
+  @Input() dice: string = "d20";
   public value: string = "";
 
   highlight = false;
@@ -38,7 +41,7 @@ export class RollableComponent {
     console.log(this.field);
     this.fieldsub = this.conn.observe(this.field).subscribe(data=>{
       if(data.op === 'roll'){
-        this.highlight =true;
+        this.highlight = true;
         setTimeout(()=>{
           this.highlight = false;
         }, 1000);
@@ -54,8 +57,12 @@ export class RollableComponent {
     this.dt.result.pipe(take(1)).subscribe(result=>{
       this.gr.evaluateRoll(result, parseInt(this.value));
       this.gr.display(result);
+      this.dt.rolled.emit({field: this.field, result: result});
     });
-    this.dt.roll(this.roll, this.char.getDice());
+    if (this.rollvalue)
+      this.dt.roll(this.value+this.dice, this.char.getDice());
+    else 
+      this.dt.roll(this.dice, this.char.getDice());
   }
 
   ngOnDestroy(){

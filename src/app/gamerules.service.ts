@@ -7,12 +7,11 @@ import { ColDef } from 'ag-grid-community'; // Column Definition Type Interface
   providedIn: 'root'
 })
 export class GamerulesService {
+  transform(value: string): string {
+    return value.split('.')[value.split('.').length-2];
+  }
   masterView(coltypes?:any): ColDef<any, any>[] {
-    return this.rules.master;/*.map((x:any)=>{
-      if(x.render && x.render in coltypes){
-        x['cellRenderer'] = coltypes[x.render];
-      }
-    })*/
+    return this.rules.master;
   }
   getDice(arg0: string) {
     try{

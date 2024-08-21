@@ -2,6 +2,7 @@
     "id": "ff3a2907-2f75-4746-a179-473a6a11febc",
     "master": "aeb2a897-c9a8-411f-b4fb-871828e4ed75",
     "game":"bitd",
+    "mode":"physical",
     "type":"opentable",
     "minPlayers": 2,
     "maxPlayers": 4,

@@ -27,11 +27,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { MasterSheetService } from '../master-sheet.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { QrComponent } from './qr/qr.component';
+import { EditComponent } from '../cells/edit/edit.component';
+import { TransformPipe } from '../transform.pipe';
 
 @Component({
   selector: 'app-party-master',
   standalone: true,
-  imports: [MqttModule, CommonModule,MatSidenavModule, RouterModule, MatToolbarModule, MatIconModule, MatTooltipModule, MatButtonModule, MatListModule, AgGridAngular],
+  imports: [MqttModule, CommonModule,MatSidenavModule, RouterModule, MatToolbarModule, MatIconModule, MatTooltipModule, MatButtonModule, MatListModule, AgGridAngular, TransformPipe],
   templateUrl: './party-master.component.html',
   styleUrl: './party-master.component.scss'
 })
@@ -46,9 +48,12 @@ export class PartyMasterComponent {
   colDefs: ColDef[] = [];
 
   colTypes = {
-      rollable: { 
-          cellRenderer: RollComponent
-      },
+    rollable: { 
+        cellRenderer: RollComponent
+    },
+    editable: { 
+        cellRenderer: EditComponent
+    },
   }; 
 
   messages: any[] = [];
@@ -82,8 +87,8 @@ export class PartyMasterComponent {
       this.colDefs.map(x=>{
         x['cellRendererParams'] = {"partyId": this.partyId}
       });
-      this.colDefs.unshift({headerName:'connection', field:'connection', width:50});
-      this.colDefs.push({headerName: "Actions", cellRenderer: ActionsComponent, cellRendererParams: {}});
+      this.colDefs.unshift({headerName:'connection', pinned:'left', field:'connection', width:50});
+      this.colDefs.push({headerName: "Actions", pinned: 'right', cellRenderer: ActionsComponent, cellRendererParams: {}});
       for(let ch of this.party.players){
         this.c.getCharacter(ch).subscribe((cdata:any)=>{
           this.chars.push(cdata);

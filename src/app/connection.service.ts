@@ -7,6 +7,14 @@ import { CharacterService } from './character.service';
   providedIn: 'root'
 })
 export class ConnectionService {
+  sendMessage //@ts-ignore
+    (partyId: string, mode: string, sender: string, receiver: string | undefined, msg: string | null) {
+      if (receiver === "all"){
+        this.mqtt.unsafePublish("aotm/parties/"+partyId+"/chat", JSON.stringify({"op": "msg", "mode": mode, "msg": msg, "sender": sender }))
+      } else if (sender === "master" && receiver !== "all"){
+        this.mqtt.unsafePublish("aotm/parties/"+partyId+"/"+receiver, JSON.stringify({"op": "msg", "mode": mode, "msg": msg }))
+      }
+  }
   getChatConnection(charId: string, partyId: string): Observable<IMqttMessage> {
     return this.mqtt.observe('aotm/parties/'+partyId+'/chat');
   }

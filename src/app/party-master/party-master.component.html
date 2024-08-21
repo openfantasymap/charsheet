@@ -15,10 +15,12 @@
         <h1>Chat</h1>
         <mat-list>
             <mat-list-item *ngFor="let message of messages">
-                <div matListItemTitle>{{getCharacter(message.character).name}}</div>
+                <span matListItemTitle>{{getCharacter(message.character).name}}</span>
                 <ng-container *ngIf="message.op==='roll'">
+                    <span matListItemLine>{{message.field|transform}}</span>
+                    <div matListItemLine>
                     <i class="ra ra-fw  ra-perspective-dice-random"></i>
-                    {{getResult(message)}}
+                    {{getResult(message)}}</div>
                 </ng-container>
             </mat-list-item>
         </mat-list>

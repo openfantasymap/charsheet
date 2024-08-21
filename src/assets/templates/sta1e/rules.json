@@ -10,6 +10,33 @@
             "CONN": "#f4573a"
         }
     },
+    "master": [
+        {"field": "name", "pinned":"left"},
+        {"field": "system.species"},
+        {"field": "system.assignment"},
+        {
+            "headerName": "Attributes", 
+            "children": [
+                {"width": 90, "type": ["rollable"], "headerName": "CTRL", "field": "system.attributes.control.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "FIT", "field": "system.attributes.fitness.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "PRES", "field": "system.attributes.presence.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "DAR", "field": "system.attributes.daring.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "INS", "field": "system.attributes.insight.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "REAS", "field": "system.attributes.reason.value"}
+            ]
+        },
+        {
+            "headerName": "Disciplines", 
+            "children": [
+                {"width": 90, "type": ["rollable"], "headerName": "COMM", "field": "system.disciplines.command.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "SEC", "field": "system.disciplines.security.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "SCI", "field": "system.disciplines.science.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "CONN", "field": "system.disciplines.conn.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "ENG", "field": "system.disciplines.engineering.value"},
+                {"width": 90, "type": ["rollable"], "headerName": "MED", "field": "system.disciplines.medicine.value"}
+            ]
+        }
+    ],
     "rules": {
         "roll": {
             "default": {
