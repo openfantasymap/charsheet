@@ -2,11 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ColDef } from 'ag-grid-community'; // Column Definition Type Interface
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GamerulesService {
+  getSupported(): Observable<any>{
+    return this.h.get('/assets/templates/supported.json');
+  }
+
   transform(value: string): string {
     return value.split('.')[value.split('.').length-2];
   }

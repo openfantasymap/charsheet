@@ -7,5 +7,6 @@
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd26", "name": "Clinical Test Subject", "game":"fallout", "game_label":"Fallout"},
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd28", "name": "Leech", "game":"bitd", "game_label":"Blades in the Dark"},
     {"id": "ced93837-9f20-4843-9e48-7a4010a0bd29", "name": "1920", "game":"coc7", "game_label":"Call of Cthulhu 7th Edition"},
-    {"id": "ef41f27c-4975-49a6-9cba-8c087507d5b0", "name": "Dead man", "game": "nocturne", "game_label": "A Nocturne"}
+    {"id": "ef41f27c-4975-49a6-9cba-8c087507d5b0", "name": "Dead man", "game": "nocturne", "game_label": "A Nocturne"},
+    {"id": "95b4b792-2bb8-4efe-a59f-e26527549812", "name": "USS DEADE", "game": "sta1e", "game_label": "Star Trek Adventures 1e"}
   ]

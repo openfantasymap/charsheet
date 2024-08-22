@@ -1,8 +1,7 @@
 {
     "version": "1.0",
-    "name": "Blades in the Dark",
+    "name": "Scum and Villainy",
     "base": "FitD",
-    "id": "bitd",
     
     "style" :{
         "dice": {
@@ -10,10 +9,16 @@
         }
     },
 
-    "characterCreation": {
-        "mode": "internal",
-        "types": ["character"]
-    },
+    "extras":[
+        {
+            "name": "The Operative", 
+            "url":"https://notwriting.itch.io/the-operative", 
+            "data":"snv/operative"
+        }, {
+            
+        }
+
+    ],
 
     "master": [
         {"field": "name", "pinned": "left"},

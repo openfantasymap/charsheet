@@ -1,0 +1,367 @@
+{
+    "name": "deda",
+    "aotm": "95b4b792-2bb8-4efe-a59f-e26527549812",
+    "type": "starship",
+    "game": "sta1e",
+    "img": "systems/sta/assets/icons/ship_icon.png",
+    "system": {
+        "notes": "",
+        "crew": {
+            "value": 6,
+            "max": 6
+        },
+        "departments": {
+            "command": {
+                "label": "sta.actor.starship.department.command",
+                "value": "3",
+                "selected": false
+            },
+            "conn": {
+                "label": "sta.actor.starship.department.conn",
+                "value": "2",
+                "selected": false
+            },
+            "security": {
+                "label": "sta.actor.starship.department.security",
+                "value": "4",
+                "selected": false
+            },
+            "engineering": {
+                "label": "sta.actor.starship.department.engineering",
+                "value": "2",
+                "selected": false
+            },
+            "science": {
+                "label": "sta.actor.starship.department.science",
+                "value": "3",
+                "selected": false
+            },
+            "medicine": {
+                "label": "sta.actor.starship.department.medicine",
+                "value": "1",
+                "selected": false
+            }
+        },
+        "designation": "NCC-75125",
+        "missionprofile": "Battlecruiser",
+        "power": {
+            "value": 10,
+            "max": 10
+        },
+        "refit": "",
+        "resistance": 6,
+        "scale": 6,
+        "shields": {
+            "value": 14,
+            "max": 14
+        },
+        "servicedate": 2371,
+        "spaceframe": "Sovereign Class",
+        "systems": {
+            "communications": {
+                "label": "sta.actor.starship.system.communications",
+                "value": "10",
+                "selected": false
+            },
+            "computers": {
+                "label": "sta.actor.starship.system.computers",
+                "value": "9",
+                "selected": false
+            },
+            "engines": {
+                "label": "sta.actor.starship.system.engines",
+                "value": "10",
+                "selected": false
+            },
+            "sensors": {
+                "label": "sta.actor.starship.system.sensors",
+                "value": "10",
+                "selected": false
+            },
+            "structure": {
+                "label": "sta.actor.starship.system.structure",
+                "value": "10",
+                "selected": false
+            },
+            "weapons": {
+                "label": "sta.actor.starship.system.weapons",
+                "value": "10",
+                "selected": false
+            }
+        },
+        "traits": "Federation Starship, fafasd"
+    },
+    "items": [
+        {
+            "name": "Command Ship",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>The ship has command and control systems allowing it to coordinate easily with allies during a crisis. When a character on the ship succeeds at a Direct Task to create an Advantage, they may always be assisted by the ship’s Communications + Command, and they may confer the Advantage to allied ships or away teams with whom the ship maintains a communications link.</p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Emergency Medical Hologram",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>The ship’s sickbay is equipped with holoemitters and a stateof-the-art holographic doctor, able to assist medical personnel during emergencies. The ship has one additional Supporting Character, an Emergency Medical Hologram, using the Attributes, Disciplines, and so forth as shown in the sidebar, which does not cost any Crew Support to introduce, and which does not automatically improve when introduced. This character cannot go into any location not equipped with holoemitters.</p><p><strong>2371 or later</strong></p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Improved Warp Drive",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>The ship’s warp drive is more efficient, capitalizing on improved field dynamics, better control of antimatter flow rates, or some other advancement that allows the ship to expend less energy when travelling at warp. Whenever the ship spends power to go to warp, roll 1 for each Power spent; for each Effect rolled, that point of Power is not spent.</p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Fast Targeting Systems",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>The ship’s targeting systems can lock weapons on target much faster and more accurately than other ships of its class, giving it an edge in battle. The ship does not suffer the normal Difficulty increase for targeting a specific System on the enemy ship.</p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Adaptable Energy Weapons",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>The ship’s weapon delivery systems are enhanced by multiparticle emitters. These emitters allow for the ship’s energy weapon capabilities to be modified when fired. If desired, before an attack is rolled, the ship’s weapon’s Stress Rating is reduced by 1CD, but the officer making the attack roll may swap out any one Stress effect for another.</p><p><strong>24th century or later</strong></p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Cloaking Device",
+            "type": "talent",
+            "img": "modules/sta-compendia/assets/icons/talents-core/talent-core.svg",
+            "system": {
+                "description": "<p>The vessel has a device that allows it to vanish from sensors. Operating the device requires a Control + Engineering task with a Difficulty of 2, assisted by the ship’s Engines + Security as this is a task from the tactical position. This task has a Power requirement of 3. If successful, the vessel gains the Cloaked trait. While cloaked, the vessel cannot attempt any attacks, nor can it be the target of an attack unless the attacker has found some way of detecting the cloaked vessel. While cloaked, a vessel’s shields are down. It requires a minor action to decloak a vessel.</p>",
+                "talenttype": {
+                    "typeenum": "general",
+                    "description": "",
+                    "minimum": 0
+                }
+            },
+            "effects": [],
+            "flags": {},
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            },
+            "folder": null,
+            "sort": 0,
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            }
+        },
+        {
+            "name": "Phaser Arrays",
+            "type": "starshipweapon",
+            "img": "modules/sta-compendia/assets/icons/starshipweapons-core/weapon-phaser-array.svg",
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "system": {
+                "description": "",
+                "damage": 0,
+                "range": "medium",
+                "qualities": {
+                    "area": false,
+                    "spread": false,
+                    "dampening": false,
+                    "calibration": false,
+                    "devastating": false,
+                    "highyield": false,
+                    "persistentx": 0,
+                    "piercingx": 0,
+                    "viciousx": 0,
+                    "hiddenx": 0,
+                    "versatilex": 2
+                },
+                "opportunity": null,
+                "escalation": null
+            },
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        },
+        {
+            "name": "Quantum Torpedoes",
+            "type": "starshipweapon",
+            "img": "modules/sta-compendia/assets/icons/starshipweapons-core/weapon-quantum-torpedo.svg",
+            "effects": [],
+            "folder": null,
+            "sort": 0,
+            "system": {
+                "description": "",
+                "damage": 4,
+                "range": "long",
+                "qualities": {
+                    "area": false,
+                    "spread": false,
+                    "dampening": false,
+                    "calibration": true,
+                    "devastating": false,
+                    "highyield": true,
+                    "persistentx": 0,
+                    "piercingx": 0,
+                    "viciousx": 0,
+                    "hiddenx": 0,
+                    "versatilex": 0
+                },
+                "opportunity": null,
+                "escalation": null
+            },
+            "ownership": {
+                "default": 0,
+                "xuN9JpdcyRd60ZEJ": 3
+            },
+            "_stats": {
+                "systemId": "sta",
+                "systemVersion": "1.1.9",
+                "coreVersion": "10.291",
+                "createdTime": 1724320994274,
+                "modifiedTime": 1724320994274,
+                "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+            }
+        }
+    ],
+    "effects": [],
+    "flags": {
+        "exportSource": {
+            "world": "sta-bcholmes-org",
+            "system": "sta",
+            "coreVersion": "10.291",
+            "systemVersion": "1.1.9"
+        }
+    },
+    "_stats": {
+        "systemId": "sta",
+        "systemVersion": "1.1.9",
+        "coreVersion": "10.291",
+        "createdTime": 1724320994274,
+        "modifiedTime": 1724320994274,
+        "lastModifiedBy": "xuN9JpdcyRd60ZEJ"
+    }
+}

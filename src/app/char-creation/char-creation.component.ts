@@ -13,14 +13,15 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConnectionService } from '../connection.service';
 import { Subscription } from 'rxjs';
 
+
 @Component({
-  selector: 'app-char-view',
+  selector: 'app-char-creation',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, RouterModule, MatSnackBarModule],
-  templateUrl: './char-view.component.html',
-  styleUrl: './char-view.component.scss'
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, CommonModule, HttpClientModule, RouterModule],
+  templateUrl: './char-creation.component.html',
+  styleUrl: './char-creation.component.scss'
 })
-export class CharViewComponent implements OnDestroy {
+export class CharCreationComponent implements OnDestroy {
 
   charId?: string|null;
 

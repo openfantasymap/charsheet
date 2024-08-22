@@ -1,0 +1,339 @@
+<body>
+  <main>
+    <h1 class="header-text mb-4">
+      <div>
+        <charsheet-field field="system.rank"></charsheet-field>
+        <charsheet-field field="name"></charsheet-field> (<charsheet-field
+          field="system.species"
+        ></charsheet-field>
+        <charsheet-field field="system.assignment">)</charsheet-field>)
+      </div>
+    </h1>
+    <div class="row" style="align-items: baseline">
+      <div class="col-md-2 view-field-label pb-2">Species:</div>
+      <div class="col-md-4 text-white">
+        <div class="view-border-bottom pb-2">
+          <charsheet-field field="system.species"></charsheet-field>
+        </div>
+      </div>
+      <div class="col-md-2 view-field-label pb-2">Rank:</div>
+      <div class="col-md-4 text-white">
+        <div class="view-border-bottom pb-2">
+          <charsheet-field field="system.rank"></charsheet-field>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="align-items: baseline">
+      <div class="col-md-2 view-field-label pb-2">Upbringing:</div>
+      <div class="col-md-4 text-white">
+        <div class="view-border-bottom pb-2">
+          <charsheet-field field="system.upbringing"></charsheet-field>
+        </div>
+      </div>
+      <div class="col-md-2 view-field-label pb-2">Environment:</div>
+      <div class="col-md-4 text-white">
+        <div class="view-border-bottom pb-2">
+          <charsheet-field field="system.environment"></charsheet-field>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="align-items: baseline">
+      <div class="col-md-2 view-field-label pb-2">Assignment:</div>
+      <div class="col-md-10 text-white">
+        <div class="view-border-bottom pb-2">Operations Manager</div>
+      </div>
+    </div>
+    <div class="row" style="align-items: baseline">
+      <div class="col-md-2 view-field-label pb-2">Traits:</div>
+      <div class="col-md-10 text-white">
+        <div class="view-border-bottom pb-2">Tamarian, Augment</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6 mt-4">
+        <h2 class="header-text"><div>Attributes</div></h2>
+        <div class="row row-cols-1 row-cols-md-3 mt-3">
+          <div class="col mb-2">
+            <charsheet-rollable
+              dice="d20"
+              roll="2d20"
+              rollvalue="false"
+              field="system.attributes.control.value"
+              tags="attribute,control"
+            >
+              <div class="stat-pill" slot>
+                <div class="stat-name purple">Control</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.control.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
+          </div>
+          <div class="col mb-2">
+            <charsheet-rollable
+              dice="d20"
+              roll="2d20"
+              rollvalue="false"
+              field="system.attributes.fitness.value"
+              tags="attribute,fitness"
+            >
+              <div class="stat-pill" slot>
+                <div class="stat-name purple">Fitness</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.fitness.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
+          </div>
+          <div class="col mb-2">
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attributes.presence.value"
+              tags="attribute,presence"
+            >
+              <div class="stat-pill" slot>
+                <div class="stat-name purple">Presence</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.presence.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
+          </div>
+          <div class="col mb-2">
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attributes.daring.value"
+              tags="attribute,daring"
+            >
+              <div class="stat-pill" slot>
+                <div class="stat-name purple">Daring</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.daring.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
+          </div>
+          <div class="col mb-2">
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attributes.insight.value"
+              tags="attribute,insight"
+            >
+              <div class="stat-pill">
+                <div class="stat-name purple">Insight</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.insight.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
+          </div>
+          <div class="col mb-2">
+            <charsheet-rollable
+              roll="2d20"
+              field="system.attributes.reason.value"
+              tags="attribute,reason"
+            >
+              <div class="stat-pill">
+                <div class="stat-name purple">Reason</div>
+                <div class="stat-value purple">
+                  <charsheet-field
+                    field="system.attributes.reason.value"
+                  ></charsheet-field>
+                </div>
+              </div>
+            </charsheet-rollable>
+          </div>
+        </div>
+        <h2 class="header-text mt-4"><div>Disciplines</div></h2>
+        <div class="row row-cols-1 row-cols-md-3 mt-3">
+          <div class="col mb-2">
+            <div class="stat-pill">
+              <div class="stat-name purple">Command</div>
+              <div class="stat-value purple">2</div>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="stat-pill">
+              <div class="stat-name purple">Security</div>
+              <div class="stat-value purple">3</div>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="stat-pill">
+              <div class="stat-name purple">Science</div>
+              <div class="stat-value purple">3</div>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="stat-pill">
+              <div class="stat-name purple">Conn</div>
+              <div class="stat-value purple">3</div>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="stat-pill">
+              <div class="stat-name purple">Engineering</div>
+              <div class="stat-value purple">3</div>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="stat-pill">
+              <div class="stat-name purple">Medicine</div>
+              <div class="stat-value purple">2</div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mt-3">
+          <div class="col mb-1">
+            <div class="stat-pill">
+              <div class="stat-name pink">Resistance</div>
+              <div class="stat-value pink">0</div>
+            </div>
+          </div>
+          <div class="col mb-1">
+            <div class="stat-pill">
+              <div class="stat-name pink">Reputation</div>
+              <div class="stat-value pink">10</div>
+            </div>
+          </div>
+          <div class="col mb-1">
+            <div class="stat-pill">
+              <div class="stat-name red">Reprimands</div>
+              <div class="stat-value red">0</div>
+            </div>
+          </div>
+        </div>
+        <h2 class="header-text mt-4"><div>Values</div></h2>
+        <div class="text-white view-border-bottom py-2">
+          Conflict should always be the last resort
+        </div>
+        <div class="text-white view-border-bottom py-2">
+          There's more to life than molecules
+        </div>
+        <div class="text-white view-border-bottom py-2">Life finds a way</div>
+        <div class="text-white view-border-bottom py-2">
+          A good mystery is irresistible
+        </div>
+        <h2 class="header-text mt-4"><div>Talents</div></h2>
+        <div class="text-white view-border-bottom py-2">
+          <strong>Cautious: Conn:</strong>
+          <span
+            >Whenever you attempt a Task with Conn, and you buy one or more d20s
+            by spending Momentum, you may re-roll a single d20.</span
+          >
+        </div>
+        <div class="text-white view-border-bottom py-2">
+          <strong>An Answer for Everything:</strong>
+          <span
+            ><span
+              >You relish intense debate, where you can see your opponent’s
+              argument unfold, then turn it back against them. When you succeed
+              at a task as part of an extended task in a social conflict, you
+              may reroll a number of </span
+            ><span class="delta">[D]</span
+            ><span> up to your Command score.</span></span
+          >
+        </div>
+        <div class="text-white view-border-bottom py-2">
+          <strong>Applied Research:</strong>
+          <span
+            >You’re a practical scientist, always looking to see how your
+            knowledge can be put into practice. Once per scene, when you attempt
+            a task which relates to information you received earlier that scene
+            from an Obtain Information question, you may roll an additional
+            d20.</span
+          >
+        </div>
+        <div class="text-white view-border-bottom py-2">
+          <strong>Augmented Ability (Fitness):</strong>
+          <span
+            >You gain the Extraordinary Attribute 1 special rule for the Fitness
+            Attribute. When the character uses this ability, they increase their
+            Complication Range by 2 for that Task.</span
+          >
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-xl-6 mt-4">
+            <h2 class="header-text"><div>Stress</div></h2>
+            <charsheet-boxed-indicator class="d-flex flex-wrap mt-3 mb-2" field="">
+              <div slot="empty" class="empty-pill mb-2"></div>
+              <div slot="full" class="empty-pill solid mb-2"></div>
+            </charsheet-boxed-indicator>
+          </div>
+          <div class="col-xl-6 mt-4">
+            <h2 class="header-text"><div>Focuses</div></h2>
+            <div class="text-white view-border-bottom py-2">Manufacturing</div>
+            <div class="text-white view-border-bottom py-2">Virology</div>
+            <div class="text-white view-border-bottom py-2">
+              Subspace Theory
+            </div>
+            <div class="text-white view-border-bottom py-2">Trauma Surgery</div>
+            <div class="text-white view-border-bottom py-2">Force Fields</div>
+            <div class="text-white view-border-bottom py-2">
+              Shipboard Tactical Systems
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="header-text mt-4"><div>Weapons</div></h2>
+          <div>
+            <div class="row mt-3">
+              <div class="col-xl-9 mb-2">
+                <div class="pill-left">Name/Type:</div>
+                <div class="pill-right">Unarmed Strike</div>
+              </div>
+              <div class="col-xl-3 mb-2">
+                <div class="d-flex align-items-start">
+                  <div class="pill-left pill-left-sm">
+                    <span class="delta">d</span>
+                  </div>
+                  <div class="pill-right pill-right-sm"><span>4</span></div>
+                </div>
+              </div>
+              <div class="col-xl-12 mb-2">
+                <div class="pill-left">Qualities:</div>
+                <div class="pill-right">Knockdown, Non-lethal</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-xl-9 mb-2">
+                <div class="pill-left">Name/Type:</div>
+                <div class="pill-right">Phaser type-1</div>
+              </div>
+              <div class="col-xl-3 mb-2">
+                <div class="d-flex align-items-start">
+                  <div class="pill-left pill-left-sm">
+                    <span class="delta">d</span>
+                  </div>
+                  <div class="pill-right pill-right-sm"><span>5</span></div>
+                </div>
+              </div>
+              <div class="col-xl-12 mb-2">
+                <div class="pill-left">Qualities:</div>
+                <div class="pill-right">Charge, Hidden 1</div>
+              </div>
+            </div>
+          </div>
+          <h2 class="header-text mt-4"><div>Equipment</div></h2>
+          <div class="text-white view-border-bottom py-2">Uniform</div>
+          <div class="text-white view-border-bottom py-2">Communicator</div>
+          <div class="text-white view-border-bottom py-2">Tricorder</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<script></script>

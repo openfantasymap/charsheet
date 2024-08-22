@@ -8,6 +8,11 @@
     <span class="spacer"></span>
     <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
+<mat-toolbar>
+    <button mat-icon-button><mat-icon>list_filter</mat-icon></button>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="addDialog()"><mat-icon>add</mat-icon></button>
+</mat-toolbar>
 <mat-list>
     <mat-list-item *ngFor="let char of chars" [routerLink]="['/sheets', char.id]">
         <div class="row">

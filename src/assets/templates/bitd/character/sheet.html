@@ -1,0 +1,254 @@
+<section class="window-content">
+  <form class=" actor-sheet" autocomplete="off">
+
+    <section class="flex-horizontal name-alias">
+  
+      <div class="portrait">
+        <charsheet-image field="img" ></charsheet-img>
+      </div>
+  
+      <div class="grow-two">
+        <div class="title">
+          <label>Name</label>: 
+          <charsheet-field field="name" modal="items.heritage.description"></charsheet-field>
+
+        </div>
+        <div  class="flex-column">
+          <div class="item-block flex-horizontal">
+            <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="heritage">Heritage</a></div>
+                <div class="item flex-horizontal" data-item-id="bLqzDeVlKpj4nfKe">
+                  <div class="item-body flex-horizontal">
+                    <div class="item-name">
+                      <charsheet-field field="items.heritage.name" modal="items.heritage.description"></charsheet-field>
+                    </div>
+                  </div>
+                </div>
+          </div>
+  
+          <div class="item-block flex-horizontal">
+            <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="background">Background</a></div>
+              <div class="item flex-horizontal" data-item-id="9U19GDCOokSup1Ct">
+                <div class="item-body flex-horizontal">
+                  <div class="item-name">
+                    <charsheet-field field="items.background.name"></charsheet-field>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+  
+          <div class="item-block flex-horizontal">
+            <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="vice">Vice</a></div>
+                <div class="item flex-horizontal" data-item-id="uifNrcsO8qvii7Ya">
+                  <div class="item-body flex-horizontal">
+                    <div class="item-name">
+                    <charsheet-field field="items.vice.name"></charsheet-field>
+                      
+                    </div>
+                  </div>
+                </div>
+          </div>
+  
+          <div class="item-block flex-horizontal">
+            <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">Class</a></div>
+                  <div class="item flex-horizontal" data-item-id="6mSCNcQfY8j73fC3">
+                    <div class="item-body flex-horizontal">
+                      <div class="item-name">
+                    <charsheet-field field="items.class.name"></charsheet-field>
+                        
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          
+        </div>
+      </div>
+  
+      <div class="">
+  
+        <div  class="flex-horizontal">
+        
+          <div>
+            <div class="coins coins-hands">
+              <charsheet-boxed field="system.coins" title="Coin" maxvalue="4"></charsheet-boxed>
+          </div>
+        
+          <div id="coins-Lyy4CxEGYr2D5O5z-coins-stashed">
+        
+            <div class="coins coins-stashed">
+              <charsheet-boxed field="system.coins_stashed" title="Stash" maxvalue="40"></charsheet-boxed>
+            </div>
+        
+          </div>
+        
+        </div>    </div>
+  
+    </section>
+      <section class="flex-horizontal">
+        <div class="flex">
+
+    <section class="row experience">
+    
+    <div id="stress"  class="section big-teeth-section">
+      <charsheet-boxed field="system.stress.value" min="0" max="system.stress.max" title="Stress"></charsheet-boxed>
+    </div>
+    <div id="trauma" class="section small-teeth-inline">
+      <div  class="small-teeth-container">
+        <div  class="small-teeth-wrap">
+          <charsheet-boxed field="system.trauma.value" max="system.trauma.max" title="Trauma" interactive="false"></charsheet-boxed>
+        </div>
+      </div>
+  
+      <div class="trauma-list">
+        <charsheet-toggle field="system.trauma.list.cold" label="Cold"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.haunted" label="Haunted"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.obsessed" label="Obsessed"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.paranoid" label="Paranoid"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.reckless" label="Reckless"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.soft" label="Soft"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.unstable" label="Unstable"></charsheet-toggle>
+        <charsheet-toggle field="system.trauma.list.vicious" label="Vicious"></charsheet-toggle>
+      </div>
+  
+    </div>
+  </section>
+
+    <section  class="flex harm-armor">
+      <div  class="character-harm">
+        <table style="width: 100%" cellpadding="0" cellspacing="0">
+          <thead class="title" >
+            <tr><th class="black-white" colspan="4">Harm</th>
+            <th class="black-white"><label>Healing</label></th>
+            <th class="black-white">Armor</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td colspan="2">
+                <input type="text"  name="system.harm.heavy.one" value="">
+              </td>
+              <td>Need Help</td>
+              <td rowspan="3">
+                <charsheet-boxed showtitle="false" field="system.healing_clock.value" max="system.healing_clock.max"></charsheet-boxed>
+                </div>
+              </td>
+              <td rowspan="3"  class="character-armor-uses">
+                <div>
+                  <label for="character-Lyy4CxEGYr2D5O5z-armor-uses-armor">Armor</label>
+                  <input  type="checkbox" name="system.armor-uses.armor">
+                </div>
+                <div>
+                  <label for="character-Lyy4CxEGYr2D5O5z-armor-uses-heavy">Heavy</label>
+                  <input  type="checkbox" name="system.armor-uses.heavy">
+                </div>
+                <div>
+                  <label for="character-Lyy4CxEGYr2D5O5z-armor-uses-special">Special</label>
+                  <input  type="checkbox" name="system.armor-uses.special">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <input type="text"  name="system.harm.medium.one" value="">
+              </td>
+              <td>
+                <input type="text"  name="system.harm.medium.two" value="">
+              </td>
+              <td>-1D</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <input type="text"  name="system.harm.light.one" value="">
+              </td>
+              <td>
+                <input type="text"  name="system.harm.light.two" value="">
+              </td>
+              <td>Less Effect</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+  
+
+  
+  
+      <div class="tab-content flex-vertical grow-two">  
+        <div  class="flex-vertical abilities" data-tab="abilities">
+          <div class="small-teeth-inline ">
+            <charsheet-boxed title="Abilities" field="system.experience" max="system.experience_max"></charsheet-boxed>
+            </div>
+            <charsheet-table field="items.ability" namefield="name" descriptionfield="system.description"></charsheet-table>
+          </div>
+        </div>
+  
+        <div  class="flex-vertical loadout" data-tab="loadout">
+          <div class="label-stripe flex-horizontal">
+            <div class="title">Loadout</div>
+             <p>Loadout <a class="item-add-popup" data-item-type="item" data-tooltip="Add Item"><i class="fas fa-plus-square"></i></a></p>
+             <p>0/Light </p>
+             <div class="dropdown">
+               <select name="system.selected_load_level">
+                 <option value="BITD.Light" selected="">Light</option><option value="BITD.Normal">Normal</option><option value="BITD.Heavy">Heavy</option>
+               </select>
+             </div>
+          </div>
+          <div>
+            <charsheet-table field="items.item" namefield="name" descriptionfield="system.description"></charsheet-table>
+          </div>
+        </div>
+  
+  
+        <div  class="flex-vertical" data-tab="contacts">
+          <div class="label-stripe flex-horizontal">
+            <div class="title">Strange Friends</div>
+          </div>
+          <charsheet-table field="system.acquaintances" namefield="name" descriptionfield="description_short" classfields="standing"></charsheet-table>
+        </div>
+      </div>
+    </div>
+      <div class="attributes">   
+        <div  class="attribute small-teeth">
+          <charsheet-boxed title="Insight" field="system.attributes.insight.exp" max="system.attributes.insight.exp_max"></charsheet-boxed>
+        </div>
+        <div class="subattributes dotted">
+          <charsheet-boxed dice="d6" title="Hunt" field="system.attributes.insight.skills.hunt.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Study" field="system.attributes.insight.skills.study.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Survey" field="system.attributes.insight.skills.survey.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Tinker" field="system.attributes.insight.skills.tinker.value" maxvalue="4"></charsheet-boxed>
+
+        </div>
+              
+        
+        <div  class="attribute small-teeth">
+          <charsheet-boxed title="Prowess" field="system.attributes.prowess.exp" max="system.attributes.prowess.exp_max"></charsheet-boxed>
+        </div>
+        <div class="subattributes dotted">
+          <charsheet-boxed dice="d6" title="Finesse" field="system.attributes.prowess.skills.finesse.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Prowl" field="system.attributes.prowess.skills.prowl.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Skirmish" field="system.attributes.prowess.skills.skirmish.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Wreck" field="system.attributes.prowess.skills.wreck.value" maxvalue="4"></charsheet-boxed>
+
+        </div>
+        
+        <div  class="attribute small-teeth">
+          <charsheet-boxed title="Resolve" field="system.attributes.resolve.exp" max="system.attributes.resolve.exp_max"></charsheet-boxed>
+        </div>
+        <div class="subattributes dotted">
+          <charsheet-boxed dice="d6" title="Attune" field="system.attributes.resolve.skills.attune.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Command" field="system.attributes.resolve.skills.command.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Consort" field="system.attributes.resolve.skills.consort.value" maxvalue="4"></charsheet-boxed>
+          <charsheet-boxed dice="d6" title="Sway" field="system.attributes.resolve.skills.sway.value" maxvalue="4"></charsheet-boxed>
+
+        </div>
+              
+      
+      </div>
+    </section>
+  
+  </form></section>
+
+  <script></script>

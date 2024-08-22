@@ -1,0 +1,24 @@
+{
+    "reference": "https://bladesinthedark.com/character-creation",
+    "steps":{
+        "class":{
+            "name": "Select a Playbook",
+            "ref": "http://51.159.6.136:43212/bitd/classes"
+        },
+        "heritage":{
+            "name": "Select a heritage",
+            "ref": "http://51.159.6.136:43212/bitd/heritages"
+        },
+        "background":{
+            "name":"Select a background",
+            "ref" :"http://51.159.6.136:43212/bitd/backgrounds"
+        },
+        "action": {
+            "name": "Select 4 action dots"
+        }
+    },
+    "conversion": {
+        "name": "name",
+        "class": ""
+    }
+}
