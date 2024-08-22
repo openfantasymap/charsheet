@@ -8,7 +8,6 @@
     <span class="spacer"></span>
     <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
-<div *ngIf="rolling" id="dicebox" (click)="close()"></div>
 <div id="scrollable">
-<div class="{{charId}}" id="rollcontainer" [innerHtml]="content"></div>
+<div id="rollcontainer" [innerHtml]="content"></div>
 </div>

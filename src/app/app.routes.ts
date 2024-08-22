@@ -8,6 +8,7 @@ import { PartyMasterComponent } from './party-master/party-master.component';
 import { PartyJoinComponent } from './party-join/party-join.component';
 import { CharCreationComponent } from './char-creation/char-creation.component';
 import { AddDialogComponent } from './add-dialog/add-dialog.component';
+import { CharImporterComponent } from './char-importer/char-importer.component';
 
 export const routes: Routes = [
     {path: 'parties/:party/master', component: PartyMasterComponent},
@@ -18,6 +19,7 @@ export const routes: Routes = [
     {path: 'sheets/create/:game/:type', component: CharCreationComponent},
     {path: 'sheets/create/:game', component: CharCreationComponent},
     {path: 'sheets/create', component: AddDialogComponent},
+    {path: 'sheets/import', component: CharImporterComponent},
     {path: 'sheets/:character', component: CharViewComponent},
     {path: 'sheets', component: CharListComponent},
     {path: '', component: DefaultComponent}

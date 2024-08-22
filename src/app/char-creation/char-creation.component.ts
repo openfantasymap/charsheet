@@ -12,6 +12,7 @@ import { GamerulesService } from '../gamerules.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConnectionService } from '../connection.service';
 import { Subscription } from 'rxjs';
+import { CharacterCreationService } from '../character-creation.service';
 
 
 @Component({
@@ -21,9 +22,10 @@ import { Subscription } from 'rxjs';
   templateUrl: './char-creation.component.html',
   styleUrl: './char-creation.component.scss'
 })
-export class CharCreationComponent implements OnDestroy {
+export class CharCreationComponent {
 
-  charId?: string|null;
+  game?: string|null;
+  gameRules: any = {};
 
   content?: SafeHtml;
   
@@ -34,12 +36,7 @@ export class CharCreationComponent implements OnDestroy {
   styleElement?: HTMLStyleElement;
   scriptElement?: HTMLScriptElement;
 
-  partyId?: string|null;
-  partySubMaster?: Subscription;
-  partySubGlobal?: Subscription;
-  partySubRooms: Map<string, Subscription> = new Map<string, Subscription>();
-
-  pinger?: NodeJS.Timeout;
+  type?: string|null;
 
   charData: any;
 
@@ -51,37 +48,32 @@ export class CharCreationComponent implements OnDestroy {
     private ar: ActivatedRoute,
     private h: HttpClient,
     private d: DomSanitizer,
-    private char: CharacterService,
     private renderer: Renderer2,
     private dt: DiceTowerService,
     private sb: MatSnackBar,
     private gr: GamerulesService,
-    private conn: ConnectionService,
+    private cc: CharacterCreationService,
 
     @Inject(DOCUMENT) private document: HTMLDocument
-
-
   ) {
 
     this.dt.rolling.subscribe(roll => {
       this.rolling = true;
     });
     this.dt.rolled.subscribe(roll=>{
-      if(this.partyId && this.charId)
-        this.messages.unshift(this.conn.sendRoll(this.charId, this.partyId, roll.field, roll.result));
     })
-    this.charId = ar.snapshot.paramMap.get('character');
-    this.partyId = ar.snapshot.paramMap.get('party');
+    this.game = ar.snapshot.paramMap.get('game');
+    this.type = ar.snapshot.paramMap.get('type');
     
     //this.dt.initialize();
   }
 
   ngOnInit(){
-    if(this.charId){
-      this.char.getCharacter(this.charId).subscribe(data=>{
+    if(this.game && this.type){
+      this.cc.getFor(this.game, this.type).subscribe(data=>{
         this.charData = data; 
         this.gr.loadFor(this.charData.game);
-        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/sheet.css', {responseType:'text'}).subscribe(data => {
+        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/creation.css', {responseType:'text'}).subscribe(data => {
           //this.style += "<style>"+d.bypassSecurityTrustStyle(data).toString().replaceAll('SafeValue must use [property]=binding: ', '').replaceAll('(see https://g.co/ng/security#xss)','')+"</style>";
           this.style = data;
           this.styleElement = this.renderer.createElement("style") as HTMLStyleElement;
@@ -89,51 +81,24 @@ export class CharCreationComponent implements OnDestroy {
           this.styleElement.appendChild(this.renderer.createText(this.style));
           this.renderer.appendChild(this.document.head, this.styleElement);
         });
-        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/sheet.html', {responseType:'text'}).subscribe(data=>{
+        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/creation.html', {responseType:'text'}).subscribe(data=>{
           this.html = data.split('<script>')[0];
-          this.js = "setTimeout(()=>{"+data.split('<script>')[1].split('</script>')[0]+"}, 250);"
-          this.content = this.d.bypassSecurityTrustHtml(this.html);
-          this.scriptElement = this.renderer.createElement("script");
-          this.renderer.setProperty(
-            this.scriptElement,
-            "text",
-            this.js
-          );
-          this.renderer.appendChild(this.document.head, this.scriptElement);
+          if (data.split('<script>')[1].length > 0){
+            this.js = "setTimeout(()=>{"+data.split('<script>')[1].split('</script>')[0]+"}, 250);"
+            this.content = this.d.bypassSecurityTrustHtml(this.html);
+            this.scriptElement = this.renderer.createElement("script");
+            this.renderer.setProperty(
+              this.scriptElement,
+              "text",
+              this.js
+            );
+            this.renderer.appendChild(this.document.head, this.scriptElement);
+          }
       
         });
       })
     }
-    if(this.partyId && this.charId) { //it's play time!
-      this.pinger = setInterval(()=>{
-        if(this.partyId && this.charId)
-          this.conn.ping(this.charId, this.partyId);
-      }, 2500);
-      this.partySubMaster = this.conn.getMasterConnection(this.charId, this.partyId).subscribe(message=>{
-        const msg = JSON.parse(message.payload.toString());
-        console.log(msg);
-        this.conn.emit(msg.field, msg);
-      });
-      this.partySubGlobal = this.conn.getChatConnection(this.charId, this.partyId).subscribe(message=>{
-        const msg = JSON.parse(message.payload.toString());
-        this.messages.unshift(msg);
-      });
-    }
-  }
-  ngOnDestroy(): void {
-    this.scriptElement?.remove();
-    this.styleElement?.remove();
-    if(this.charId && this.partyId){
-      this.conn.disconnect(this.charId, this.partyId);
-      this.partySubMaster?.unsubscribe();
-      this.partySubGlobal?.unsubscribe();
-      clearInterval(this.pinger);
-    }
-  }
-
-  close(){
-    this.rolling=false;
-    this.sb.dismiss();    
+    
   }
 }
 
