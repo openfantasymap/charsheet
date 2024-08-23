@@ -94,10 +94,12 @@ export class CharCreationComponent {
   }
 
   goNext(){
-    this.currentStep = this.ccData.sequence[++this.currentIndex];
+    this.currentIndex = Math.min(++this.currentIndex, this.ccData.sequence.length);
+    this.currentStep = this.ccData.sequence[this.currentIndex];
   }
   goPrev(){
-    this.currentStep = this.ccData.sequence[--this.currentIndex];
+    this.currentIndex = Math.max(--this.currentIndex, 0);
+    this.currentStep = this.ccData.sequence[this.currentIndex];
   }
 }
 
