@@ -13,12 +13,13 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConnectionService } from '../connection.service';
 import { Subscription } from 'rxjs';
 import { CharacterCreationService } from '../character-creation.service';
+import { StepComponent } from "./step/step.component";
 
 
 @Component({
   selector: 'app-char-creation',
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatButtonModule, CommonModule, HttpClientModule, RouterModule],
+  imports: [MatToolbarModule, MatIconModule, MatButtonModule, CommonModule, HttpClientModule, RouterModule, StepComponent],
   templateUrl: './char-creation.component.html',
   styleUrl: './char-creation.component.scss'
 })
@@ -38,11 +39,14 @@ export class CharCreationComponent {
 
   type?: string|null;
 
-  charData: any;
+  ccData: any;
 
   rolling = false;
 
   messages: any[] = [];
+
+  currentStep = "";
+  currentIndex = 0;
 
   constructor(
     private ar: ActivatedRoute,
@@ -69,11 +73,13 @@ export class CharCreationComponent {
   }
 
   ngOnInit(){
+    if(!this.type){
+    }
     if(this.game && this.type){
+      this.gr.loadFor(this.game);
       this.cc.getFor(this.game, this.type).subscribe(data=>{
-        this.charData = data; 
-        this.gr.loadFor(this.charData.game);
-        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/creation.css', {responseType:'text'}).subscribe(data => {
+        this.ccData = data; 
+        this.h.get('/assets/templates/'+this.game+'/'+this.type+'/creation.css', {responseType:'text'}).subscribe(data => {
           //this.style += "<style>"+d.bypassSecurityTrustStyle(data).toString().replaceAll('SafeValue must use [property]=binding: ', '').replaceAll('(see https://g.co/ng/security#xss)','')+"</style>";
           this.style = data;
           this.styleElement = this.renderer.createElement("style") as HTMLStyleElement;
@@ -81,24 +87,17 @@ export class CharCreationComponent {
           this.styleElement.appendChild(this.renderer.createText(this.style));
           this.renderer.appendChild(this.document.head, this.styleElement);
         });
-        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/creation.html', {responseType:'text'}).subscribe(data=>{
-          this.html = data.split('<script>')[0];
-          if (data.split('<script>')[1].length > 0){
-            this.js = "setTimeout(()=>{"+data.split('<script>')[1].split('</script>')[0]+"}, 250);"
-            this.content = this.d.bypassSecurityTrustHtml(this.html);
-            this.scriptElement = this.renderer.createElement("script");
-            this.renderer.setProperty(
-              this.scriptElement,
-              "text",
-              this.js
-            );
-            this.renderer.appendChild(this.document.head, this.scriptElement);
-          }
-      
-        });
+        this.currentStep = this.ccData.sequence[this.currentIndex];
       })
     }
     
+  }
+
+  goNext(){
+    this.currentStep = this.ccData.sequence[++this.currentIndex];
+  }
+  goPrev(){
+    this.currentStep = this.ccData.sequence[--this.currentIndex];
   }
 }
 

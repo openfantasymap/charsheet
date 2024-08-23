@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ImagefieldComponent } from './imagefield/imagefield.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { BoxedIndicatorComponent } from './boxed-indicator/boxed-indicator.component';
+import { StepComponent } from './char-creation/step/step.component';
 
 @Component({
   selector: 'app-root',
@@ -47,5 +48,8 @@ export class AppComponent {
     customElements.define('charsheet-toggle', ctoggle);
     const cboxed = createCustomElement(BoxedIndicatorComponent, { injector: this.injector });
     customElements.define('charsheet-boxed', cboxed);
+
+    const ccstep = createCustomElement(StepComponent, { injector: this.injector });
+    customElements.define('charsheet-creation-step', ccstep);
   }
 }

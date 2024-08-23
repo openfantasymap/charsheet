@@ -3,20 +3,37 @@
     "steps":{
         "class":{
             "name": "Select a Playbook",
-            "ref": "http://51.159.6.136:43212/bitd/classes"
+            "mode": "choice",
+            "choice": 1,
+            "ref": "http://51.159.6.136:43212/bitd/classes",
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         },
         "heritage":{
             "name": "Select a heritage",
-            "ref": "http://51.159.6.136:43212/bitd/heritages"
+            "mode": "choice",
+            "choice": 1,
+            "ref": "http://51.159.6.136:43212/bitd/heritages",
+            "template": "<div><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         },
         "background":{
             "name":"Select a background",
-            "ref" :"http://51.159.6.136:43212/bitd/backgrounds"
+            "mode": "choice",
+            "choice": 1,
+            "ref" :"http://51.159.6.136:43212/bitd/backgrounds",
+            "template": "<div><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         },
         "action": {
+            "mode": "choice",
+            "choice": 4,
             "name": "Select 4 action dots"
         }
     },
+    "sequence": [
+        "class",
+        "heritage",
+        "background",
+        "action"
+    ],
     "conversion": {
         "name": "name",
         "class": ""

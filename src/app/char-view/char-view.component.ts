@@ -90,9 +90,9 @@ export class CharViewComponent implements OnDestroy {
         });
         this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/sheet.html', {responseType:'text'}).subscribe(data=>{
           this.html = data.split('<script>')[0];
-          if(data.split('<script>')[1].length > 0){
+          this.content = this.d.bypassSecurityTrustHtml(this.html);
+          if(data.split('<script>').length > 1){
             this.js = "setTimeout(()=>{"+data.split('<script>')[1].split('</script>')[0]+"}, 250);"
-            this.content = this.d.bypassSecurityTrustHtml(this.html);
             this.scriptElement = this.renderer.createElement("script");
             this.renderer.setProperty(
               this.scriptElement,

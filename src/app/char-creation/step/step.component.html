@@ -1,0 +1,4 @@
+<h1>{{stepData.name}}</h1>
+<div (click)="select(itm)" [ngClass]="{'selected': selecteds.indexOf(itm)>=0}" *ngFor="let itm of items">
+<div [innerHtml]="itm.template"></div>
+</div>

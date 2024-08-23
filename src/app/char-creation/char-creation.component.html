@@ -1,13 +1,15 @@
-<mat-toolbar *ngIf="charData">
+<mat-toolbar *ngIf="ccData">
     <button mat-icon-button routerLink="/sheets"><mat-icon>arrow_left</mat-icon></button>
     <h1>CharVault</h1>
     <span class="spacer26"></span>
-    <span>{{charData.name}}</span>
-    <span> - </span>
-    <span>{{charData.game}}</span>
+    <span>{{game}}</span>
+    <span>&nbsp;-&nbsp;</span>
+    <span>{{type}}</span>
     <span class="spacer"></span>
     <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
+<character-creation-step [step]="currentStep"></character-creation-step>
 <div id="scrollable">
-<div id="rollcontainer" [innerHtml]="content"></div>
 </div>
+<button (click)="goPrev()" mat-icon-button type="button"><mat-icon>backward</mat-icon></button>
+<button (click)="goNext()" mat-icon-button type="button"><mat-icon>forward</mat-icon></button>
