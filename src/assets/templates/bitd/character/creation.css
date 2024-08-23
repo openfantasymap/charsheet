@@ -1,3 +1,22 @@
+@import url("https://fonts.cdnfonts.com/css/kirsty-2");
+
+
 .selected{
     border: 1px solid red;
+}
+
+.class {
+    padding: 15px;
+    margin: 10px;
+    background-image: url('/assets/general/BW_Parchment.jpg');
+    background-size: cover;
+
+}
+
+.selected .class {
+    padding:13px !important;
+}
+
+.class h1{
+    font-family: Kirsty, serif;
 }

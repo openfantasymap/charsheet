@@ -8,8 +8,13 @@
     <span class="spacer"></span>
     <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
+<mat-toolbar>
+    <a mat-button [disabled]="currentStep===b.id" (click)="goTo(b.id)" *ngFor="let b of steps">{{b.title}}</a>
+</mat-toolbar>
+<div class="content">
 <character-creation-step [step]="currentStep"></character-creation-step>
 <div id="scrollable">
 </div>
 <button (click)="goPrev()" mat-icon-button type="button"><mat-icon>backward</mat-icon></button>
 <button (click)="goNext()" mat-icon-button type="button"><mat-icon>forward</mat-icon></button>
+</div>

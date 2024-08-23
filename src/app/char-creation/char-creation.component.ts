@@ -48,6 +48,8 @@ export class CharCreationComponent {
   currentStep = "";
   currentIndex = 0;
 
+  steps:any[] = [];
+
   constructor(
     private ar: ActivatedRoute,
     private h: HttpClient,
@@ -79,6 +81,11 @@ export class CharCreationComponent {
       this.gr.loadFor(this.game);
       this.cc.getFor(this.game, this.type).subscribe(data=>{
         this.ccData = data; 
+        this.steps = this.ccData.sequence.map((x:any)=>{
+          let b = this.ccData.steps[x];
+          b['id'] = x;
+          return b;
+        });
         this.h.get('/assets/templates/'+this.game+'/'+this.type+'/creation.css', {responseType:'text'}).subscribe(data => {
           //this.style += "<style>"+d.bypassSecurityTrustStyle(data).toString().replaceAll('SafeValue must use [property]=binding: ', '').replaceAll('(see https://g.co/ng/security#xss)','')+"</style>";
           this.style = data;
@@ -99,6 +106,11 @@ export class CharCreationComponent {
   }
   goPrev(){
     this.currentIndex = Math.max(--this.currentIndex, 0);
+    this.currentStep = this.ccData.sequence[this.currentIndex];
+  }
+
+  goTo(id:string){
+    this.currentIndex = this.ccData.sequence.indexOf(id);
     this.currentStep = this.ccData.sequence[this.currentIndex];
   }
 }

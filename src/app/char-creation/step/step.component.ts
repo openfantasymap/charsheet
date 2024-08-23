@@ -2,11 +2,14 @@ import { Component, ContentChild, EventEmitter, Input, OnChanges, Output, ViewEn
 import { CharacterCreationService } from '../../character-creation.service';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'character-creation-step',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule,MatInputModule, FormsModule, MatFormFieldModule],
   templateUrl: './step.component.html',
   styleUrl: './step.component.scss',
   //encapsulation: ViewEncapsulation.ShadowDom
@@ -21,6 +24,8 @@ export class StepComponent implements OnChanges {
   items: any[] = [];
 
   selecteds: any[] = []
+
+  data:any = {};
 
   constructor(
     private cc: CharacterCreationService

@@ -2,6 +2,7 @@
     "reference": "https://bladesinthedark.com/character-creation",
     "steps":{
         "class":{
+            "title": "Playbook",
             "name": "Select a Playbook",
             "mode": "choice",
             "choice": 1,
@@ -9,37 +10,52 @@
             "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         },
         "heritage":{
+            "title": "Heritage",
             "name": "Select a heritage",
             "mode": "choice",
             "choice": 1,
             "ref": "http://51.159.6.136:43212/bitd/heritages",
-            "template": "<div><h1>{{name}}</h1><p>{{system.description}}</p></div>"
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         },
         "background":{
+            "title": "Background",
             "name":"Select a background",
             "mode": "choice",
             "choice": 1,
             "ref" :"http://51.159.6.136:43212/bitd/backgrounds",
-            "template": "<div><h1>{{name}}</h1><p>{{system.description}}</p></div>"
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         },
         "action": {
+            "title" :"Actions",
             "mode": "choice",
             "choice": 4,
             "name": "Select 4 action dots"
         },
         "identification":{
+            "title": "Info",
+            "name": "General Info",
             "mode": "form",
             "fields": [{
+                "label": "Name",
                 "name": "name",
+                "field": "text"
+            },{
+                "label": "Alias",
+                "name": "alias",
+                "field": "text"
+            },{
+                "label": "Look",
+                "name": "look",
                 "field": "text"
             }]
         },
         "ability": {
+            "title": "Ability",
             "mode": "choice",
             "choice": 1,
             "name": "Select 1 Special ability",
             "ref" :"http://51.159.6.136:43212/bitd/abilities",
-            "template": "<div><h1>{{name}}</h1><p>{{system.description}}</p></div>"
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
         }
     },
     "sequence": [
@@ -47,7 +63,8 @@
         "heritage",
         "background",
         "action",
-        "ability"
+        "ability",
+        "identification"
     ],
     "conversion": {
         "name": "name",
