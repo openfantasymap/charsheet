@@ -13,14 +13,17 @@
     <span class="spacer"></span>
     <button mat-icon-button (click)="addDialog()"><mat-icon>add</mat-icon></button>
 </mat-toolbar>
-<mat-list>
-    <mat-list-item *ngFor="let char of chars" [routerLink]="['/sheets', char.id]">
+<div class="folder">
+    <div class="folder-container" *ngFor="let char of chars" [routerLink]="['/sheets', char.id]">
+    <div class="folder-tab" >
+        <div class="folder-tab-label">
         <div class="row">
             <img class="left" src="/assets/templates/{{char.game}}/icon.webp" (error)="altImg($event, '/assets/templates/'+char.game+'/icon.png')" height="62">
-            <div class="column">
-                <span matListItemTitle>{{char.name}}</span>
-                <span matListItemLine>{{char.game_label}}</span>
+            <div class="column center">
+                <span class="folder-tab-label-title">{{char.name}}</span>
+                <span class="folder-tab-label-text">{{char.game_label}}</span>
             </div>
         </div>
-    </mat-list-item>
-</mat-list>
+    </div></div>
+    </div>
+</div>

@@ -10,6 +10,8 @@
 </mat-toolbar>
 <mat-toolbar>
     <a mat-button [disabled]="currentStep===b.id" (click)="goTo(b.id)" *ngFor="let b of steps">{{b.title}}</a>
+    <span class="spacer"></span>
+    <a mat-icon-button><mat-icon>settings</mat-icon></a>
 </mat-toolbar>
 <div class="content">
 <character-creation-step [step]="currentStep"></character-creation-step>

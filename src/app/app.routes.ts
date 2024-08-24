@@ -16,11 +16,14 @@ export const routes: Routes = [
     {path: 'parties/:party/join', component: PartyJoinComponent},
     {path: 'parties/:party/:character', component: CharViewComponent},
     {path: 'parties', component: PartyListComponent},
-    {path: 'sheets/create/:game/:type', component: CharCreationComponent},
-    {path: 'sheets/create/:game', component: CharCreationComponent},
-    {path: 'sheets/create', component: AddDialogComponent},
-    {path: 'sheets/import', component: CharImporterComponent},
+    
     {path: 'sheets/:character', component: CharViewComponent},
     {path: 'sheets', component: CharListComponent},
+
+    {path: 'create/:game/:type', component: CharCreationComponent},
+    {path: 'create/:game', component: CharCreationComponent},
+    {path: 'create', component: AddDialogComponent},
+    
+    {path: 'import', component: CharImporterComponent},
     {path: '', component: DefaultComponent}
 ];

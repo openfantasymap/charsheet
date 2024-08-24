@@ -9,7 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-import { Subscription } from 'rxjs';
+import { Subscription, take } from 'rxjs';
 import { AgGridAngular } from 'ag-grid-angular'; // Angular Data Grid Component
 import { 
   ColDef,
@@ -81,7 +81,7 @@ export class PartyMasterComponent {
   }
 
   ngOnInit(){
-    this.g.loaded.subscribe(data=>{
+    this.g.loaded.pipe(take(1)).subscribe(data=>{
       this.colDefs = [];
       this.colDefs = this.g.masterView(this.colTypes);
       this.colDefs.map(x=>{

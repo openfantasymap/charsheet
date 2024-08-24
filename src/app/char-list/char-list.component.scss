@@ -1,4 +1,4 @@
-.left{float:left;}
+.left{flex: 0 0 1px; margin-right: 4px;}
 
 .mdc-list-item{
     flex-direction: row-reverse;
@@ -7,3 +7,76 @@
 
 .mat-mdc-list-item-title{color:black;}
 .mat-mdc-list-item-line{color:rgb(137, 137, 137);}
+
+
+.folder{
+    display:flex;
+    flex-direction: column;
+}
+
+.folder-container{
+    padding-top:5px;
+    display: flex;
+    align-items: flex-start;
+    height: 92px;
+    background-image: url('/assets/general/folder_bg.jpg');
+    box-shadow: inset 2px -3px 4px #333;
+}
+
+
+.folder-tab{
+    display: flex;
+    padding: 15px;
+    height: 63px;
+    background-image: url('/assets/general/folder_bg.jpg');
+    box-shadow: 2px -3px 4px #333;
+}
+.folder-tab{
+    background-image: url('/assets/general/folder_bg.jpg');
+
+}
+.folder-tab::after(){
+    width:20px;
+}
+
+.folder-tab-label{
+    background-color:aliceblue;
+    flex-direction: row;
+    border: 2px solid #eee;
+    transform:rotate(2deg);
+}
+
+
+
+.folder-tab-label:nth-child(2n) { transform:rotate(-4deg); }
+.folder-tab-label:nth-child(3n) { transform:rotate(2deg); }
+.folder-tab-label:nth-child(4n) { transform:rotate(-5deg); }
+.folder-tab-label:nth-child(5n) { transform:rotate(-6deg); }
+.folder-tab-label:nth-child(6n) { transform:rotate(6deg); }
+
+
+
+.folder-tab-label-title{
+    font-weight: bold;
+}
+
+.folder-tab-label-text{
+    color: #555;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display:flex;
+    flex-direction: column;
+}
+
+.center{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}

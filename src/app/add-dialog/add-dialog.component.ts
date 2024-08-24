@@ -4,6 +4,7 @@ import {MatGridListModule} from '@angular/material/grid-list'
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-add-dialog',
@@ -26,12 +27,12 @@ export class AddDialogComponent {
   }
 
   newChar(g: string){
-    this.g.loaded.subscribe(gr=>{
+    this.g.loaded.pipe(take(1)).subscribe(gr=>{
       if(gr.characterCreation.mode === "internal") {
         if(gr.characterCreation.types.length > 1){
 
         } else {
-          this.r.navigate(['/','sheets','create',gr.id, gr.characterCreation.types[0]])
+          this.r.navigate(['/','create',gr.id, gr.characterCreation.types[0]])
         }
       } else {
         window.open(gr.characterCreation.url, '_blank');
