@@ -1,29 +1,46 @@
 <mat-toolbar>
-    
-    <button mat-icon-button routerLink="/"><mat-icon>arrow_left</mat-icon></button>
-    <h1>CharVault</h1>
-    <span class="spacer26"></span>
-    <button mat-button routerLink="/sheets">Sheets</button>
-    <button mat-button routerLink="/parties">Parties</button>
-    <span class="spacer"></span>
-    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+  <button mat-icon-button routerLink="/">
+    <mat-icon>arrow_left</mat-icon>
+  </button>
+  <h1>CharVault</h1>
+  <span class="spacer26"></span>
+  <button mat-button routerLink="/sheets">Sheets</button>
+  <button mat-button routerLink="/parties">Parties</button>
+  <span class="spacer"></span>
+  <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
 <mat-toolbar>
-    <button mat-icon-button><mat-icon>list_filter</mat-icon></button>
-    <span class="spacer"></span>
-    <button mat-icon-button (click)="addDialog()"><mat-icon>add</mat-icon></button>
+  <button mat-icon-button><mat-icon>list_filter</mat-icon></button>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="addDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
 </mat-toolbar>
 <div class="folder">
-    <div class="folder-container" *ngFor="let char of chars" [routerLink]="['/sheets', char.id]">
-    <div class="folder-tab" >
-        <div class="folder-tab-label">
+  <div
+    class="folder-container"
+    *ngFor="let char of chars"
+    
+  >
+    <div class="folder-tab" [routerLink]="['/sheets', char.id]">
+      <div class="folder-tab-label">
         <div class="row">
-            <img class="left" src="/assets/templates/{{char.game}}/icon.webp" (error)="altImg($event, '/assets/templates/'+char.game+'/icon.png')" height="62">
-            <div class="column center">
-                <span class="folder-tab-label-title">{{char.name}}</span>
-                <span class="folder-tab-label-text">{{char.game_label}}</span>
-            </div>
+          <img
+            class="left"
+            src="/assets/templates/{{ char.game }}/icon.webp"
+            (error)="
+              altImg($event, '/assets/templates/' + char.game + '/icon.png')
+            "
+            height="62"
+          />
+          <div class="column center">
+            <span class="folder-tab-label-title">{{ char.name }}</span>
+            <span class="folder-tab-label-text">{{ char.game_label }}</span>
+          </div>
         </div>
-    </div></div>
+      </div>
     </div>
+    <span class="spacer"></span>
+    <button mat-icon-button><mat-icon>menu</mat-icon></button>
+  </div>
 </div>

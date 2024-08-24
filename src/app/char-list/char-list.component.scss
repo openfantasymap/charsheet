@@ -20,6 +20,7 @@
     align-items: flex-start;
     height: 92px;
     background-image: url('/assets/general/folder_bg.jpg');
+    background-position-y: 63px;
     box-shadow: inset 2px -3px 4px #333;
 }
 
@@ -32,19 +33,12 @@
     background-image: url('/assets/general/folder_bg.jpg');
     box-shadow: 2px -3px 4px #333;
 }
-.folder-tab{
-    background-image: url('/assets/general/folder_bg.jpg');
-
-}
-.folder-tab::after(){
-    width:20px;
-}
 
 .folder-tab-label{
     background-color: aliceblue;
     flex-direction: row;
-    /* border: 2px solid #eee; */
     border-bottom-left-radius: 2px;
+    border-top-right-radius: 3px;
     box-shadow: -1px 1px 4px #333;
     transform: rotate(2deg);
     padding-right: 10px;
