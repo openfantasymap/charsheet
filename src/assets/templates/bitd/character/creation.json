@@ -4,13 +4,15 @@
         "class":{
             "title": "Playbook",
             "name": "Select a Playbook",
+            "description": "When you choose a playbook, you’re choosing a set of special abilities (which give your character ways to break the rules in various ways) and a set of xp triggers (which determine how you earn experience for character advancement). But every playbook represents a scoundrel at heart. The Cutter has special abilities related to combat, but that doesn’t mean they’re “the fighter” of the game. Any character type can fight well. Think of your playbook as an area of focus and preference, but not a unique skill set. <br />This is why we call them “playbooks” rather than “character classes” or “archetypes.” You’re selecting the set of initial action ratings and special abilities that your character has access to—but you’re not defining their immutable essence or true nature. Your character will grow and change over time; who they become is part of the fun of playing the game.",
             "mode": "choice",
             "choice": 1,
             "ref": "http://51.159.6.136:43212/bitd/classes",
-            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p><p><b>XP</b>: {{system.experience_clues}}</p></div>"
         },
         "heritage":{
             "title": "Heritage",
+            "description": "Your character’s heritage describes where their family line is from. When you choose a heritage, write a detail about your family life on the line above.",
             "name": "Select a heritage",
             "mode": "choice",
             "choice": 1,
@@ -20,6 +22,7 @@
         "background":{
             "title": "Background",
             "name":"Select a background",
+            "description":"Your character’s background describes what they did before they joined the crew. Choose a background and then write a detail about it that’s specific to your character.",
             "mode": "choice",
             "choice": 1,
             "ref" :"http://51.159.6.136:43212/bitd/backgrounds",
@@ -27,6 +30,7 @@
         },
         "action": {
             "title" :"Actions",
+            "description": "<div><p>Your playbook begins with three action dots already placed. You get to add four more dots (so you’ll have seven total). At the start of the game, no action rating may have more than two dots (unless a special ability tells you otherwise). Assign your four dots like this:</p><ul><li>Put one dot in any action that you feel reflects your character’s <strong>heritage</strong>.</li><li>Put one dot in any action that you feel reflects your character’s <strong>background</strong>.</li><li>Assign two more dots anywhere you please (max rating is 2, remember).</li></ul></div>",
             "mode": "choice",
             "choice": 4,
             "name": "Select 4 action dots"
@@ -34,6 +38,7 @@
         "identification":{
             "title": "Info",
             "name": "General Info",
+            "description":"Choose a name for your character from the sample list, or create your own. If your character uses an alias or nickname in the underworld, make a note of it. Record a few evocative words that describe your character’s look (samples provided on the next page).",
             "mode": "form",
             "fields": [{
                 "label": "Name",
@@ -52,10 +57,39 @@
         "ability": {
             "title": "Ability",
             "mode": "choice",
+            "description": "Take a look at the special abilities for your playbook and choose one. If you can’t decide which one to pick, go with the first one on the list—it’s placed there as a good default choice.",
             "choice": 1,
             "name": "Select 1 Special ability",
             "ref" :"http://51.159.6.136:43212/bitd/abilities",
+            "filter": {"field":"class.name", "refField": "system.class"},
             "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
+        },
+        "vices": {
+            "title": "Vices",
+            "mode": "choice",
+            "description":"<div><p>Every character is in thrall to some vice or another, which they indulge to deal with stress. Choose a vice from the list, and describe it on the line above with the specific details and the name and location of your <strong>vice purveyor</strong>.</p><ul><li><span>Faith: </span>You’re dedicated to an unseen power, forgotten god, ancestor, etc.</li><li><span>Gambling:</span> You crave games of chance, betting on sporting events, etc.</li><li><span>Luxury: </span>Expensive or ostentatious displays of opulence.</li><li><span>Obligation: </span>You’re devoted to a family, a cause, an organization, a charity, etc.</li><li><span>Pleasure:</span> Gratification from lovers, food, drink, drugs, art, theater, etc.</li><li><span>Stupor: </span>You seek oblivion in the abuse of drugs, drinking to excess, getting beaten to a pulp in the fighting pits, etc.</li><li><span>Weird: </span>You experiment with strange essences, consort with rogue spirits, observe bizarre rituals or taboos, etc.</li></ul></div>",
+            "choice": 1,
+            "name": "Select 1 Vice",
+            "ref" :"http://51.159.6.136:43212/bitd/vices",
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description}}</p></div>"
+        },
+        "npcs_friend": {
+            "title": "Friends",
+            "mode": "choice",
+            "description":"<div><p>Each playbook has a list of NPCs that your character knows. Choose one from the list who is a close relationship (a good friend, a lover, a family relation, etc.). Mark the upward-pointing triangle next to their name. Then choose another NPC on the list who’s your rival or enemy. Mark the downward-pointing triangle next to their name.</p></div>",
+            "choice": 1,
+            "name": "Select 1 Friend",
+            "ref" :"http://51.159.6.136:43212/bitd/npcs",
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description_short}}</p></div>"
+        },
+        "npcs_rival": {
+            "title": "Rivals",
+            "mode": "choice",
+            "description":"<div><p>Each playbook has a list of NPCs that your character knows. Choose one from the list who is a close relationship (a good friend, a lover, a family relation, etc.). Mark the upward-pointing triangle next to their name. Then choose another NPC on the list who’s your rival or enemy. Mark the downward-pointing triangle next to their name.</p></div>",
+            "choice": 1,
+            "name": "Select 1 Rival",
+            "ref" :"http://51.159.6.136:43212/bitd/npcs",
+            "template": "<div class='class'><h1>{{name}}</h1><p>{{system.description_short}}</p></div>"
         }
     },
     "sequence": [
@@ -64,6 +98,9 @@
         "background",
         "action",
         "ability",
+        "vices",
+        "npcs_friend",
+        "npcs_rival",
         "identification"
     ],
     "conversion": {

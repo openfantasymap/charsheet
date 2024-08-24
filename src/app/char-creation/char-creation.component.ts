@@ -113,5 +113,9 @@ export class CharCreationComponent {
     this.currentIndex = this.ccData.sequence.indexOf(id);
     this.currentStep = this.ccData.sequence[this.currentIndex];
   }
+
+  done(){
+    
+  }
 }
 

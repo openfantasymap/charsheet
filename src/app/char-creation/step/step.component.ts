@@ -5,11 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'character-creation-step',
   standalone: true,
-  imports: [CommonModule, MatButtonModule,MatInputModule, FormsModule, MatFormFieldModule],
+  imports: [CommonModule, MatSidenavModule, MatButtonModule,MatInputModule, FormsModule, MatFormFieldModule],
   templateUrl: './step.component.html',
   styleUrl: './step.component.scss',
   //encapsulation: ViewEncapsulation.ShadowDom

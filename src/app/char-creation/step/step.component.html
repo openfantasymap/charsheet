@@ -1,22 +1,30 @@
-<h1>{{ stepData.name }}</h1>
-<ng-container *ngIf="stepData.mode === 'choice'">
-  <div
-    (click)="select(itm)"
-    [ngClass]="{ selected: selecteds.indexOf(itm) >= 0 }"
-    *ngFor="let itm of items"
-  >
-    <div [innerHtml]="itm.template"></div>
-  </div>
-</ng-container>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" position="end" opened>
+    <div [innerHtml]="stepData.description"></div>
+  </mat-sidenav>
 
-<ng-container *ngIf="stepData.mode === 'form'"> 
-    <div *ngFor="let field of stepData.fields">
-    <mat-form-field  appearence="outline">
-        <mat-label>{{field.label}}</mat-label>
-        <input [name]="field.name" [(ngModel)]="data[field.name]" matInput >
-    </mat-form-field>
-</div>
-<div>
-    {{data|json}}
-</div>
-</ng-container>
+  <mat-sidenav-content>
+    <h1>{{ stepData.name }}</h1>
+    <ng-container *ngIf="stepData.mode === 'choice'">
+      <div
+        (click)="select(itm)"
+        [ngClass]="{ selected: selecteds.indexOf(itm) >= 0 }"
+        *ngFor="let itm of items"
+      >
+        <div [innerHtml]="itm.template"></div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="stepData.mode === 'form'">
+      <div *ngFor="let field of stepData.fields">
+        <mat-form-field appearence="outline">
+          <mat-label>{{ field.label }}</mat-label>
+          <input [name]="field.name" [(ngModel)]="data[field.name]" matInput />
+        </mat-form-field>
+      </div>
+      <div>
+        {{ data | json }}
+      </div>
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

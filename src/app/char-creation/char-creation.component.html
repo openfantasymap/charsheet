@@ -15,6 +15,8 @@
 <character-creation-step [step]="currentStep"></character-creation-step>
 <div id="scrollable">
 </div>
-<button (click)="goPrev()" mat-icon-button type="button"><mat-icon>backward</mat-icon></button>
-<button (click)="goNext()" mat-icon-button type="button"><mat-icon>forward</mat-icon></button>
+<button [disabled]="currentIndex===0" (click)="goPrev()" mat-raised-button type="button"><mat-icon>backward</mat-icon> Back</button>
+<button [disabled]="currentIndex===ccData.sequence.length-1" (click)="goNext()" mat-raised-button type="button">Next <mat-icon>forward</mat-icon></button>
+<button (click)="done()" mat-raised-button type="button"><mat-icon>check</mat-icon> Done</button>
+
 </div>
