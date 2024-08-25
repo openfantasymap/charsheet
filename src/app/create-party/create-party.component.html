@@ -24,8 +24,12 @@
         Scheduled
       </mat-slide-toggle>
       <mat-form-field *ngIf="party.scheduled">
-        <ngx-mat-datetime-picker [(ngModel)]="party.schedule" #picker >
-        </ngx-mat-datetime-picker>
+        <mat-label>Session Schedule</mat-label>
+      
+      <input [(ngModel)]="party.schedule" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
      </mat-form-field>
 
       <mat-form-field *ngIf="party.open" class="example-chip-list">

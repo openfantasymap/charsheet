@@ -12,15 +12,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatChipEditedEvent, MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 
 
 @Component({
   selector: 'app-create-party',
   standalone: true,
-  imports: [MatInputModule,NgxMatDatetimePickerModule, NgxMatTimepickerModule, MatCardModule,MatDatepickerModule,  MatChipsModule, MatIconModule, MatSlideToggleModule,MatFormFieldModule, FormsModule, MatButtonModule,CommonModule,MatSelectModule],
+  imports: [MatInputModule, MatNativeDateModule, MatCardModule,MatDatepickerModule,  MatChipsModule, MatIconModule, MatSlideToggleModule,MatFormFieldModule, FormsModule, MatButtonModule,CommonModule,MatSelectModule],
   templateUrl: './create-party.component.html',
   styleUrl: './create-party.component.scss'
 })
