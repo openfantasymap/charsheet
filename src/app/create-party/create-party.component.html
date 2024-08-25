@@ -1,1 +1,60 @@
-<p>create-party works!</p>
+<mat-card>
+    <mat-card-header>
+        <h1>Mission Creation</h1>
+    </mat-card-header>
+    <mat-card-content>
+    
+    <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input name="name" [(ngModel)]="party.name" matInput value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Select system</mat-label>
+
+    <mat-select name="system" [(ngModel)]="party.system">
+        <mat-option *ngFor="let s of supported" [value]="s.id">{{s.name}}</mat-option>    
+    </mat-select>
+    </mat-form-field>
+
+    <mat-slide-toggle name="open" [(ngModel)]="party.open">
+        Open Table
+      </mat-slide-toggle>
+      <mat-slide-toggle *ngIf="party.open" name="open" [(ngModel)]="party.scheduled">
+        Scheduled
+      </mat-slide-toggle>
+      <mat-form-field *ngIf="party.scheduled">
+        <ngx-mat-datetime-picker [(ngModel)]="party.schedule" #picker >
+        </ngx-mat-datetime-picker>
+     </mat-form-field>
+
+      <mat-form-field *ngIf="party.open" class="example-chip-list">
+        <mat-label>Tags</mat-label>
+        <mat-chip-grid #chipGrid aria-label="Choose tags">
+          @for (fruit of fruits(); track fruit) {
+            <mat-chip-row
+              (removed)="remove(fruit)"
+              [editable]="true"
+              (edited)="edit(fruit, $event)"
+              [aria-description]="'press enter to edit ' + fruit.name"
+            >
+              {{fruit.name}}
+              <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip-row>
+          }
+          <input
+            placeholder="Tags..."
+            [matChipInputFor]="chipGrid"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)"
+          />
+        </mat-chip-grid>
+      </mat-form-field>
+
+    <button mat-button>Create</button>
+  </form>
+</mat-card-content>
+</mat-card>
