@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 .cabinet{
     min-height: 100vh;
     display: flex;
@@ -42,6 +44,9 @@
 
 
 .drawer-label{
+    font-family: Caveat, sans-serif;
+    font-size: larger;
+    color: darkblue;
     background-color: aliceblue;
     max-width: 150px;
     max-height: 50px;
@@ -50,7 +55,17 @@
     margin-left: auto;
     margin-right: auto;
     padding: 3px;
+    transform:rotate(1deg);
 }
+
+
+.drawer:nth-of-type(2n) .drawer-label { transform:rotate(-4deg); }
+.drawer:nth-of-type(3n) .drawer-label { transform:rotate(2deg); }
+.drawer:nth-of-type(4n) .drawer-label { transform:rotate(-2deg); }
+.drawer:nth-of-type(5n) .drawer-label { transform:rotate(-3deg); }
+.drawer:nth-of-type(6n) .drawer-label { transform:rotate(3deg); }
+
+
 
 .drawer-overlay{
     width:100%;
