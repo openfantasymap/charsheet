@@ -9,8 +9,10 @@ import { PartyJoinComponent } from './party-join/party-join.component';
 import { CharCreationComponent } from './char-creation/char-creation.component';
 import { AddDialogComponent } from './add-dialog/add-dialog.component';
 import { CharImporterComponent } from './char-importer/char-importer.component';
+import { CreatePartyComponent } from './create-party/create-party.component';
 
 export const routes: Routes = [
+    {path: 'parties/create', component: CreatePartyComponent},
     {path: 'parties/:party/master', component: PartyMasterComponent},
     {path: 'parties/:party', component: PartyDetailComponent},
     {path: 'parties/:party/join', component: PartyJoinComponent},
