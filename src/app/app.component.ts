@@ -15,6 +15,7 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { BoxedIndicatorComponent } from './boxed-indicator/boxed-indicator.component';
 import { StepComponent } from './char-creation/step/step.component';
 import { GravatarModule } from 'ngx-gravatar';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -27,13 +28,19 @@ export class AppComponent {
   title = 'charsheet';
   control = new FormControl('<app-alert>This is neat</app-alert>');
   dstatus = false;
+  user:any = {};
 
-  constructor(private injector: Injector, private dt: DiceTowerService) {
+  constructor(
+    private injector: Injector, 
+    private dt: DiceTowerService,
+    private u: UserService
+  ) {
     dt.rolling.subscribe(status=>{
       this.dstatus = status;
     })
   }
   ngOnInit() {
+    this.u.getUser().subscribe(data=>this.user=data);
 
     const csfield = createCustomElement(FieldComponent, { injector: this.injector });
     customElements.define('charsheet-field', csfield);

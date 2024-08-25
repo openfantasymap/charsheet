@@ -2,12 +2,13 @@
 <mat-toolbar>
     <img class="logo" src="/assets/aotm/icon.webp" routerLink="/">
     <span class="spacer26"></span>
-    <button mat-button routerLink="/sheets">Sheets</button>
+    <button mat-button routerLink="/sheets">Archive</button>
     <button class="lcompact" mat-button routerLink="/create">+</button>
-    <button mat-button routerLink="/parties">Parties</button>
+    <button mat-button routerLink="/parties">Missions</button>
     <button class="lcompact" mat-button routerLink="/parties/create">+</button>
+    <button mat-button [disabled]="true" routerLink="/vault">Vault</button>
     <span class="spacer"></span>
-    <img ngxGravatar [email]="'sirmmo@gmail.com'" />
+    <img ngxGravatar [email]="user.username" />
   </mat-toolbar>
 
 <router-outlet>
