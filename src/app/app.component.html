@@ -1,5 +1,14 @@
 <div *ngIf="dstatus" id="dice-box"></div>
-
+<mat-toolbar>
+    <img class="logo" src="/assets/aotm/icon.webp" routerLink="/">
+    <span class="spacer26"></span>
+    <button mat-button routerLink="/sheets">Sheets</button>
+    <button class="lcompact" mat-button routerLink="/sheets/create">+</button>
+    <button mat-button routerLink="/parties">Parties</button>
+    <button class="lcompact" mat-button routerLink="/parties/create">+</button>
+    <span class="spacer"></span>
+    <img ngxGravatar [email]="'sirmmo@gmail.com'" />
+  </mat-toolbar>
 
 <router-outlet>
 

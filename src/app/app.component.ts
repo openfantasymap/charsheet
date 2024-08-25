@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Injector } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { createCustomElement } from '@angular/elements';
 import { FieldComponent } from './field/field.component';
 import { FormControl, FormsModule } from '@angular/forms';
@@ -14,11 +14,12 @@ import { ImagefieldComponent } from './imagefield/imagefield.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { BoxedIndicatorComponent } from './boxed-indicator/boxed-indicator.component';
 import { StepComponent } from './char-creation/step/step.component';
+import { GravatarModule } from 'ngx-gravatar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FieldComponent, FormsModule, CommonModule, MatToolbarModule, MatButtonModule],
+  imports: [RouterOutlet, FieldComponent, FormsModule, CommonModule, MatToolbarModule, MatButtonModule, GravatarModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

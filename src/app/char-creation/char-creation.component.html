@@ -1,13 +1,3 @@
-<mat-toolbar *ngIf="ccData">
-    <button mat-icon-button routerLink="/sheets"><mat-icon>arrow_left</mat-icon></button>
-    <h1>AOTM</h1>
-    <span class="spacer26"></span>
-    <span>{{game}}</span>
-    <span>&nbsp;-&nbsp;</span>
-    <span>{{type}}</span>
-    <span class="spacer"></span>
-    <button mat-icon-button><mat-icon>menu</mat-icon></button>
-</mat-toolbar>
 <mat-toolbar>
     <a mat-button [disabled]="currentStep===b.id" (click)="goTo(b.id)" *ngFor="let b of steps">{{b.title}}</a>
     <span class="spacer"></span>

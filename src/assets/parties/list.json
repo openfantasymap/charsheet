@@ -16,5 +16,11 @@
         "name": "For a few Parsecs more",
         "game": "sta1e",
         "type": "private"
+    },
+    {
+        "id": "ef9ede82-90d9-4b6a-a3d8-89dc99cbb24c",
+        "name": "one last run",
+        "game": "cbrpnk",
+        "type": "private"
     }
 ]
