@@ -26,5 +26,12 @@
     </div>
   </div>
 
-  <div class="flex-vertical text-clear">{{user.achievements|json}}</div>
+  <div class="flex-vertical text-clear">
+    <div class="achievement flex-horizontal" *ngFor="let a of user.achievements">
+        <img [src]="a.icon" height="48" width="48">
+        <div class="flex-vertical">
+            <span class="title">{{a.name}}</span>
+            <span class="acquired">{{a.acquired}}</span>
+        </div>
+    </div>
 </div>

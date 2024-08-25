@@ -13,6 +13,13 @@
 .flex-vertical{
     display: flex;
     flex-direction: column;
+}
+.flex-horizontal{
+    display: flex;
+    flex-direction: row;
+}
+
+.centered{
     justify-content: center;
     align-content: center;
 }
