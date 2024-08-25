@@ -190,6 +190,10 @@ td {
 }
 
 
+.grow-two{
+  flex: 2 0 100px;
+}
+
 .coins .indicator{
   display: inline-block;
   width: 10px;
@@ -275,7 +279,7 @@ td {
 }
 
 .subattributes .title{
-  background-color: white;
+  background-color: transparent;
   color:black;
   display: inline-block;
 }
@@ -284,7 +288,10 @@ td {
   background-color: black;
   color: white;
   border: 1px solid #555;
-  content: "0";
+}
+
+.subattributes .clear::before{
+  content: 'x';
 }
 
 .subattributes .clear{

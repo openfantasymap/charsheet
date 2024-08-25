@@ -1,21 +1,23 @@
 <mat-toolbar>
     
     <button mat-icon-button routerLink="/"><mat-icon>arrow_left</mat-icon></button>
-    <h1>CharVault</h1>
+    <h1>AOTM</h1>
     <span class="spacer26"></span>
     <button mat-button routerLink="/sheets">Sheets</button>
     <button mat-button routerLink="/parties">Parties</button>
     <span class="spacer"></span>
     <button mat-icon-button><mat-icon>menu</mat-icon></button>
 </mat-toolbar>
-<mat-list>
-    <mat-list-item *ngFor="let char of chars" [routerLink]="['/parties', char.id]">
-        <div class="row">
-            <img class="left" src="/assets/templates/{{char.game}}/icon.webp" (error)="altImg($event, '/assets/templates/'+char.game+'/icon.png')" height="62">
-            <div class="column">
-                <span matListItemTitle>{{char.name}}</span>
-                <span matListItemLine>{{char.game_label}}</span>
+<div class="cabinet grid">
+    <div class="drawer {{char.game}}" *ngFor="let char of chars" [routerLink]="['/parties', char.id]">
+        <div class="drawer-structure {{char.game}}">
+            <img class="icon" src="/assets/templates/{{char.game}}/icon.webp" (error)="altImg($event, '/assets/templates/'+char.game+'/icon.png')" height="62">
+            <div class="drawer-label">
+                <div class="column">
+                    <span matListItemTitle>{{char.name}}</span>
+                </div>
             </div>
         </div>
-    </mat-list-item>
-</mat-list>
+        <div class="drawer-overlay {{char.game}}"></div>
+    </div>
+</div>
