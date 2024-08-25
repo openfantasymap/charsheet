@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { GravatarModule } from 'ngx-gravatar';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -15,5 +16,17 @@ import { GravatarModule } from 'ngx-gravatar';
   styleUrl: './default.component.scss'
 })
 export class DefaultComponent {
+
+  user: any = {};
+
+  constructor(
+    private usr: UserService
+  ){}
+
+  ngOnInit(){
+    this.usr.getUser().subscribe(data=>{
+      this.user = data;
+    })
+  }
 
 }
