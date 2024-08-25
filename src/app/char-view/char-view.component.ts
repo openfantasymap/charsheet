@@ -1,6 +1,12 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, Inject, OnDestroy, Renderer2 } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Inject,
+  OnDestroy,
+  Renderer2,
+} from '@angular/core';
 import { DomSanitizer, SafeHtml, SafeStyle } from '@angular/platform-browser';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,24 +22,41 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-char-view',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, RouterModule, MatSnackBarModule],
+  imports: [
+    HttpClientModule,
+    CommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    RouterModule,
+    MatSnackBarModule,
+  ],
   templateUrl: './char-view.component.html',
-  styleUrl: './char-view.component.scss'
+  styleUrl: './char-view.component.scss',
 })
 export class CharViewComponent implements OnDestroy {
+  // Declare height and width variables
+  scrHeight: any;
+  scrWidth: any;
 
-  charId?: string|null;
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?: any) {
+    this.scrHeight = window.innerHeight;
+    this.scrWidth = window.innerWidth;
+    console.log(this.scrHeight, this.scrWidth);
+  }
+  charId?: string | null;
 
   content?: SafeHtml;
-  
-  style: string = "";
-  html: string = "";
-  js: string = "";
+
+  style: string = '';
+  html: string = '';
+  js: string = '';
 
   styleElement?: HTMLStyleElement;
   scriptElement?: HTMLScriptElement;
 
-  partyId?: string|null;
+  partyId?: string | null;
   partySubMaster?: Subscription;
   partySubGlobal?: Subscription;
   partySubRooms: Map<string, Subscription> = new Map<string, Subscription>();
@@ -58,72 +81,100 @@ export class CharViewComponent implements OnDestroy {
     private conn: ConnectionService,
 
     @Inject(DOCUMENT) private document: HTMLDocument
-
-
   ) {
-
-    this.dt.rolling.subscribe(roll => {
+    this.getScreenSize();
+    this.dt.rolling.subscribe((roll) => {
       this.rolling = true;
     });
-    this.dt.rolled.subscribe(roll=>{
-      if(this.partyId && this.charId)
-        this.messages.unshift(this.conn.sendRoll(this.charId, this.partyId, roll.field, roll.result));
-    })
+    this.dt.rolled.subscribe((roll) => {
+      if (this.partyId && this.charId)
+        this.messages.unshift(
+          this.conn.sendRoll(this.charId, this.partyId, roll.field, roll.result)
+        );
+    });
     this.charId = ar.snapshot.paramMap.get('character');
     this.partyId = ar.snapshot.paramMap.get('party');
-    
+
     //this.dt.initialize();
   }
 
-  ngOnInit(){
-    if(this.charId){
-      this.char.getCharacter(this.charId).subscribe(data=>{
-        this.charData = data; 
+  ngOnInit() {
+    if (this.charId) {
+      this.char.getCharacter(this.charId).subscribe((data) => {
+        this.charData = data;
         this.gr.loadFor(this.charData.game);
-        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/sheet.css', {responseType:'text'}).subscribe(data => {
-          //this.style += "<style>"+d.bypassSecurityTrustStyle(data).toString().replaceAll('SafeValue must use [property]=binding: ', '').replaceAll('(see https://g.co/ng/security#xss)','')+"</style>";
-          this.style = data;
-          this.styleElement = this.renderer.createElement("style") as HTMLStyleElement;
-          this.styleElement.type="text/css";
-          this.styleElement.appendChild(this.renderer.createText(this.style));
-          this.renderer.appendChild(this.document.head, this.styleElement);
-        });
-        this.h.get('/assets/templates/'+this.charData.game+'/'+this.charData.type+'/sheet.html', {responseType:'text'}).subscribe(data=>{
-          this.html = data.split('<script>')[0];
-          this.content = this.d.bypassSecurityTrustHtml(this.html);
-          if(data.split('<script>').length > 1){
-            this.js = "setTimeout(()=>{"+data.split('<script>')[1].split('</script>')[0]+"}, 250);"
-            this.scriptElement = this.renderer.createElement("script");
-            this.renderer.setProperty(
-              this.scriptElement,
-              "text",
-              this.js
-            );
-            this.renderer.appendChild(this.document.head, this.scriptElement);
-          }
-        });
-      })
+        this.h
+          .get(
+            '/assets/templates/' +
+              this.charData.game +
+              '/' +
+              this.charData.type +
+              '/sheet.css',
+            { responseType: 'text' }
+          )
+          .subscribe((data) => {
+            //this.style += "<style>"+d.bypassSecurityTrustStyle(data).toString().replaceAll('SafeValue must use [property]=binding: ', '').replaceAll('(see https://g.co/ng/security#xss)','')+"</style>";
+            this.style = data;
+            this.styleElement = this.renderer.createElement(
+              'style'
+            ) as HTMLStyleElement;
+            this.styleElement.type = 'text/css';
+            this.styleElement.appendChild(this.renderer.createText(this.style));
+            this.renderer.appendChild(this.document.head, this.styleElement);
+          });
+          let mobile = this.scrWidth < 800;
+          let turl  =
+          '/assets/templates/' +
+            this.charData.game +
+            '/' +
+            this.charData.type +
+            '/sheet'+//(mobile?'-mobile':'')+
+            '.html';
+            console.log(turl);
+        this.h
+          .get(turl,
+            { responseType: 'text' }
+          )
+          .subscribe((data) => {
+            this.html = data.split('<script>')[0];
+            this.content = this.d.bypassSecurityTrustHtml(this.html);
+            if (data.split('<script>').length > 1) {
+              this.js =
+                'setTimeout(()=>{' +
+                data.split('<script>')[1].split('</script>')[0] +
+                '}, 250);';
+              this.scriptElement = this.renderer.createElement('script');
+              this.renderer.setProperty(this.scriptElement, 'text', this.js);
+              this.renderer.appendChild(this.document.head, this.scriptElement);
+            }
+          });
+      });
     }
-    if(this.partyId && this.charId) { //it's play time!
-      this.pinger = setInterval(()=>{
-        if(this.partyId && this.charId)
+    if (this.partyId && this.charId) {
+      //it's play time!
+      this.pinger = setInterval(() => {
+        if (this.partyId && this.charId)
           this.conn.ping(this.charId, this.partyId);
       }, 2500);
-      this.partySubMaster = this.conn.getMasterConnection(this.charId, this.partyId).subscribe(message=>{
-        const msg = JSON.parse(message.payload.toString());
-        console.log(msg);
-        this.conn.emit(msg.field, msg);
-      });
-      this.partySubGlobal = this.conn.getChatConnection(this.charId, this.partyId).subscribe(message=>{
-        const msg = JSON.parse(message.payload.toString());
-        this.messages.unshift(msg);
-      });
+      this.partySubMaster = this.conn
+        .getMasterConnection(this.charId, this.partyId)
+        .subscribe((message) => {
+          const msg = JSON.parse(message.payload.toString());
+          console.log(msg);
+          this.conn.emit(msg.field, msg);
+        });
+      this.partySubGlobal = this.conn
+        .getChatConnection(this.charId, this.partyId)
+        .subscribe((message) => {
+          const msg = JSON.parse(message.payload.toString());
+          this.messages.unshift(msg);
+        });
     }
   }
   ngOnDestroy(): void {
     this.scriptElement?.remove();
     this.styleElement?.remove();
-    if(this.charId && this.partyId){
+    if (this.charId && this.partyId) {
       this.conn.disconnect(this.charId, this.partyId);
       this.partySubMaster?.unsubscribe();
       this.partySubGlobal?.unsubscribe();
@@ -131,9 +182,8 @@ export class CharViewComponent implements OnDestroy {
     }
   }
 
-  close(){
-    this.rolling=false;
-    this.sb.dismiss();    
+  close() {
+    this.rolling = false;
+    this.sb.dismiss();
   }
 }
-

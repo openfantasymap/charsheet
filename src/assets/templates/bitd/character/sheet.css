@@ -18,35 +18,18 @@ textarea {
   }
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-
-  .grow-one {
-    flex-grow: 1;
-  }
-
-  .grow-two {
-    flex-grow: 2;
-  }
-
-  &.experience {
-    margin-bottom: 0px;
-    justify-content: center;
-  }
-}
-
 .flex-horizontal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .flex-vertical {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+
 }
 
 .tab[data-tab] {
@@ -337,9 +320,11 @@ td {
 }
 
 #stress{
+  flex: 1 0 261px;
   width: 350px;
 }
 
 #trauma{
+  flex: 1 0 200px;
   width: 100%;
 }

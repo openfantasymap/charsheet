@@ -1,0 +1,35 @@
+img{
+    width: 100vw;
+    max-width: 600px;
+}
+
+.flex-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.black{
+    background-color: black;
+}
+
+.text-clear{
+    color: white;
+}
+
+#agent-data{
+    padding: 20px;
+}
+
+#agent-data .title{
+    display:block;
+    color: darkgray;
+    
+}
+#agent-data .value{
+    display:block;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
