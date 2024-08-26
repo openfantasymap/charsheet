@@ -59,6 +59,28 @@
 }
 
 #achievements{
-    flex: 1 0 100px;
+    flex: 1 0 250px;
     padding: 20px;
+}
+
+.achievement{
+
+    padding: 5px;
+}
+
+
+#friends{
+    flex: 1 0 250px;
+    padding: 20px;
+}
+
+.friend{
+    padding: 5px;
+    .title{
+        font-weight: bold;
+    }
+
+    .rank{
+        color:#999
+    }
 }

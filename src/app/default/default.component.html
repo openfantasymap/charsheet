@@ -30,9 +30,23 @@
     <h1>Honors</h1>
     <div class="achievement flex-horizontal" *ngFor="let a of user.achievements">
         <img [src]="a.icon" height="48" width="48">
-        <div class="flex-vertical">
+        <div class="flex-vertical spcleft">
             <span class="title">{{a.name}}</span>
             <span class="acquired">{{a.acquired}}</span>
         </div>
     </div>
 </div>
+
+
+<div class="flex-vertical text-clear" id="friends">
+    <h1>Known Agents</h1>
+    <div class="friend flex-horizontal" *ngFor="let a of user.friends">
+        <img ngxGravatar [email]="a.username" width="48" height="48">
+        <div class="flex-vertical spcleft">
+            <span class="title">{{a.name}}</span>
+            <span class="rank">{{a.rank}}</span>
+        </div>
+    </div>
+</div>
+
+

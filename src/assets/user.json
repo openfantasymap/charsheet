@@ -7,6 +7,19 @@
     "achievements": [{
         "name": "Founder",
         "acquired": "2024-08-24",
-        "icon": ""
+        "icon": "/assets/general/award-medal.svg"
+    }],
+    "friends":[{
+        "name": "hyperloris",
+        "username": "lorenzo.dramis@gmail.com",
+        "rank": "Junior Agent"
+    },{
+        "name": "ErikTheRed",
+        "username":"ilrich@gmail.com",
+        "rank": "Junior Agent"
+    },{
+        "name": "Montich",
+        "username":"leonardo.montecchiari@gmail.com",
+        "rank": "Junior Agent"
     }]
 }
