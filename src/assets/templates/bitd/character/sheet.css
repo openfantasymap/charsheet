@@ -355,9 +355,9 @@ td {
 }
 
 .character-harm input{
-  width:100px;
+  width:100%;
   &.wide{
-    width: 218px
+    width: 100%
   }
 }
 
@@ -369,7 +369,17 @@ table{
   width: 100%;
 }
 
+.character-healing{
+  min-width: 100px;
 }
+
+}
+
+/*
+MOBILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+?==============================================
+DESKTOP vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+*/
 
 @media only screen and (min-width:500px){
   
@@ -713,6 +723,8 @@ td {
   flex-flow: row;
 }
 
+table{width:100%}
+
 #stress{
   flex: 1 0 261px;
   width: 350px;
@@ -726,4 +738,17 @@ td {
 .name-alias, .experience{
   flex-grow: 1;
 }
+
+.grow{
+  flex-grow: 1;
+}
+
+
+.character-harm input{
+  width:100%;
+  &.wide{
+    width: 100%
+  }
+}
+
 }
