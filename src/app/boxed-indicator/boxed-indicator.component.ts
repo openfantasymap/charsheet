@@ -48,7 +48,10 @@ export class BoxedIndicatorComponent {
   ngOnInit() {
     if (this.context.length > 0)
       this.field = this.context.replace('$', '1')+"."+this.field;
-    this.value = parseInt(this.char.getField(this.field));
+    if (this.field)
+      this.value = parseInt(this.char.getField(this.field));
+    else
+      this.value = 0;
     if(this.max.length>0){
       if (this.context.length > 0)
         this.max = this.context.replace('$', '1')+"."+this.max;
