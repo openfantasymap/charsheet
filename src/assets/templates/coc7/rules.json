@@ -1,6 +1,6 @@
 {
     "version": "1.0",
-    "name": "Star Trek Adventures 1ed.",
+    "name": "Call of Cthulhu 7ed",
     "base": "Modiphius 2d20",
     "rules": {
         "roll": {
@@ -13,23 +13,17 @@
             }
         },
         "dice": {
-            "roll":"2d20",
+            "roll":"1d10+1d%",
             "modifiers": [{
-                "name": "support",
+                "name": "advantage",
                 "player": "others",
-                "roll": "1d20",
+                "roll": "1d%",
                 "min": 0,
                 "max": 1
             },{
-                "name": "momentum",
+                "name": "disadvantage",
                 "player": "self",
-                "roll": "1d20",
-                "min": 0,
-                "max": 2
-            },{
-                "name": "determination",
-                "player": "self",
-                "roll": "1d20",
+                "roll": "1d%",
                 "min": 0,
                 "max": 1
             }]

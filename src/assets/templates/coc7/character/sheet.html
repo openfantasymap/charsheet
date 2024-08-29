@@ -6,183 +6,198 @@
             </div>
             <div class="flexrow">
 
-            <div class="infos">
-                <div class="row flexrow">
-                    <label>Name :</label>
-                    <charsheet-field field="name"></charsheet-field>
+                <div class="infos">
+                    <div class="row flexrow">
+                        <label>Name :</label>
+                        <charsheet-field field="name"></charsheet-field>
+                    </div>
+                    <div class="row flexrow">
+                        <label>Occupation :</label>
+                        <charsheet-field field="system.infos.occupation"></charsheet-field>
+                    </div>
+                    <div class="row flexrow">
+                        <label>Age :</label>
+                        <charsheet-field field="system.infos.age"></charsheet-field>
+                        <label>Sex :</label>
+                        <charsheet-field field="system.infos.sex"></charsheet-field>
+                    </div>
+                    <div class="row flexrow">
+                        <label>Residence :</label>
+                        <charsheet-field field="system.infos.residence"></charsheet-field>
+                    </div>
+                    <div class="row flexrow">
+                        <label>Birthplace :</label>
+                        <charsheet-field field="system.infos.birthplace"></charsheet-field>
+                    </div>
                 </div>
-                <div class="row flexrow">
-                    <label>Occupation :</label>
-                    <charsheet-field field="system.infos.occupation"></charsheet-field>
-                </div>
-                <div class="row flexrow">
-                    <label>Age :</label>
-                    <charsheet-field field="system.infos.age"></charsheet-field>
-                    <label>Sex :</label>
-                    <charsheet-field field="system.infos.sex"></charsheet-field>
-                </div>
-                <div class="row flexrow">
-                    <label>Residence :</label>
-                    <charsheet-field field="system.infos.residence"></charsheet-field>
-                </div>
-                <div class="row flexrow">
-                    <label>Birthplace :</label>
-                    <charsheet-field field="system.infos.birthplace"></charsheet-field>
-                </div>
-            </div>
 
-            <div class="characteristics">
-                <div class="header"></div>
-                <div class="char-boxes">
-                    <div class="char-box" data-characteristic="str" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            STR
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.str.value"></charsheet-field>
+                <div class="characteristics">
+                    <div class="header"></div>
+                    <div class="char-boxes">
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.str.value" dice="1d100">
+                            <div class="char-box">
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    STR
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.str.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">25</div>
+                                    <div class="fith-score">10</div>
+                                </div>
                             </div>
-                            <div class="half-score">25</div>
-                            <div class="fith-score">10</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="con" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            CON
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.con.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.con.value" dice="1d100">
+                            <div class="char-box" data-characteristic="con" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    CON
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.con.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">25</div>
+                                    <div class="fith-score">10</div>
+                                </div>
                             </div>
-                            <div class="half-score">25</div>
-                            <div class="fith-score">10</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="siz" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            SIZ
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.siz.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.siz.value" dice="1d100">
+                            <div class="char-box" data-characteristic="siz" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    SIZ
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.siz.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">32</div>
+                                    <div class="fith-score">13</div>
+                                </div>
                             </div>
-                            <div class="half-score">32</div>
-                            <div class="fith-score">13</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="dex" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            DEX
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.dex.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.dex.value" dice="1d100">
+                            <div class="char-box" data-characteristic="dex" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    DEX
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.dex.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">25</div>
+                                    <div class="fith-score">10</div>
+                                </div>
                             </div>
-                            <div class="half-score">25</div>
-                            <div class="fith-score">10</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="app" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            APP
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.app.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.app.value" dice="1d100">
+                            <div class="char-box" data-characteristic="app" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    APP
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.app.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">25</div>
+                                    <div class="fith-score">10</div>
+                                </div>
                             </div>
-                            <div class="half-score">25</div>
-                            <div class="fith-score">10</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="int" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            INT
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.int.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.int.value" dice="1d100">
+                            <div class="char-box" data-characteristic="int" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    INT
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.int.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">32</div>
+                                    <div class="fith-score">13</div>
+                                </div>
                             </div>
-                            <div class="half-score">32</div>
-                            <div class="fith-score">13</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="pow" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            POW
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.pow.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.pow.value" dice="1d100">
+                            <div class="char-box" data-characteristic="pow" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    POW
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.pow.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">25</div>
+                                    <div class="fith-score">10</div>
+                                </div>
                             </div>
-                            <div class="half-score">25</div>
-                            <div class="fith-score">10</div>
-                        </div>
-                    </div>
-                    <div class="char-box" data-characteristic="edu" draggable="true">
-                        <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
-                        <div class="charac-name characteristic-label rollable" draggable="true"
-                            data-context-menu="skill-roll" data-target-type="characteristic">
-                            EDU
-                        </div>
-                        <div class="charac-score">
-                            <div class="main-score">
-                                <charsheet-field class="characteristic-score"
-                                    field="system.characteristics.edu.value"></charsheet-field>
+                        </charsheet-rollable>
+                        <charsheet-rollable rollvalue="false" field="system.characteristics.edu.value" dice="1d100">
+                            <div class="char-box" data-characteristic="edu" draggable="true">
+                                <div class="roll-icon"><i class="game-icon game-icon-d10"></i></div>
+                                <div class="charac-name characteristic-label rollable" draggable="true"
+                                    data-context-menu="skill-roll" data-target-type="characteristic">
+                                    EDU
+                                </div>
+                                <div class="charac-score">
+                                    <div class="main-score">
+                                        <charsheet-field class="characteristic-score"
+                                            field="system.characteristics.edu.value"></charsheet-field>
+                                    </div>
+                                    <div class="half-score">32</div>
+                                    <div class="fith-score">13</div>
+                                </div>
                             </div>
-                            <div class="half-score">32</div>
-                            <div class="fith-score">13</div>
-                        </div>
+                        </charsheet-rollable>
                     </div>
-                </div>
-                <div class="footer">
-                    <div class="attribute flex">
-                        <div class="attribute-label">
-                            <h2>Mov:</h2>
+                    <div class="footer">
+                        <div class="attribute flex">
+                            <div class="attribute-label">
+                                <h2>Mov:</h2>
+                            </div>
+                            <div class="attribute-value">7</div>
                         </div>
-                        <div class="attribute-value">7</div>
-                    </div>
-                    <div class="attribute flex">
-                        <div class="attribute-label">
-                            <h2>Build:</h2>
+                        <div class="attribute flex">
+                            <div class="attribute-label">
+                                <h2>Build:</h2>
+                            </div>
+                            <div class="attribute-value">0</div>
                         </div>
-                        <div class="attribute-value">0</div>
-                    </div>
-                    <div class="attribute flex" data-attrib="db" data-roll-formula="0">
-                        <div class="attribute-label rollable">
-                            <h2>DB:</h2>
+                        <div class="attribute flex" data-attrib="db" data-roll-formula="0">
+                            <div class="attribute-label rollable">
+                                <h2>DB:</h2>
+                            </div>
+                            <div class="attribute-value">0</div>
                         </div>
-                        <div class="attribute-value">0</div>
-                    </div>
-                    <div class="attribute flex">
-                        <div class="attribute-label">
-                            <h2>Armor:</h2>
+                        <div class="attribute flex">
+                            <div class="attribute-label">
+                                <h2>Armor:</h2>
+                            </div>
+                            <div class="attribute-value"></div>
                         </div>
-                        <div class="attribute-value"></div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -777,7 +792,7 @@
                     </div>
                 </div>
 
-                <div class="tab coc7 sheet actor temp-retro-compat" data-group="primary" data-tab="possession">
+                <div class="tab coc7 acrive sheet actor temp-retro-compat" data-group="primary" data-tab="possession">
                     <div class="flexrow" style="height: 100%">
                         <div class="flexcol flex3 inventory">
                             <h3 class="warning">Inventory is currently empty.</h3>

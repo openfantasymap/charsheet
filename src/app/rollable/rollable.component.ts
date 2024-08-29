@@ -22,7 +22,7 @@ export class RollableComponent {
   @Input() field: string = "";
   @Input() roll: string = "";
   @Input() tags: string = "";
-  @Input() rollvalue?: boolean|string = true;
+  @Input() rollvalue?: boolean|string = false;
   @Input() dice: string = "d20";
   public value: string = "";
 
@@ -59,7 +59,7 @@ export class RollableComponent {
       this.gr.display(result);
       this.dt.rolled.emit({field: this.field, result: result});
     });
-    if (this.rollvalue)
+    if (this.rollvalue === true || this.rollvalue === 'true')
       this.dt.roll(this.value+this.dice, this.char.getDice());
     else 
       this.dt.roll(this.dice, this.char.getDice());

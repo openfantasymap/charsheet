@@ -247,7 +247,7 @@
     border-image-width: 450 200 50 200;
   }
   .sheetV2.character form.permission-limited {
-    background: var(--other-sheet-bg);
+    /*background: var(--other-sheet-bg);*/
     background-repeat: repeat;
     border-image: none;
     padding: 0 5px;
