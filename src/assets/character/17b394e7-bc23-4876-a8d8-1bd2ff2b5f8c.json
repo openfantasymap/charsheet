@@ -1,0 +1,106 @@
+{
+    "aotm": "17b394e7-bc23-4876-a8d8-1bd2ff2b5f8c",
+    "game": "mothership1e",
+    "type": "character",
+    "id": "20fc7360-4087-47b8-968c-0a6b66033fef",
+    "characterClass": "android",
+    "name": "ALANZO BYRD",
+    "pronouns": "THEY / THEM",
+    "thumbnailPath": "images/characters/Mothership Chars 74.png",
+    "strength": 28,
+    "speed": 24,
+    "intellect": 56,
+    "combat": 35,
+    "sanity": 23,
+    "fear": 77,
+    "body": 16,
+    "stress": 4,
+    "minStress": 2,
+    "maxWounds": 3,
+    "wounds": 0,
+    "maxHealth": 17,
+    "health": 17,
+    "credits": 230,
+    "trinket": "Coffee Cup, Chipped, reads: HAPPINESS IS MANDATORY",
+    "patch": "Atom Symbol",
+    "traumaResponse": "Fear saves made by nearby friendly players are at disadvantage.",
+    "highScore": 0,
+    "bonusStat": "speed",
+    "skillTrainingYearsRemaining": 0,
+    "skillTrainingMonthsRemaining": 0,
+    "skills": [
+        "linguistics",
+        "computers",
+        "mathematics",
+        "hacking"
+    ],
+    "equipment": [
+        {
+            "id": "0d6af125-93aa-4d74-b0aa-d5d06bed684d",
+            "name": "Bioscanner",
+            "description": "Long Range. Allows the user to scan for signs of life. Can tell the location of signs of life, but not what that life is. Blocked by some materials at the Warden’s discretion.",
+            "equipped": true,
+            "quantity": 1,
+            "cost": 3000,
+            "baseType": "bioscanner"
+        }
+    ],
+    "armor": [
+        {
+            "armorType": "standardCrewAttire",
+            "id": "70e90318-7fd0-47a9-bd2d-6f8e1e985444",
+            "name": "Standard Crew Attire",
+            "equipped": true,
+            "armorPoints": 1,
+            "cost": 20,
+            "oxygenSupply": 0,
+            "notes": "",
+            "armorSpeed": "normal",
+            "broken": false
+        }
+    ],
+    "weapons": [
+        {
+            "id": "dadc5928-da54-4035-838e-c31fc57fc384",
+            "name": "",
+            "equipped": true,
+            "cost": 50,
+            "weaponRange": "adjacent",
+            "damageString": "1d5 DMG",
+            "critical": "Bleeding [+]",
+            "special": "",
+            "weaponType": "Scalpel",
+            "damage": [
+                {
+                    "damageType": "xd5",
+                    "amount": 1
+                }
+            ],
+            "baseType": "scalpel"
+        },
+        {
+            "id": "a87967c1-5658-4bb0-87e9-8245a92474e8",
+            "name": "",
+            "equipped": true,
+            "cost": 1000,
+            "weaponRange": "adjacent",
+            "damageString": "3d10 DMG (AA)",
+            "critical": "Bleeding + Gore",
+            "special": "When dealing a Wound, roll on BOTH the Bleeding AND Gore columns.",
+            "weaponType": "Vibechete",
+            "damage": [
+                {
+                    "damageType": "xd10",
+                    "amount": 3
+                }
+            ],
+            "baseType": "vibechete"
+        }
+    ],
+    "items": [],
+    "conditions": [],
+    "creationComplete": true,
+    "woundEffects": [],
+    "contractors": [],
+    "notes": ""
+}

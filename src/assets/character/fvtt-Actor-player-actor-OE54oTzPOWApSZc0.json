@@ -1,0 +1,253 @@
+{
+  "name": "Player Actor",
+  "type": "player",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attribute": {
+      "magic": {
+        "label": "ATTRIBUTE.MAGIC",
+        "value": 0
+      },
+      "physique": {
+        "label": "ATTRIBUTE.PHYSIQUE",
+        "value": 0
+      },
+      "precision": {
+        "label": "ATTRIBUTE.PRECISION",
+        "value": 0
+      },
+      "logic": {
+        "label": "ATTRIBUTE.LOGIC",
+        "value": 0
+      },
+      "empathy": {
+        "label": "ATTRIBUTE.EMPATHY",
+        "value": 0
+      }
+    },
+    "skill": {
+      "agility": {
+        "label": "SKILL.AGILITY",
+        "value": 0,
+        "attribute": "physique"
+      },
+      "closeCombat": {
+        "label": "SKILL.CLOSE_COMBAT",
+        "value": 0,
+        "attribute": "physique"
+      },
+      "force": {
+        "label": "SKILL.FORCE",
+        "value": 0,
+        "attribute": "physique"
+      },
+      "medicine": {
+        "label": "SKILL.MEDICINE",
+        "value": 0,
+        "attribute": "precision"
+      },
+      "rangedCombat": {
+        "label": "SKILL.RANGED_COMBAT",
+        "value": 0,
+        "attribute": "precision"
+      },
+      "stealth": {
+        "label": "SKILL.STEALTH",
+        "value": 0,
+        "attribute": "precision"
+      },
+      "investigation": {
+        "label": "SKILL.INVESTIGATION",
+        "value": 0,
+        "attribute": "logic"
+      },
+      "learning": {
+        "label": "SKILL.LEARNING",
+        "value": 0,
+        "attribute": "logic"
+      },
+      "vigilance": {
+        "label": "SKILL.VIGILANCE",
+        "value": 0,
+        "attribute": "logic"
+      },
+      "inspiration": {
+        "label": "SKILL.INSPIRATION",
+        "value": 0,
+        "attribute": "empathy"
+      },
+      "manipulation": {
+        "label": "SKILL.MANIPULATION",
+        "value": 0,
+        "attribute": "empathy"
+      },
+      "observation": {
+        "label": "SKILL.OBSERVATION",
+        "value": 0,
+        "attribute": "empathy"
+      }
+    },
+    "condition": {
+      "physical": {
+        "isBroken": false,
+        "states": {
+          "exhausted": {
+            "label": "CONDITION.EXHAUSTED",
+            "isChecked": false
+          },
+          "battered": {
+            "label": "CONDITION.BATTERED",
+            "isChecked": false
+          },
+          "wounded": {
+            "label": "CONDITION.WOUNDED",
+            "isChecked": false
+          }
+        }
+      },
+      "mental": {
+        "isBroken": false,
+        "states": {
+          "angry": {
+            "label": "CONDITION.ANGRY",
+            "isChecked": false
+          },
+          "frightened": {
+            "label": "CONDITION.FRIGHTENED",
+            "isChecked": false
+          },
+          "hopeless": {
+            "label": "CONDITION.HOPELESS",
+            "isChecked": false
+          }
+        }
+      }
+    },
+    "bio": {
+      "age": "",
+      "archetype": "",
+      "motivation": "",
+      "trauma": "",
+      "darkSecret": ""
+    },
+    "advantage": "",
+    "memento": "",
+    "experience": 0,
+    "resources": 0,
+    "capital": 0,
+    "note": "",
+    "headquarter": "7PeX70wPu3nqfDkH",
+    "changelog": [],
+    "starting": true
+  },
+  "prototypeToken": {
+    "name": "Player Actor",
+    "displayName": 30,
+    "actorLink": true,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "hexagonalShape": 0,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "vaesen": {
+      "headquarterName": "h"
+    },
+    "exportSource": {
+      "world": "jkjl",
+      "system": "vaesen",
+      "coreVersion": "12.330",
+      "systemVersion": "6.0.0"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.330",
+    "systemId": "vaesen",
+    "systemVersion": "6.0.0",
+    "createdTime": 1724964208257,
+    "modifiedTime": 1724964208436,
+    "lastModifiedBy": "LezSVbYlDGBj5Ilz"
+  }
+}

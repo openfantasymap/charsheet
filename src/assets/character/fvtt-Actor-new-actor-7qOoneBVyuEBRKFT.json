@@ -1,0 +1,392 @@
+{
+  "name": "New Actor",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "header": {
+      "health": {
+        "value": 0,
+        "label": "Health",
+        "mod": 0,
+        "max": 0,
+        "calculatedMax": 0
+      },
+      "stress": {
+        "value": 0,
+        "label": "Stress",
+        "mod": 0,
+        "max": 10
+      },
+      "npc": false
+    },
+    "attributes": {
+      "str": {
+        "value": 0,
+        "label": "Strength",
+        "mod": 0
+      },
+      "wit": {
+        "value": 0,
+        "label": "Wits",
+        "mod": 0
+      },
+      "agl": {
+        "value": 0,
+        "label": "Agility",
+        "mod": 0
+      },
+      "emp": {
+        "value": 0,
+        "label": "Empathy",
+        "mod": 0
+      }
+    },
+    "skills": {
+      "heavyMach": {
+        "value": 5,
+        "label": "Heavy Machinery",
+        "ability": "str",
+        "description": "Heavy Machinery",
+        "mod": 5
+      },
+      "closeCbt": {
+        "value": 0,
+        "label": "Close Combat",
+        "ability": "str",
+        "description": "Close Combat",
+        "mod": 0
+      },
+      "stamina": {
+        "value": 0,
+        "label": "Stamina",
+        "ability": "str",
+        "description": "Stamina",
+        "mod": 0
+      },
+      "rangedCbt": {
+        "value": 0,
+        "label": "Ranged Combat",
+        "ability": "agl",
+        "description": "Ranged Combat",
+        "mod": 0
+      },
+      "mobility": {
+        "value": 0,
+        "label": "Mobility",
+        "ability": "agl",
+        "description": "Mobility",
+        "mod": 0
+      },
+      "piloting": {
+        "value": 0,
+        "label": "Piloting",
+        "ability": "agl",
+        "description": "Piloting",
+        "mod": 0
+      },
+      "command": {
+        "value": 0,
+        "label": "Command",
+        "ability": "emp",
+        "description": "Command",
+        "mod": 0
+      },
+      "manipulation": {
+        "value": 0,
+        "label": "Manipulation",
+        "ability": "emp",
+        "description": "Manipulation",
+        "mod": 0
+      },
+      "medicalAid": {
+        "value": 0,
+        "label": "Medical Aid",
+        "ability": "emp",
+        "description": "Medical Aid",
+        "mod": 0
+      },
+      "observation": {
+        "value": 0,
+        "label": "Observation",
+        "ability": "wit",
+        "description": "Observation",
+        "mod": 0
+      },
+      "survival": {
+        "value": 0,
+        "label": "Survival",
+        "ability": "wit",
+        "description": "Survival",
+        "mod": 0
+      },
+      "comtech": {
+        "value": 0,
+        "label": "Comtech",
+        "ability": "wit",
+        "description": "Comtech",
+        "mod": 0
+      }
+    },
+    "general": {
+      "career": {
+        "value": "8",
+        "label": "career"
+      },
+      "appearance": {
+        "value": "",
+        "label": "appearance"
+      },
+      "sigItem": {
+        "value": "",
+        "label": "sigItem"
+      },
+      "agenda": {
+        "value": "",
+        "label": "agenda"
+      },
+      "relOne": {
+        "value": "",
+        "label": "relOne"
+      },
+      "relTwo": {
+        "value": "",
+        "label": "relTwo"
+      },
+      "xp": {
+        "value": 17,
+        "max": 20,
+        "calculatedMax": 20
+      },
+      "sp": {
+        "value": 2,
+        "max": 3
+      },
+      "radiation": {
+        "value": 0,
+        "max": 10,
+        "calculatedMax": 10,
+        "permanent": 0
+      },
+      "starving": {
+        "value": 0,
+        "max": 1
+      },
+      "dehydrated": {
+        "value": 0,
+        "max": 1,
+        "calculatedMax": 1
+      },
+      "exhausted": {
+        "value": 0,
+        "max": 1,
+        "calculatedMax": 1
+      },
+      "freezing": {
+        "value": 0,
+        "max": 1,
+        "calculatedMax": 1
+      },
+      "hypoxia": {
+        "value": 0,
+        "max": 1
+      },
+      "heatstroke": {
+        "value": 0,
+        "max": 1
+      },
+      "gravitydyspraxia": {
+        "value": 0,
+        "max": 1
+      },
+      "critInj": {
+        "value": 0
+      },
+      "armor": {
+        "value": 0,
+        "max": 10
+      },
+      "panic": {
+        "value": 0,
+        "max": 1,
+        "lastRoll": 2,
+        "calculatedMax": 1
+      },
+      "cash": {
+        "value": "0",
+        "label": "Number"
+      }
+    },
+    "consumables": {
+      "air": {
+        "value": 0,
+        "min": 0,
+        "max": 5
+      },
+      "power": {
+        "value": 0,
+        "min": 0,
+        "max": 5
+      },
+      "food": {
+        "value": 0,
+        "min": 0,
+        "max": 5
+      },
+      "water": {
+        "value": 0,
+        "min": 0,
+        "max": 5
+      }
+    },
+    "notes": "",
+    "adhocitems": ""
+  },
+  "prototypeToken": {
+    "name": "New Actor",
+    "displayName": 20,
+    "actorLink": true,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "header.health"
+    },
+    "bar2": {
+      "attribute": "header.stress"
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "negative": false,
+      "priority": 0
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "items": [],
+  "effects": [
+    {
+      "name": "Starving",
+      "statuses": [
+        "starving"
+      ],
+      "img": "systems/alienrpg/images/starving.webp",
+      "_id": "2lSdQNLbC9UKzBaA",
+      "type": "base",
+      "system": {},
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": 0,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "origin": null,
+      "tint": "#ffffff",
+      "transfer": false,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.330",
+        "systemId": "alienrpg",
+        "systemVersion": "3.2.1",
+        "createdTime": 1724963108912,
+        "modifiedTime": 1724963108912,
+        "lastModifiedBy": "cO733lIZlQWpaJ6D"
+      }
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {
+      "sheetClass": "alienrpg.alienrpgActorSheet"
+    },
+    "exportSource": {
+      "world": "ali",
+      "system": "alienrpg",
+      "coreVersion": "12.330",
+      "systemVersion": "3.2.1"
+    }
+  },
+  "_stats": {
+    "systemId": "alienrpg",
+    "systemVersion": "3.2.1",
+    "coreVersion": "12.330",
+    "createdTime": 1673096023643,
+    "modifiedTime": 1724963118526,
+    "lastModifiedBy": "cO733lIZlQWpaJ6D"
+  }
+}
