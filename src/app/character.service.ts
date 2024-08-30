@@ -19,7 +19,7 @@ export class CharacterService {
   }
   private data: any;
 
-  getField(field: string) {
+  getField(field: string, asList=true) {
     let ret = this.data;
     let steps = [field];
     if (field.indexOf(".") >= 0){
@@ -29,10 +29,15 @@ export class CharacterService {
       if (ret.length === undefined)
         ret = ret[field];
       else{
-        ret = ret.filter((x:any)=>x.type===field);
-        if (ret.length === 1)
-          ret = ret[0];
-      }
+        const tret = ret.filter((x:any)=>x.type===field);
+        if (tret.length === 1)
+          ret = tret[0];
+        else 
+          if (asList)
+            ret = tret;
+          else 
+            ret = Object.fromEntries(tret.map((x:any)=>[x.name, x]));
+      } 
     } 
     return ret;
   }

@@ -17,9 +17,11 @@ export class FieldComponent implements OnInit {
   @Input() field: string = "";
   @Input() context: string = "";
   @Input() modal?: string;
+  @Input() modifier?: number|null;
+  @Input() list?: string;
   public value?: string;
   public modalText?: string;
-
+  public asList: boolean = true;
   constructor(
     private char: CharacterService,
     private ar: ActivatedRoute,
@@ -27,9 +29,15 @@ export class FieldComponent implements OnInit {
   ){}
 
   ngOnInit(){
+    if(this.list){
+      this.asList = this.list === 'true';
+    }
     if (this.context.length > 0)
       this.field = this.context.replace('$', '1')+"."+this.field;
-    this.value = this.char.getField(this.field);
+    this.value = this.char.getField(this.field, this.asList);
+    if (this.modifier && this.value){
+      this.value = Math.trunc((parseFloat(this.value)*this.modifier)).toString();
+    }
   }
 
   showModal(){

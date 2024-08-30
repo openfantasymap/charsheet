@@ -17,7 +17,11 @@ export class TableComponent implements OnInit {
   @Input() descriptionfield: string = "";
   @Input() classfields: string="";
 
+  @Input() template?: string;
+
   public items?: any[];
+
+  public templateMode = false;
 
   constructor(
     private char: CharacterService
@@ -25,6 +29,9 @@ export class TableComponent implements OnInit {
 
   ngOnInit(){
     this.items = this.char.getField(this.field);
+    if (this.template){
+      this.templateMode=true;
+    }
   }
 
   getField(field: string, row: any){

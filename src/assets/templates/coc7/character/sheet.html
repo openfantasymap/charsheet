@@ -45,8 +45,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.str.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">25</div>
-                                    <div class="fith-score">10</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.str.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.str.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -62,8 +64,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.con.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">25</div>
-                                    <div class="fith-score">10</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.con.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.con.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -79,8 +83,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.siz.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">32</div>
-                                    <div class="fith-score">13</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.siz.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.siz.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -96,8 +102,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.dex.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">25</div>
-                                    <div class="fith-score">10</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.dex.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.dex.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -113,8 +121,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.app.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">25</div>
-                                    <div class="fith-score">10</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.app.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.app.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -130,8 +140,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.int.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">32</div>
-                                    <div class="fith-score">13</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.int.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.int.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -147,8 +159,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.pow.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">25</div>
-                                    <div class="fith-score">10</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.pow.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.pow.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -164,8 +178,10 @@
                                         <charsheet-field class="characteristic-score"
                                             field="system.characteristics.edu.value"></charsheet-field>
                                     </div>
-                                    <div class="half-score">32</div>
-                                    <div class="fith-score">13</div>
+                                    <charsheet-field class="half-score" field="system.characteristics.edu.value"
+                                        modifier="0.5"></charsheet-field>
+                                    <charsheet-field class="fith-score" field="system.characteristics.edu.value"
+                                        modifier="0.2"></charsheet-field>
                                 </div>
                             </div>
                         </charsheet-rollable>
@@ -202,6 +218,7 @@
     </section>
 
     <nav class="sheet-nav tabs" data-group="primary">
+        <charsheet-tab-title for="skills"></charsheet-tab-title>
     </nav>
 
     <section class="sheet-body">
@@ -291,12 +308,25 @@
             </div>
 
             <div class="right-panel">
-                <div class="tab active" data-group="primary" data-tab="skills">
+                <div class="tab skills" data-group="primary" data-tab="skills">
+                    <h1>Skills</h1>
                     <ol class="item-list">
-                        <li class="item itemV2">
+                        <template id="skilltemplate">
+                            <li class="item itemV2 template">
+                                <div class="item-image" style=""></div>
+                                <div class="item-name skill-name rollable">Accounting</div>
+                                <charsheet-field class="item-score" field="items.skill.Accounting.system.base" list="false"></charsheet-field>
+                                <div class="item-controls">
+                                    <a class="item-control development-flag"><i class="fas fa-certificate"></i></a>
+                                    <a class="item-control item-popup" title="Detail"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                            </li>
+                        </template>
+                        <charsheet-table field="items.skill" template="#skilltemplate" ></charsheet-table>
+                        <li class="item itemV2 template">
                             <div class="item-image" style=""></div>
                             <div class="item-name skill-name rollable">Accounting</div>
-                            <div class="item-score">5</div>
+                            <charsheet-field class="item-score" field="items.skill.Accounting.system.base" list="false"></charsheet-field>
                             <div class="item-controls">
                                 <a class="item-control development-flag"><i class="fas fa-certificate"></i></a>
                                 <a class="item-control item-popup" title="Detail"><i class="fas fa-info-circle"></i></a>
@@ -679,7 +709,8 @@
                     </ol>
                 </div>
 
-                <div class="tab active combat" data-group="primary" data-tab="combat">
+                <div class="tab combat" data-group="primary" data-tab="combat">
+                    <h1>Combat</h1>
                     <div class="combat-panel">
                         <div class="weapon-list melee">
                             <div class="section-header">
@@ -792,8 +823,9 @@
                     </div>
                 </div>
 
-                <div class="tab coc7 acrive sheet actor temp-retro-compat" data-group="primary" data-tab="possession">
-                    <div class="flexrow" style="height: 100%">
+                <div class="tab possession" data-group="primary" data-tab="possession">
+                    <h1>Possessions</h1>
+                    <div class="flexcol" >
                         <div class="flexcol flex3 inventory">
                             <h3 class="warning">Inventory is currently empty.</h3>
                             <ol class="inventory-list">
@@ -828,9 +860,10 @@
                     </div>
                 </div>
 
-                <div class="tab coc7 sheet actor temp-retro-compat restore-list-styles character-background"
+                <div class="tab character-background"
                     data-group="primary" data-tab="background">
-                    <div class="flexrow">
+                    <h1>Background</h1>
+                    <div class="flexcol">
                         <div class="flexcol bio-section" data-index="0" style="flex: 0 0 50%">
                             <div class="flexrow" style="flex: initial">
                                 <label style="
@@ -902,342 +935,6 @@
                   ">Traits</label>
                             </div>
                             <textarea class="bio-section-value" rows="4"></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab coc7 sheet" data-group="primary" data-tab="effects">
-                    <ol class="items-list effects-list">
-                        <li class="items-header flexrow" data-effect-type="temporary">
-                            <h3 class="item-name effect-name flexrow">Temporary</h3>
-                            <div class="effect-source">Source</div>
-                            <div class="effect-source">Duration</div>
-                            <div class="item-controls effect-controls flexrow">
-                                <a class="effect-control" data-action="create" title="Create">
-                                    <i class="fas fa-plus"></i> Add
-                                </a>
-                            </div>
-                        </li>
-
-                        <ol class="item-list"></ol>
-                        <li class="items-header flexrow" data-effect-type="passive">
-                            <h3 class="item-name effect-name flexrow">Passive</h3>
-                            <div class="effect-source">Source</div>
-                            <div class="effect-source">Duration</div>
-                            <div class="item-controls effect-controls flexrow">
-                                <a class="effect-control" data-action="create" title="Create">
-                                    <i class="fas fa-plus"></i> Add
-                                </a>
-                            </div>
-                        </li>
-
-                        <ol class="item-list"></ol>
-                        <li class="items-header flexrow" data-effect-type="inactive">
-                            <h3 class="item-name effect-name flexrow">Inactive</h3>
-                            <div class="effect-source">Source</div>
-                            <div class="effect-source">Duration</div>
-                            <div class="item-controls effect-controls flexrow">
-                                <a class="effect-control" data-action="create" title="Create">
-                                    <i class="fas fa-plus"></i> Add
-                                </a>
-                            </div>
-                        </li>
-
-                        <ol class="item-list"></ol>
-                        <li class="items-header flexrow" data-effect-type="status">
-                            <h3 class="item-name effect-name flexrow">Status</h3>
-                            <div class="effect-source">Source</div>
-                            <div class="effect-source">Duration</div>
-                            <div class="item-controls effect-controls flexrow">
-                                <a class="effect-control" data-action="create" title="Create">
-                                    <i class="fas fa-plus"></i> Add
-                                </a>
-                            </div>
-                        </li>
-
-                        <ol class="item-list"></ol>
-                    </ol>
-                </div>
-
-                <div class="tab coc7 sheet actor temp-retro-compat restore-list-styles character-background"
-                    data-group="primary" data-tab="keeper">
-                    <div class="editor">
-                        <a class="editor-edit"><i class="fa-solid fa-edit"></i></a>
-                        <div class="editor-content" data-engine="prosemirror" data-collaborate="false"
-                            data-edit="system.description.keeper"></div>
-                    </div>
-                    <div class="flexrow">
-                        <div class="flexcol bio-section" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                    flex: 1;
-                  ">Sanity Loss Encounters</label>
-                                <div class="item-controls" style="height: fit-content; font-size: 10px; flex: 0 0 16px">
-                                    <a class="sanity-loss-type-add" title="Add Sanity Loss Encounter"
-                                        data-type="encounter"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                            <div class="bio-section-value" style="min-height: 80px"></div>
-                        </div>
-                        <div class="flexcol bio-section" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                    flex: 1;
-                  ">Sanity Loss Immunities</label>
-                                <div class="item-controls" style="height: fit-content; font-size: 10px; flex: 0 0 16px">
-                                    <a class="sanity-loss-type-add" title="Add Sanity Loss Immunity"
-                                        data-type="immunity"><i class="fas fa-plus-square"></i></a>
-                                </div>
-                            </div>
-                            <div class="bio-section-value" style="min-height: 80px"></div>
-                        </div>
-                        <div class="flexcol bio-section" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                    flex: 1;
-                  ">Flags</label>
-                            </div>
-                            <div class="bio-section-value" style="min-height: 80px">
-                                <div class="flexrow">
-                                    <div class="bio-section-type">5% Insanity Mythos Awarded</div>
-                                    <div class="item-controls">
-                                        <a class="item-control toggle-keeper-flags" title="5% Insanity Mythos Awarded"
-                                            data-flag="mythosInsanityExperienced">
-                                            <i class="far fa-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="flexrow">
-                                    <div class="bio-section-type">Mythos Hardened</div>
-                                    <div class="item-controls">
-                                        <a class="item-control toggle-keeper-flags" title="Mythos Hardened"
-                                            data-flag="mythosHardened">
-                                            <i class="far fa-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>&nbsp;</p>
-                        <h3 class="form-header">
-                            Cash and Assets
-                            <a class="item-control add-monetary"><i class="fas fa-plus"></i></a>
-                        </h3>
-                        <div class="cash-assets">
-                            <div class="form-group">
-                                <label>Money Format :</label>
-                                <select name="system.monetary.format">
-                                    <option value="decimalLeft" selected="">
-                                        Decimal (?0.00)
-                                    </option>
-                                    <option value="decimalRight">Decimal (0.00 ?)</option>
-                                    <option value="integerLeft">Integer (?0)</option>
-                                    <option value="integerRight">Integer (0 ?)</option>
-                                    <option value="lsd">£sd</option>
-                                    <option value="roman">Roman</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Symbol :</label>
-                                <input type="text" name="system.monetary.symbol" value="$" />
-                            </div>
-                            <div class="flexrow form-group item" data-index="0" draggable="true">
-                                <input name="system.monetary.values.0.name" value="Penniless" type="text"
-                                    placeholder="Name" />
-                                <input name="system.monetary.values.0.min" value="" class="cash-assets-range"
-                                    type="number" placeholder="Min" />
-                                <input name="system.monetary.values.0.max" value="0" class="cash-assets-range"
-                                    type="number" placeholder="Max" />
-                                <select name="system.monetary.values.0.cashType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.0.cashValue" value="0.5" type="number"
-                                    placeholder="Cash" />
-                                <select name="system.monetary.values.0.assetsType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.0.assetsValue" value="0" type="number"
-                                    placeholder="Assets" />
-                                <select name="system.monetary.values.0.spendingType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.0.spendingValue" value="0.5" type="number"
-                                    placeholder="Spending" />
-                                <a class="item-control remove-monetary"><i class="fas fa-minus"></i></a>
-                            </div>
-                            <div class="flexrow form-group item" data-index="1" draggable="true">
-                                <input name="system.monetary.values.1.name" value="Poor" type="text"
-                                    placeholder="Name" />
-                                <input name="system.monetary.values.1.min" value="1" class="cash-assets-range"
-                                    type="number" placeholder="Min" />
-                                <input name="system.monetary.values.1.max" value="9" class="cash-assets-range"
-                                    type="number" placeholder="Max" />
-                                <select name="system.monetary.values.1.cashType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.1.cashValue" value="1" type="number"
-                                    placeholder="Cash" />
-                                <select name="system.monetary.values.1.assetsType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.1.assetsValue" value="10" type="number"
-                                    placeholder="Assets" />
-                                <select name="system.monetary.values.1.spendingType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.1.spendingValue" value="2" type="number"
-                                    placeholder="Spending" />
-                                <a class="item-control remove-monetary"><i class="fas fa-minus"></i></a>
-                            </div>
-                            <div class="flexrow form-group item" data-index="2" draggable="true">
-                                <input name="system.monetary.values.2.name" value="Average" type="text"
-                                    placeholder="Name" />
-                                <input name="system.monetary.values.2.min" value="10" class="cash-assets-range"
-                                    type="number" placeholder="Min" />
-                                <input name="system.monetary.values.2.max" value="49" class="cash-assets-range"
-                                    type="number" placeholder="Max" />
-                                <select name="system.monetary.values.2.cashType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.2.cashValue" value="2" type="number"
-                                    placeholder="Cash" />
-                                <select name="system.monetary.values.2.assetsType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.2.assetsValue" value="50" type="number"
-                                    placeholder="Assets" />
-                                <select name="system.monetary.values.2.spendingType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.2.spendingValue" value="10" type="number"
-                                    placeholder="Spending" />
-                                <a class="item-control remove-monetary"><i class="fas fa-minus"></i></a>
-                            </div>
-                            <div class="flexrow form-group item" data-index="3" draggable="true">
-                                <input name="system.monetary.values.3.name" value="Wealthy" type="text"
-                                    placeholder="Name" />
-                                <input name="system.monetary.values.3.min" value="50" class="cash-assets-range"
-                                    type="number" placeholder="Min" />
-                                <input name="system.monetary.values.3.max" value="89" class="cash-assets-range"
-                                    type="number" placeholder="Max" />
-                                <select name="system.monetary.values.3.cashType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.3.cashValue" value="5" type="number"
-                                    placeholder="Cash" />
-                                <select name="system.monetary.values.3.assetsType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.3.assetsValue" value="500" type="number"
-                                    placeholder="Assets" />
-                                <select name="system.monetary.values.3.spendingType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.3.spendingValue" value="50" type="number"
-                                    placeholder="Spending" />
-                                <a class="item-control remove-monetary"><i class="fas fa-minus"></i></a>
-                            </div>
-                            <div class="flexrow form-group item" data-index="4" draggable="true">
-                                <input name="system.monetary.values.4.name" value="Rich" type="text"
-                                    placeholder="Name" />
-                                <input name="system.monetary.values.4.min" value="90" class="cash-assets-range"
-                                    type="number" placeholder="Min" />
-                                <input name="system.monetary.values.4.max" value="98" class="cash-assets-range"
-                                    type="number" placeholder="Max" />
-                                <select name="system.monetary.values.4.cashType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.4.cashValue" value="20" type="number"
-                                    placeholder="Cash" />
-                                <select name="system.monetary.values.4.assetsType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value">1 x</option>
-                                    <option value="multiplier" selected="">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.4.assetsValue" value="2000" type="number"
-                                    placeholder="Assets" />
-                                <select name="system.monetary.values.4.spendingType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.4.spendingValue" value="250" type="number"
-                                    placeholder="Spending" />
-                                <a class="item-control remove-monetary"><i class="fas fa-minus"></i></a>
-                            </div>
-                            <div class="flexrow form-group item" data-index="5" draggable="true">
-                                <input name="system.monetary.values.5.name" value="Super Rich" type="text"
-                                    placeholder="Name" />
-                                <input name="system.monetary.values.5.min" value="99" class="cash-assets-range"
-                                    type="number" placeholder="Min" />
-                                <input name="system.monetary.values.5.max" value="" class="cash-assets-range"
-                                    type="number" placeholder="Max" />
-                                <select name="system.monetary.values.5.cashType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.5.cashValue" value="50000" type="number"
-                                    placeholder="Cash" />
-                                <select name="system.monetary.values.5.assetsType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.5.assetsValue" value="5000000" type="number"
-                                    placeholder="Assets" />
-                                <select name="system.monetary.values.5.spendingType" class="cash-assets-type">
-                                    <option value="none">None</option>
-                                    <option value="value" selected="">1 x</option>
-                                    <option value="multiplier">CR x</option>
-                                </select>
-                                <input name="system.monetary.values.5.spendingValue" value="5000" type="number"
-                                    placeholder="Spending" />
-                                <a class="item-control remove-monetary"><i class="fas fa-minus"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
