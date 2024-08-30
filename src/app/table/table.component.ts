@@ -1,6 +1,7 @@
-import { Component, Injector, Input, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CharacterService } from '../character.service';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -8,7 +9,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './table.component.html',
-  styleUrl: './table.component.scss'
+  styleUrl: './table.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableComponent implements OnInit {
   @Input() field: string = "";
@@ -18,19 +20,28 @@ export class TableComponent implements OnInit {
   @Input() classfields: string="";
 
   @Input() template?: string;
+  @Input() templatefields?: string;
 
   public items?: any[];
 
   public templateMode = false;
+  private templateString?:string;
+  private templateFields: string[] = [];
 
   constructor(
-    private char: CharacterService
+    private char: CharacterService,
+    private ds: DomSanitizer
   ){}
 
   ngOnInit(){
     this.items = this.char.getField(this.field);
     if (this.template){
       this.templateMode=true;
+      let temp = document.querySelector(this.template);
+      this.templateString = temp?.innerHTML;
+    }
+    if(this.templatefields){
+      this.templateFields = this.templatefields.split('|');
     }
   }
 
@@ -42,10 +53,23 @@ export class TableComponent implements OnInit {
     let ret =[];
     for (let field of fields){
       if(field){
-        ret.push(this.getField(field, row));
+        ret.push(this.char.getFieldUtil(field, row));
       }
     }
     return ret;
+  }
+
+  getTemplated(item: any){
+    if(this.templateString){
+      let t = this.templateString;
+      for(let k of this.templateFields){
+        t = t.replaceAll('{{'+k+'}}', this.char.getFieldUtil(k,item));
+      }
+        let sd = this.ds.bypassSecurityTrustHtml(t);
+        console.log(sd)
+        return sd;
+    }
+    return null;
   }
 
 

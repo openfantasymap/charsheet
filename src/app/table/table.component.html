@@ -8,7 +8,6 @@
 
 <div *ngIf="templateMode">
     <div *ngFor="let row of items" class="item" [ngClass]="getFields(classfields.split(','), row)" >
-        <div *ngIf="namefield !== ''" class="name">{{getField(namefield, row)}}</div>
-        <div *ngIf="descriptionfield !== ''" class="description">{{getField(descriptionfield, row)}}</div>
+        <div [innerHTML]="getTemplated(row)"></div>
     </div>
 </div>
