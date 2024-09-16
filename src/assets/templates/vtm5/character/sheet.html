@@ -114,10 +114,15 @@
                 <div class="tab disciplines" data-group="primary" data-tab="disciplines">
                     <h1>Disciplines</h1>
                     <template id="disctemplate">
-                        <div>
-                            <h2>{{name}} ({{discipline}})<charsheet-boxed interactive="false" value="{{level}}" minvalue="0" maxvalue="5"></charsheet-boxed></h2>
-                            <div>{{summary}}</div>
-                            <div>{{dicePool}}</div>
+                        <div class="flexrow">
+                            <div style="max-width:30px; height: 25px;" title="{{discipline}}">
+                                <img src="/assets/templates/vtm5/assets/Rombo_Disciplines/rombo_{{discipline}}.svg" />
+                            </div>
+                            <div>
+                                <h2>{{name}}<charsheet-boxed interactive="false" value="{{level}}" minvalue="0" maxvalue="5"></charsheet-boxed></h2>
+                                <div>{{summary}}</div>
+                                <div>{{dicePool}}</div>
+                            </div>
                         </div>
                     </template>
                     <charsheet-table template="#disctemplate" field="disciplines" templatefields="name|summary|level|discipline|dicePool"></charsheet-table>

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CharacterService } from '../character.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-imagefield',
@@ -23,6 +24,7 @@ export class ImagefieldComponent {
     if (this.pattern.length > 0 && this.value?.length){
       this.value = this.pattern.replace('{{field}}', this.value);
     }
+    
   }
 
 
