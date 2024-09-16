@@ -1,8 +1,11 @@
 <div class="container">
+    <div class="logo">
+    <img src="/assets/templates/vtm5/icon_wide.png">
+</div>
     <section class="sheet-header">
         <div class="flexrow">
             <div class="sheet-portrait">
-                <img class="photo" src="icons/svg/mystery-man.svg" title="1920 Character" data-edit="img" />
+                <charsheet-image class="photo" field="clan" pattern="/assets/templates/vtm5/assets/clanIcons/{{field}}.webp" title="Character"></charsheet-image>
             </div>
             <div class="flexrow">
 
@@ -36,7 +39,8 @@
                         <charsheet-field field="desire"></charsheet-field>
                     </div>
                 </div>
-
+</div>
+<div class="flexrow">
                 <div class="characteristics">
                     <div class="physical">
                      <h2>Physical</h2>
@@ -67,8 +71,31 @@
         </div>
     </section>
 
+
     <section class="sheet-body">
         <div class="two-panes-content">
+            <div class="left-panel">
+                <div class="statblock health">
+                    <h2>Health</h2>
+                    <charsheet-boxed field="maxHealth" minvalue="0" maxvalue="15"></charsheet-boxed>
+                </div>
+                <div class="statblock willpower">
+                    <h2>Willpower</h2>
+                    <charsheet-boxed field="willpower" minvalue="0" maxvalue="15"></charsheet-boxed>
+                </div>
+                <div class="statblock humanity">
+                    <h2>Humanity</h2>
+                    <charsheet-boxed field="humanity" minvalue="0" maxvalue="10"></charsheet-boxed>
+                </div>
+                <div class="statblock hunger">
+                    <h2>Hunger</h2>
+                    <charsheet-boxed field="hunger" value="0" minvalue="0" maxvalue="5"></charsheet-boxed>
+                </div>
+                <div class="statblock blood_potency">
+                    <h2>Blood Potency</h2>
+                    <charsheet-boxed field="bloodPotency" minvalue="0" maxvalue="10"></charsheet-boxed>
+                </div>
+            </div>
             <div class="right-panel">
                 <div class="tab skills" data-group="primary" data-tab="skills">
                     <h1>Attributes</h1>
@@ -84,93 +111,49 @@
                     </ol>
                 </div>
 
-                <div class="tab possession" data-group="primary" data-tab="possession">
+                <div class="tab disciplines" data-group="primary" data-tab="disciplines">
                     <h1>Disciplines</h1>
                     <template id="disctemplate">
                         <div>
-                            <charsheet-field field="disciplines.{{name}}.{{name}}"></charsheet-field>
-                            <div>{{description}}</div>
+                            <h2>{{name}} ({{discipline}})<charsheet-boxed interactive="false" value="{{level}}" minvalue="0" maxvalue="5"></charsheet-boxed></h2>
+                            <div>{{summary}}</div>
+                            <div>{{dicePool}}</div>
                         </div>
                     </template>
-                    <charsheet-table template="#disctemplate" field="disciplines"></charsheet-table>
+                    <charsheet-table template="#disctemplate" field="disciplines" templatefields="name|summary|level|discipline|dicePool"></charsheet-table>
                 </div>
 
-                <div class="tab character-background"
-                    data-group="primary" data-tab="background">
-                    <h1>Background</h1>
-                    <div class="flexcol">
-                        <div class="flexcol bio-section" data-index="0" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                  ">Personal Description</label>
-                            </div>
-                            <textarea class="bio-section-value" rows="4"></textarea>
+                <div class="tab character-background">
+                    <div>
+                    <h1>Merits</h1>
+                    <template id="merittemplate">
+                        <div class="merit">
+                            <h2>{{name}} ({{level}})</h2>
+                            <div>{{summary}}</div>
                         </div>
-                        <div class="flexcol bio-section" data-index="1" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                  ">Ideology/Beliefs</label>
-                            </div>
-                            <textarea class="bio-section-value" rows="4"></textarea>
+                    </template>
+                    <charsheet-table template="#merittemplate" field="merits" templatefields="name|summary|level|type"></charsheet-table>
+                    </div>
+                    <div>
+                        <h1>Flaws</h1>
+                    <template id="flawtemplate">
+                        <div class="flaw">
+                            <h2>{{name}} ({{level}})</h2>
+                            <div>{{summary}}</div>
                         </div>
-                        <div class="flexcol bio-section" data-index="2" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                  ">Significant People</label>
-                            </div>
-                            <textarea class="bio-section-value" rows="4"></textarea>
+                    </template>
+                    <charsheet-table template="#flawtemplate" field="flaws" templatefields="name|summary|level|type"></charsheet-table>
+                    </div>
+                    <div>
+                        <h1>Touchstones</h1>
+                    <template id="tstemplate">
+                        <div class="ts">
+                            <h2>{{name}}</h2>
+                            <div>{{description}}</div>
+                            <div>{{conviction}}</div>
                         </div>
-                        <div class="flexcol bio-section" data-index="3" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                  ">Meaningful Locations</label>
-                            </div>
-                            <textarea class="bio-section-value" rows="4"></textarea>
-                        </div>
-                        <div class="flexcol bio-section" data-index="4" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                  ">Treasured Possessions</label>
-                            </div>
-                            <textarea class="bio-section-value" rows="4"></textarea>
-                        </div>
-                        <div class="flexcol bio-section" data-index="5" style="flex: 0 0 50%">
-                            <div class="flexrow" style="flex: initial">
-                                <label style="
-                    height: 1rem;
-                    margin: 0;
-                    border: 0;
-                    font-family: customSheetFont, 'Palatino Linotype', serif;
-                    font-size: 0.75rem;
-                  ">Traits</label>
-                            </div>
-                            <textarea class="bio-section-value" rows="4"></textarea>
-                        </div>
+                    </template>
+                    <charsheet-table template="#tstemplate" field="touchstones" templatefields="name|description|conviction"></charsheet-table>
                     </div>
                 </div>
             </div>

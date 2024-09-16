@@ -46,18 +46,22 @@ export class BoxedIndicatorComponent {
   ) {}
 
   ngOnInit() {
-    if (this.context.length > 0)
-      this.field = this.context.replace('$', '1')+"."+this.field;
-    if (this.field)
-      this.value = parseInt(this.char.getField(this.field));
-    else
-      this.value = 0;
+    if (this.value){
+
+    } else {
+      if (this.context.length > 0)
+        this.field = this.context.replace('$', '1')+"."+this.field;
+      if (this.field)
+        this.value = parseInt(this.char.getField(this.field));
+      else
+        this.value = 0;
+    } 
     if(this.max.length>0){
       if (this.context.length > 0)
         this.max = this.context.replace('$', '1')+"."+this.max;
       this.maxvalue = parseInt(this.char.getField(this.max));
     }
-    this.set(this.value);
+    this.doSet(this.value);
 
     this.showtitle = this.showtitle === 'false'?false:true;
     this.interactive = this.interactive === 'false'?false:true;
@@ -84,17 +88,21 @@ export class BoxedIndicatorComponent {
 
   }
 
+  doSet(value:number){
+    this.value = value;
+    if(this.mode === 'fill'){
+      this.items_full = Array(this.value).fill(1).map((e,i)=>e+(i*1));
+      this.items_empty = Array(this.maxvalue-this.value).fill(1).map((e,i)=>e+((i+this.value)*1));
+    } else {
+      this.items_empty = Array(this.maxvalue-this.value).fill(1).map((e,i)=>e+(i*1));
+      let s = this.items_empty[this.items_empty.length];
+      this.items_full = Array(this.value).fill(1).map((e,i)=>e+((i+s)*1));
+    }
+  }
+
   set(value:number){
     if(this.interactive){
-      this.value = value;
-      if(this.mode === 'fill'){
-        this.items_full = Array(this.value).fill(1).map((e,i)=>e+(i*1));
-        this.items_empty = Array(this.maxvalue-this.value).fill(1).map((e,i)=>e+((i+this.value)*1));
-      } else {
-        this.items_empty = Array(this.maxvalue-this.value).fill(1).map((e,i)=>e+(i*1));
-        let s = this.items_empty[this.items_empty.length];
-        this.items_full = Array(this.value).fill(1).map((e,i)=>e+((i+s)*1));
-      }
+      this.doSet(value)
     }
   }
 

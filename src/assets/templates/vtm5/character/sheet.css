@@ -671,8 +671,61 @@
 
   .characteristics h2{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid black;
   }
 
   .characteristics li{
     margin-left: -10px;
   }
+
+  .container .logo{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container .logo img{
+    width: 50%;
+    max-width: 230px;
+    margin-top: 2px;
+  }
+
+  .statblock{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .statblock .indicators{
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 499px) { 
+
+    .tab{
+      width: 100%;
+      border-top: 1px solid black;
+    }
+
+    .characteristics{
+      margin-bottom: 5px;
+    }
+  
+    }
+
+    
+  @media only screen and (min-width: 500px) { 
+
+    .tab{
+      width: 350px;
+      max-width: 30vw;
+      border-right: 1px solid black;
+    }
+  
+    }
+
+    .sheet-portrait img{
+      max-width: 120px;
+    }
