@@ -316,124 +316,9 @@
     flex: 1;
     font-weight: bold;
     display: flex;
-    flex-direction: column;
-  }
-  .container .sheet-header .characteristics .header {
-    flex: 1;
-  }
-  .container .sheet-header .characteristics .footer {
-    flex: 1;
-    display: flex;
     flex-direction: row;
-  }
-  .container .sheet-header .characteristics .footer .attribute {
-    flex: 0 0 25%;
-    display: grid;
-    grid-template-columns: auto 2rem;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .sheet-header .characteristics .footer .attribute.flex {
-    display: flex;
-  }
-  .container .sheet-header .characteristics .footer .attribute-label {
-    min-width: 0;
-  }
-  .container .sheet-header .characteristics .footer .attribute-label h2 {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    line-height: 1.375rem;
-    font-size: 0.75rem;
-    color: var(--main-sheet-front-color);
-    font-weight: normal;
-    text-align: right;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .container .sheet-header .characteristics .footer .attribute-value {
-    text-align: center;
-    font-size: 0.75rem;
-    color: var(--main-sheet-front-color);
-    font-weight: normal;
-  }
-  .container .sheet-header .characteristics .footer .attribute-value input {
-    padding: 0;
-    font-size: 0.75rem;
-    color: var(--main-sheet-front-color);
-    background-color: rgba(0, 0, 0, 0.1);
-    font-weight: normal;
-  }
-  .container .sheet-header .characteristics .char-boxes {
-    flex: 0 0 6rem;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(4, 3.75rem);
-    grid-template-rows: repeat(2, 3rem);
-  }
-  .container .sheet-header .characteristics .char-box {
-    display: grid;
-    grid-template-columns: 1rem 2.75rem;
-    grid-template-rows: 1rem 2rem;
-    grid-template-areas: 'rollIcon characName' 'characScore characScore';
-    align-items: baseline;
-  }
-  .container .sheet-header .characteristics .char-box .roll-icon {
-    color: var(--main-sheet-front-color);
-    grid-area: rollIcon;
-    line-height: 1.4rem;
-  }
-  .container .sheet-header .characteristics .char-box .charac-name {
-    color: var(--main-sheet-front-color);
-    grid-area: characName;
-    line-height: 1.4rem;
-  }
-  .container .sheet-header .characteristics .char-box .charac-score {
-    grid-area: characScore;
-    margin-top: 0.25rem;
-    margin-right: 0.5rem;
-    border-radius: 0.25rem;
-    color: var(--main-sheet-back-color);
-    background: rgba(255, 255, 255, 0.5);
-    display: grid;
-    grid-template-columns: 2.375rem 0.875rem;
-    grid-template-rows: 0.875rem 0.875rem;
-    grid-template-areas: 'mainScore halfScore' 'mainScore fithScore';
-  }
-  .container .sheet-header .characteristics .char-box .charac-score .main-score {
-    grid-area: mainScore;
-    justify-self: center;
-    align-self: center;
-  }
-  .container .sheet-header .characteristics .char-box .charac-score .half-score {
-    grid-area: halfScore;
-    font-size: 0.6rem;
-    justify-self: center;
-    align-self: center;
-  }
-  .container .sheet-header .characteristics .char-box .charac-score .fith-score {
-    grid-area: fithScore;
-    font-size: 0.6rem;
-    justify-self: center;
-    align-self: center;
-  }
-  .container .sheet-header .characteristics .char-box .charac-score input {
-    font-weight: bold;
-  }
-  .container .sheet-header .characteristics input {
-    text-align: center;
-    color: var(--main-sheet-back-color);
-    font-size: 1.3rem;
-  }
-  .container .sheet-header .characteristics input:hover,
-  .container .sheet-header .characteristics input:focus {
-    background: transparent;
-  }
-  .container .sheet-header .characteristics input:read-only {
-    border: 1px solid transparent;
-    box-shadow: none;
-    cursor: default;
+    justify-content: space-evenly;
+    
   }
   .container .sheet-nav {
     border-top: 1px solid var(--main-sheet-front-color);
@@ -766,3 +651,28 @@
     color: var(--main-sheet-front-color);
   }
   
+  .indicators{
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .indicator{
+    width:13px;
+    height:12px;
+    margin: 1px;
+    border: black 1px solid;
+    border-radius: 100%;
+  }
+
+  .indicator.full{
+    background-color: black;
+  }
+
+  .characteristics h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .characteristics li{
+    margin-left: -10px;
+  }

@@ -18,7 +18,7 @@ export class BoxedIndicatorComponent {
   @Input() min = "";
   @Input() max = "";
   @Input() context: string = "";
-  @Input() title= "test";
+  @Input() title= "";
   @Input() field= "";
   @Input() mode="fill";
   value = 0;

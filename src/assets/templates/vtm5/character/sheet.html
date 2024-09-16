@@ -38,7 +38,30 @@
                 </div>
 
                 <div class="characteristics">
-                   
+                    <div class="physical">
+                     <h2>Physical</h2>
+                     <div>
+                         <div>Strenght <charsheet-boxed field="attributes.strength" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                         <div>Dexterity <charsheet-boxed field="attributes.dexterity" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                         <div>Stamina <charsheet-boxed field="attributes.stamina" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                     </div>
+                    </div>
+                    <div class="social">
+                     <h2>Social</h2>
+                     <div>
+                         <div>Charisma <charsheet-boxed field="attributes.charisma" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                         <div>Manipulation <charsheet-boxed field="attributes.manipulation" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                         <div>Composure <charsheet-boxed field="attributes.composure" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                     </div>
+                    </div>
+                    <div class="mental">
+                     <h2>Mental</h2>
+                     <div>
+                         <div>Intelligence <charsheet-boxed field="attributes.intelligence" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                         <div>Wits <charsheet-boxed field="attributes.wits" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                         <div>Resolve <charsheet-boxed field="attributes.resolve" minvalue="0" maxvalue="5" interactive="false"></charsheet-boxed></div>
+                     </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,13 +71,13 @@
         <div class="two-panes-content">
             <div class="right-panel">
                 <div class="tab skills" data-group="primary" data-tab="skills">
-                    <h1>Skills</h1>
+                    <h1>Attributes</h1>
                     <ol class="item-list">
                         <template id="skilltemplate">
                             <li class="item itemV2">
                                 <div class="item-image" style=""></div>
                                 <div class="item-name skill-name rollable">{{key}}</div>
-                                <charsheet-boxed class="item-score" field="skills.{{key}}" max="5" min="0" mode="fill"></charsheet-boxed>
+                                <charsheet-boxed class="item-score" field="skills.{{key}}" maxvalue="5" minvalue="0" interactive="false" mode="fill"></charsheet-boxed>
                             </li>
                         </template>
                         <charsheet-table field="skills" mode="kvp" template="#skilltemplate" templatefields="" ></charsheet-table>
@@ -62,40 +85,14 @@
                 </div>
 
                 <div class="tab possession" data-group="primary" data-tab="possession">
-                    <h1>Possessions</h1>
-                    <div class="flexcol" >
-                        <div class="flexcol flex3 inventory">
-                            <h3 class="warning">Inventory is currently empty.</h3>
-                            <ol class="inventory-list">
-                                <li></li>
-                            </ol>
+                    <h1>Disciplines</h1>
+                    <template id="disctemplate">
+                        <div>
+                            <charsheet-field field="disciplines.{{name}}.{{name}}"></charsheet-field>
+                            <div>{{description}}</div>
                         </div>
-                        <div class="flexcol flex2 cash" style="border: 1px groove">
-                            <div class="flexrow cash-row">
-                                <label>Spending level :</label>
-                                <span>$0,50</span>
-                            </div>
-                            <div class="flexrow cash-row">
-                                <label>Cash :</label>
-                                <span>$0,50</span>
-                            </div>
-                            <div class="flexrow cash-row">
-                                <label>Spent :</label><input type="text" name="system.monetary.spent" value="" />
-                            </div>
-                            <div class="flexrow cash-row">
-                                <label>Assets :</label>
-                                <span style="line-height: 22px">$0,00</span>
-                            </div>
-                            <div style="flex: none">
-                                <textarea name="system.monetary.assetsDetails" placeholder="Assets details"
-                                    rows="4"></textarea>
-                            </div>
-                            <label style="flex: initial">Notes :</label>
-                            <div class="flex1">
-                                <textarea name="system.notes" placeholder="Notes"></textarea>
-                            </div>
-                        </div>
-                    </div>
+                    </template>
+                    <charsheet-table template="#disctemplate" field="disciplines"></charsheet-table>
                 </div>
 
                 <div class="tab character-background"
