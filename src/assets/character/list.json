@@ -9,5 +9,6 @@
     {"id": "ef41f27c-4975-49a6-9cba-8c087507d5b0", "name": "Dead man", "game": "nocturne", "game_label": "A Nocturne"},
     {"id": "95b4b792-2bb8-4efe-a59f-e26527549812", "name": "USS DEADE", "game": "sta1e", "game_label": "Star Trek Adventures 1e"},
     {"id": "d02b0a13-d1a2-4b1e-8b45-42f7d82da9e8", "name": "Ingegner 'Ingegnè'", "game": "greenoaks", "game_label": "Green Oaks"},
-    {"id": "62a0e43d-0df3-445e-b088-4a2a8eb79e26", "name": "1920", "game":"coc7", "game_label": "Call of Cthulhu 7th edition"}
+    {"id": "62a0e43d-0df3-445e-b088-4a2a8eb79e26", "name": "1920", "game":"coc7", "game_label": "Call of Cthulhu 7th edition"},
+    {"id": "3678e9dc-1a24-4be6-9941-c60d9be259dc", "name": "vamptest", "game": "vtm5", "game_label": "Vampire the Masquerade"}
   ]

@@ -1,0 +1,185 @@
+{
+    "aotm": "3678e9dc-1a24-4be6-9941-c60d9be259dc",
+    "game": "vtm5",
+    "type": "character",
+    "name": "sdadasdfsa",
+    "description": "",
+    "sire": "sdfdsf",
+    "clan": "Ventrue",
+    "predatorType": {
+      "name": "Consensualist",
+      "pickedDiscipline": "auspex",
+      "pickedSpecialties": [
+        {
+          "skill": "medicine",
+          "name": "Phlebotomy"
+        }
+      ],
+      "pickedMeritsAndFlaws": []
+    },
+    "touchstones": [
+      {
+        "name": "adf",
+        "description": "",
+        "conviction": "fsdfsdf"
+      }
+    ],
+    "ambition": "dfsdf",
+    "desire": "sdfsdf",
+    "attributes": {
+      "strength": 1,
+      "charisma": 2,
+      "intelligence": 3,
+      "dexterity": 4,
+      "manipulation": 3,
+      "wits": 3,
+      "stamina": 2,
+      "composure": 2,
+      "resolve": 2
+    },
+    "skills": {
+      "athletics": 0,
+      "brawl": 0,
+      "craft": 2,
+      "drive": 2,
+      "firearms": 2,
+      "melee": 0,
+      "larceny": 1,
+      "stealth": 1,
+      "survival": 1,
+      "animal ken": 0,
+      "etiquette": 3,
+      "insight": 0,
+      "intimidation": 1,
+      "leadership": 1,
+      "performance": 2,
+      "persuasion": 2,
+      "streetwise": 1,
+      "subterfuge": 1,
+      "academics": 1,
+      "awareness": 1,
+      "finance": 1,
+      "investigation": 2,
+      "medicine": 0,
+      "occult": 2,
+      "politics": 2,
+      "science": 0,
+      "technology": 0
+    },
+    "skillSpecialties": [
+      {
+        "skill": "academics",
+        "name": "2"
+      },
+      {
+        "skill": "craft",
+        "name": "1"
+      },
+      {
+        "skill": "performance",
+        "name": ""
+      },
+      {
+        "skill": "science",
+        "name": ""
+      },
+      {
+        "skill": "etiquette",
+        "name": "1"
+      }
+    ],
+    "availableDisciplineNames": [
+      "dominate",
+      "fortitude",
+      "presence"
+    ],
+    "disciplines": [
+      {
+        "name": "Cloud Memory",
+        "description": "",
+        "rouseChecks": 0,
+        "amalgamPrerequisites": [],
+        "summary": "make a person forget the past minute",
+        "dicePool": "Charisma + Dominate",
+        "level": 1,
+        "discipline": "dominate"
+      },
+      {
+        "name": "Mesmerize",
+        "description": "",
+        "rouseChecks": 1,
+        "amalgamPrerequisites": [],
+        "summary": "allow issuing more complex commands",
+        "dicePool": "Manipulation + Dominate",
+        "level": 2,
+        "discipline": "dominate"
+      },
+      {
+        "name": "Unswayable Mind",
+        "description": "",
+        "rouseChecks": 0,
+        "amalgamPrerequisites": [],
+        "summary": "add extra defense against mind-swaying",
+        "dicePool": "",
+        "level": 1,
+        "discipline": "fortitude"
+      },
+      {
+        "name": "Heightened Senses",
+        "description": "",
+        "rouseChecks": 0,
+        "amalgamPrerequisites": [],
+        "summary": "your senses become supernaturally sharp; add Auspex rating to perception rolls",
+        "dicePool": "",
+        "level": 1,
+        "discipline": "auspex"
+      }
+    ],
+    "rituals": [],
+    "bloodPotency": 0,
+    "generation": 13,
+    "maxHealth": 0,
+    "willpower": 0,
+    "experience": 0,
+    "humanity": 0,
+    "merits": [
+      {
+        "name": "Mask",
+        "level": 2,
+        "type": "merit",
+        "summary": "fake identity with fake documents, lv2 can pass background checks"
+      },
+      {
+        "name": "Cobbler",
+        "level": 1,
+        "type": "merit",
+        "summary": "You can make or source masks for others"
+      },
+      {
+        "name": "Resources",
+        "level": 3,
+        "type": "merit",
+        "summary": "wealth & income, 1 - you can afford basics, 5 - you can afford anything money can buy"
+      },
+      {
+        "name": "Watchmen",
+        "level": 1,
+        "type": "merit",
+        "summary": "mortal security guards"
+      }
+    ],
+    "flaws": [
+      {
+        "name": "No Haven",
+        "level": 1,
+        "type": "flaw",
+        "summary": "you don't have a home"
+      },
+      {
+        "name": "Suspect",
+        "level": 1,
+        "type": "flaw",
+        "summary": "bad reputation within a faction, -2 on Social tests with them"
+      }
+    ]
+  }

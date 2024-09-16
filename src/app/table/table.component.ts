@@ -22,6 +22,8 @@ export class TableComponent implements OnInit {
   @Input() template?: string;
   @Input() templatefields?: string;
 
+  @Input() mode:string="objects"
+
   public items?: any[];
 
   public templateMode = false;
@@ -34,7 +36,14 @@ export class TableComponent implements OnInit {
   ){}
 
   ngOnInit(){
-    this.items = this.char.getField(this.field);
+    if (this.mode === "kvp"){
+      this.items = [];
+      for(let e of Object.entries(this.char.getField(this.field))){
+        this.items.push({key:e[0], value:e[1]});
+      }
+    } else {
+      this.items = this.char.getField(this.field);
+    }
     if (this.template){
       this.templateMode=true;
       let temp = document.querySelector(this.template);
@@ -42,6 +51,10 @@ export class TableComponent implements OnInit {
     }
     if(this.templatefields){
       this.templateFields = this.templatefields.split('|');
+    }
+    if (this.mode === "kvp"){
+      this.templateFields.push('key')
+      this.templateFields.push('value')
     }
   }
 

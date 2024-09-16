@@ -1,0 +1,32 @@
+{
+    "version": "1.0",
+    "name": "Vampire the Masquerade 5",
+    "base": "Vampire",
+    "rules": {
+        "roll": {
+            "default": {
+                "mode": "separate",
+                "criteria": "lower",
+                "notable": ["critical", "failure"],
+                "critical": {"value": 1, "mode": "count"},
+                "failure": {"value": 20, "mode": "count"}
+            }
+        },
+        "dice": {
+            "roll":"1d10+1d%",
+            "modifiers": [{
+                "name": "advantage",
+                "player": "others",
+                "roll": "1d%",
+                "min": 0,
+                "max": 1
+            },{
+                "name": "disadvantage",
+                "player": "self",
+                "roll": "1d%",
+                "min": 0,
+                "max": 1
+            }]
+        }
+    }
+}
