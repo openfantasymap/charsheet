@@ -1,0 +1,1130 @@
+{
+  "name": "X-27",
+  "type": "character",
+  "game": "pf1e",
+  "aotm": "fvtt-Actor-player-character-(pc)-hZh4Uq5LG1oiq5n8",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 11,
+        "damage": 0,
+        "drain": 0,
+        "userPenalty": 0
+      },
+      "dex": {
+        "value": 9,
+        "damage": 0,
+        "drain": 0,
+        "userPenalty": 0
+      },
+      "con": {
+        "value": 15,
+        "damage": 0,
+        "drain": 0,
+        "userPenalty": 0
+      },
+      "int": {
+        "value": 16,
+        "damage": 0,
+        "drain": 0,
+        "userPenalty": 0
+      },
+      "wis": {
+        "value": 10,
+        "damage": 0,
+        "drain": 0,
+        "userPenalty": 0
+      },
+      "cha": {
+        "value": 18,
+        "damage": 0,
+        "drain": 0,
+        "userPenalty": 0
+      }
+    },
+    "attributes": {
+      "hpAbility": "con",
+      "cmbAbility": "str",
+      "naturalAC": 0,
+      "ac": {
+        "normal": {
+          "ability": "dex"
+        },
+        "touch": {
+          "ability": "dex"
+        },
+        "flatFooted": {}
+      },
+      "cmd": {
+        "strAbility": "str",
+        "dexAbility": "dex"
+      },
+      "sr": {
+        "formula": ""
+      },
+      "clCheck": false,
+      "saveNotes": "",
+      "acNotes": "",
+      "cmdNotes": "",
+      "srNotes": "",
+      "attack": {
+        "meleeAbility": "str",
+        "rangedAbility": "dex"
+      },
+      "energyDrain": 0,
+      "quadruped": null,
+      "savingThrows": {
+        "fort": {
+          "base": 0,
+          "ability": "con"
+        },
+        "ref": {
+          "base": 0,
+          "ability": "dex"
+        },
+        "will": {
+          "base": 0,
+          "ability": "wis"
+        }
+      },
+      "hp": {
+        "base": 0,
+        "temp": 0,
+        "nonlethal": 0,
+        "offset": 0
+      },
+      "wounds": {
+        "base": 0,
+        "offset": 0
+      },
+      "vigor": {
+        "temp": 0,
+        "base": 0,
+        "offset": 0
+      },
+      "init": {
+        "value": 0,
+        "ability": "dex"
+      },
+      "speed": {
+        "land": {
+          "base": 30
+        },
+        "climb": {
+          "base": null
+        },
+        "swim": {
+          "base": null
+        },
+        "burrow": {
+          "base": null
+        },
+        "fly": {
+          "base": null,
+          "maneuverability": "average"
+        },
+        "flyManeuverability": {
+          "base": ""
+        }
+      },
+      "spells": {
+        "spellbooks": {
+          "primary": {
+            "name": "",
+            "inUse": false,
+            "castPerDayAllOffsetFormula": "",
+            "preparedAllOffsetFormula": "",
+            "casterType": "high",
+            "class": "",
+            "cl": {
+              "formula": ""
+            },
+            "concentrationFormula": "",
+            "concentrationNotes": "",
+            "clNotes": "",
+            "ability": "int",
+            "autoSpellLevelCalculation": true,
+            "autoSpellLevels": true,
+            "psychic": false,
+            "arcaneSpellFailure": true,
+            "hasCantrips": true,
+            "spellPreparationMode": "spontaneous",
+            "baseDCFormula": "10 + @sl + @ablMod",
+            "spellPoints": {
+              "useSystem": false,
+              "value": 0,
+              "maxFormula": "",
+              "restoreFormula": ""
+            },
+            "spells": {
+              "spell0": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell1": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell2": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell3": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell4": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell5": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell6": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell7": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell8": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell9": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              }
+            },
+            "spellSlotAbilityBonusFormula": "",
+            "domainSlotValue": 1
+          },
+          "secondary": {
+            "name": "",
+            "inUse": false,
+            "castPerDayAllOffsetFormula": "",
+            "preparedAllOffsetFormula": "",
+            "casterType": "high",
+            "class": "",
+            "cl": {
+              "formula": ""
+            },
+            "concentrationFormula": "",
+            "concentrationNotes": "",
+            "clNotes": "",
+            "ability": "int",
+            "autoSpellLevelCalculation": true,
+            "autoSpellLevels": true,
+            "psychic": false,
+            "arcaneSpellFailure": true,
+            "hasCantrips": true,
+            "spellPreparationMode": "spontaneous",
+            "baseDCFormula": "10 + @sl + @ablMod",
+            "spellPoints": {
+              "useSystem": false,
+              "value": 0,
+              "maxFormula": "",
+              "restoreFormula": ""
+            },
+            "spells": {
+              "spell0": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell1": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell2": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell3": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell4": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell5": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell6": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell7": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell8": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell9": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              }
+            },
+            "spellSlotAbilityBonusFormula": "",
+            "domainSlotValue": 1
+          },
+          "tertiary": {
+            "name": "",
+            "inUse": false,
+            "castPerDayAllOffsetFormula": "",
+            "preparedAllOffsetFormula": "",
+            "casterType": "high",
+            "class": "",
+            "cl": {
+              "formula": ""
+            },
+            "concentrationFormula": "",
+            "concentrationNotes": "",
+            "clNotes": "",
+            "ability": "int",
+            "autoSpellLevelCalculation": true,
+            "autoSpellLevels": true,
+            "psychic": false,
+            "arcaneSpellFailure": true,
+            "hasCantrips": true,
+            "spellPreparationMode": "spontaneous",
+            "baseDCFormula": "10 + @sl + @ablMod",
+            "spellPoints": {
+              "useSystem": false,
+              "value": 0,
+              "maxFormula": "",
+              "restoreFormula": ""
+            },
+            "spells": {
+              "spell0": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell1": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell2": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell3": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell4": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell5": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell6": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell7": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell8": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell9": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              }
+            },
+            "spellSlotAbilityBonusFormula": "",
+            "domainSlotValue": 1
+          },
+          "spelllike": {
+            "name": "",
+            "inUse": false,
+            "castPerDayAllOffsetFormula": "",
+            "preparedAllOffsetFormula": "",
+            "casterType": "high",
+            "class": "_hd",
+            "cl": {
+              "formula": ""
+            },
+            "concentrationFormula": "",
+            "concentrationNotes": "",
+            "clNotes": "",
+            "ability": "cha",
+            "autoSpellLevelCalculation": true,
+            "autoSpellLevels": true,
+            "psychic": false,
+            "arcaneSpellFailure": true,
+            "hasCantrips": true,
+            "spellPreparationMode": "spontaneous",
+            "baseDCFormula": "10 + @sl + @ablMod",
+            "spellPoints": {
+              "useSystem": false,
+              "value": 0,
+              "maxFormula": "",
+              "restoreFormula": ""
+            },
+            "spells": {
+              "spell0": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell1": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell2": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell3": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell4": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell5": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell6": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell7": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell8": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              },
+              "spell9": {
+                "castPerDayOffsetFormula": "",
+                "preparedOffsetFormula": ""
+              }
+            },
+            "spellSlotAbilityBonusFormula": "",
+            "domainSlotValue": 1
+          }
+        }
+      }
+    },
+    "details": {
+      "height": "",
+      "weight": "",
+      "gender": "",
+      "deity": "",
+      "age": "",
+      "alignment": "tn",
+      "biography": {
+        "value": ""
+      },
+      "bonusFeatFormula": "",
+      "bonusSkillRankFormula": "",
+      "tooltip": {
+        "name": "",
+        "hideHeld": false,
+        "hideArmor": false,
+        "hideBuffs": false,
+        "hideConditions": false,
+        "hideClothing": false,
+        "hideName": false
+      },
+      "carryCapacity": {
+        "bonus": {
+          "user": 0
+        },
+        "multiplier": {
+          "base": 1,
+          "user": 0
+        }
+      },
+      "notes": {
+        "value": ""
+      },
+      "xp": {
+        "value": 2000
+      }
+    },
+    "skills": {
+      "acr": {
+        "ability": "dex",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "apr": {
+        "ability": "int",
+        "rt": false,
+        "acp": false,
+        "rank": 8
+      },
+      "art": {
+        "ability": "int",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "blf": {
+        "ability": "cha",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "clm": {
+        "ability": "str",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "crf": {
+        "ability": "int",
+        "rt": false,
+        "acp": false,
+        "rank": 0,
+        "subSkills": {
+          "crf1": {
+            "name": "New SCraft complex armsaCraft - Complex Weaponskill",
+            "ability": "int",
+            "rank": 0,
+            "rt": false,
+            "cs": false,
+            "acp": false,
+            "background": true
+          }
+        }
+      },
+      "dip": {
+        "ability": "cha",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "dev": {
+        "ability": "dex",
+        "rt": true,
+        "acp": true,
+        "rank": 0
+      },
+      "dis": {
+        "ability": "cha",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "esc": {
+        "ability": "dex",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "fly": {
+        "ability": "dex",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "han": {
+        "ability": "cha",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "hea": {
+        "ability": "wis",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "int": {
+        "ability": "cha",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "kar": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "kdu": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "ken": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "kge": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "khi": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "klo": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "kna": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "kno": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "kpl": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "kre": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "lin": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "lor": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "per": {
+        "ability": "wis",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "prf": {
+        "ability": "cha",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "pro": {
+        "ability": "wis",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "rid": {
+        "ability": "dex",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "sen": {
+        "ability": "wis",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "slt": {
+        "ability": "dex",
+        "rt": true,
+        "acp": true,
+        "rank": 0
+      },
+      "spl": {
+        "ability": "int",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      },
+      "ste": {
+        "ability": "dex",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "sur": {
+        "ability": "wis",
+        "rt": false,
+        "acp": false,
+        "rank": 0
+      },
+      "swm": {
+        "ability": "str",
+        "rt": false,
+        "acp": true,
+        "rank": 0
+      },
+      "umd": {
+        "ability": "cha",
+        "rt": true,
+        "acp": false,
+        "rank": 0
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": 0,
+        "ts": 0,
+        "bs": 0,
+        "bse": 0,
+        "ll": {
+          "enabled": false,
+          "multiplier": {
+            "dim": 2,
+            "bright": 2
+          }
+        },
+        "sid": false,
+        "tr": false,
+        "si": false,
+        "sc": false,
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "cres": "",
+      "regen": "",
+      "fastHealing": "",
+      "languages": {
+        "value": [],
+        "custom": []
+      },
+      "di": {
+        "value": [],
+        "custom": []
+      },
+      "dv": {
+        "value": [],
+        "custom": []
+      },
+      "ci": {
+        "value": [],
+        "custom": []
+      },
+      "stature": "tall",
+      "weaponProf": {
+        "value": [],
+        "custom": []
+      },
+      "armorProf": {
+        "value": [],
+        "custom": []
+      },
+      "aura": {
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "altCurrency": {
+      "pp": 0,
+      "gp": 0,
+      "sp": 0,
+      "cp": 0
+    }
+  },
+  "prototypeToken": {
+    "name": "Player Character (PC)",
+    "displayName": 0,
+    "actorLink": true,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "hexagonalShape": 0,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "img": "systems/pf1/icons/races/android.png",
+      "name": "Android",
+      "system": {
+        "description": {
+          "value": "<h2>Standard Racial Traits</h2><ul><li><strong>Ability Score Modifiers</strong>: Androids have swift reflexes and are very intelligent, but have difficulty relating to others. As a result, androids gain a +2 bonus to <em>Dexterity</em> and <em>Intelligence</em>, but suffer a –2 penalty to <em>Charisma</em>.</li><li><strong>Type</strong>: Androids are <em>humanoids</em> with the <em>android</em> subtype.</li><li><strong>Size</strong>: Androids are Medium creatures, and they have no bonuses or penalties due to their size.</li><li><strong>Base Speed</strong>: Androids have a base speed of 30 feet.</li><li><strong>Languages</strong>: Androids begin play speaking Common. Androids with high <em>Intelligence</em> can choose any languages they want (except secret languages, such as Druidic).</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Exceptional Senses</strong>: Androids have <em>darkvision</em> to a range of 60 feet and lowlight vision. They also gain a +2 racial bonus on @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.2h6hz5AkTDxKPFxr]{Perception} checks..</li></ul><h3>Weakness Traits</h3><ul><li><strong>Emotionless</strong>: Androids have problems processing emotions properly, and thus take a –4 penalty on @UUID[Compendium.pf1.pf1e-rules.x175kVqUfLGPt8tC.JournalEntryPage.ka0VQGItdrWw3paO]{Sense Motive} checks.</li></ul><h3>Other Racial Traits</h3><ul><li><strong>Constructed</strong>: For the purposes of effects targeting creatures by type (such as a ranger's @Compendium[pf1.class-abilities.XmALhWqXdN9yOmtd]{Favored Enemy} and bane weapons), androids count as both humanoids and constructs. Androids gain a +4 racial bonus on all saving throws against mind-affecting effects, @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.24p2Koq4FFCLDKnj]{paralysis}, poison, and @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.ZgsBPY0uVCVl6SGh]{stun} effects, are not subject to @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.AVaxTNildXRzYnQm]{fatigue} or @UUID[Compendium.pf1.pf1e-rules.NSqfXaj4MevUR2uJ.JournalEntryPage.ITxxh53qgl74wWcE]{exhaustion}, and are immune to disease and sleep effects. Androids can never gain morale bonuses, and are immune to fear effects and all emotion-based effects.</li><li><strong>Nanite Surge</strong>: An android's body is infused with nanites. Once per day as an <em>immediate action</em>, an android can cause her nanites to surge, granting a bonus equal to 3 + the android's character level on any one d20 roll; this ability must be activated before the roll is made. When an android uses this power, her circuitry-tattoos glow with light equivalent to that of a torch in illumination for 1 round.</li></ul>"
+        },
+        "tags": [
+          "Rare",
+          "Alien"
+        ],
+        "changes": [
+          {
+            "_id": "kFNmNGo9",
+            "formula": "2",
+            "target": "dex",
+            "type": "racial"
+          },
+          {
+            "_id": "rBdMb88b",
+            "formula": "2",
+            "target": "int",
+            "type": "racial"
+          },
+          {
+            "_id": "K7ma9Mrj",
+            "formula": "-2",
+            "target": "cha",
+            "type": "racial"
+          },
+          {
+            "_id": "YMLEiwgW",
+            "formula": "2",
+            "target": "skill.per",
+            "type": "racial"
+          },
+          {
+            "_id": "SYYOh4I1",
+            "formula": "-4",
+            "target": "skill.sen",
+            "type": "racial"
+          }
+        ],
+        "changeFlags": {
+          "loseDexToAC": false,
+          "noMediumEncumbrance": false,
+          "noHeavyEncumbrance": false,
+          "mediumArmorFullSpeed": false,
+          "heavyArmorFullSpeed": false
+        },
+        "contextNotes": [
+          {
+            "target": "allSavingThrows",
+            "text": "+[[4]] Racial vs Mind Affecting, Paralysis, Poison, Stun\nImmune to Disease, Sleep and Emotion-based Effects"
+          }
+        ],
+        "links": {
+          "children": []
+        },
+        "armorProf": {
+          "value": [],
+          "custom": []
+        },
+        "weaponProf": {
+          "value": [],
+          "custom": []
+        },
+        "languages": {
+          "value": [
+            "common"
+          ],
+          "custom": []
+        },
+        "flags": {
+          "boolean": {},
+          "dictionary": {}
+        },
+        "scriptCalls": [],
+        "creatureType": "humanoid",
+        "size": "med",
+        "speeds": {
+          "land": 30,
+          "fly": null,
+          "flyManeuverability": "",
+          "swim": null,
+          "climb": null,
+          "burrow": null
+        },
+        "subTypes": [
+          "Android"
+        ],
+        "sources": [
+          {
+            "id": "PZO1133",
+            "pages": "19"
+          }
+        ]
+      },
+      "type": "race",
+      "effects": [],
+      "_stats": {
+        "compendiumSource": "Compendium.pf1.races.Item.9Fe6mDt0oP52m6Jl",
+        "duplicateSource": null,
+        "coreVersion": "12.330",
+        "systemId": "pf1",
+        "systemVersion": "10.4",
+        "createdTime": 1734471499739,
+        "modifiedTime": 1734471499739,
+        "lastModifiedBy": "lnGBmfzGrKzaIstc"
+      },
+      "ownership": {
+        "default": 0,
+        "lnGBmfzGrKzaIstc": 3
+      },
+      "flags": {},
+      "_id": "rIDgR0KKdSKAPjV2",
+      "folder": null,
+      "sort": 0
+    },
+    {
+      "name": "Inventor",
+      "type": "class",
+      "_id": "pQSH9kPvw2BF710H",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": ""
+        },
+        "tags": [],
+        "changes": [],
+        "changeFlags": {
+          "loseDexToAC": false,
+          "noMediumEncumbrance": false,
+          "noHeavyEncumbrance": false,
+          "mediumArmorFullSpeed": false,
+          "heavyArmorFullSpeed": false
+        },
+        "links": {
+          "children": [],
+          "classAssociations": []
+        },
+        "tag": "",
+        "armorProf": {
+          "value": [],
+          "custom": []
+        },
+        "weaponProf": {
+          "value": [],
+          "custom": []
+        },
+        "languages": {
+          "value": [],
+          "custom": []
+        },
+        "flags": {
+          "boolean": {},
+          "dictionary": {}
+        },
+        "scriptCalls": [],
+        "subType": "base",
+        "level": 1,
+        "hd": 8,
+        "hp": 8,
+        "bab": "low",
+        "skillsPerLevel": 0,
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "fc": {
+          "hp": {
+            "value": 0
+          },
+          "skill": {
+            "value": 0
+          },
+          "alt": {
+            "value": 0,
+            "notes": ""
+          }
+        },
+        "wealth": "",
+        "alignment": "",
+        "classSkills": {
+          "acr": false,
+          "apr": false,
+          "art": false,
+          "blf": false,
+          "clm": false,
+          "crf": false,
+          "dip": false,
+          "dev": false,
+          "dis": false,
+          "esc": false,
+          "fly": false,
+          "han": false,
+          "hea": false,
+          "int": false,
+          "kar": false,
+          "kdu": false,
+          "ken": false,
+          "kge": false,
+          "khi": false,
+          "klo": false,
+          "kna": false,
+          "kno": false,
+          "kpl": false,
+          "kre": false,
+          "lin": false,
+          "lor": false,
+          "per": false,
+          "prf": false,
+          "pro": false,
+          "rid": false,
+          "sen": false,
+          "slt": false,
+          "spl": false,
+          "ste": false,
+          "sur": false,
+          "swm": false,
+          "umd": false
+        },
+        "customHD": "",
+        "casting": {
+          "type": ""
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "lnGBmfzGrKzaIstc": 3
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "coreVersion": "12.330",
+        "systemId": "pf1",
+        "systemVersion": "10.4",
+        "createdTime": 1734471940761,
+        "modifiedTime": 1734471971743,
+        "lastModifiedBy": "lnGBmfzGrKzaIstc"
+      }
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "exportSource": {
+      "world": "asdasfadededadasd",
+      "system": "pf1",
+      "coreVersion": "12.330",
+      "systemVersion": "10.4"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.330",
+    "systemId": "pf1",
+    "systemVersion": "10.4",
+    "createdTime": 1734470151954,
+    "modifiedTime": 1734473168358,
+    "lastModifiedBy": "lnGBmfzGrKzaIstc"
+  }
+}
