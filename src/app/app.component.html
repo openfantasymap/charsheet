@@ -8,7 +8,8 @@
     <button class="lcompact" mat-button routerLink="/parties/create">+</button>
     <button mat-button [disabled]="true" routerLink="/vault">Vault</button>
     <span class="spacer"></span>
-    <img ngxGravatar [email]="user.username" />
+    <img *ngIf="user" ngxGravatar [email]="user.username" />
+    <button mat-button (click)="login()">Login</button>
   </mat-toolbar>
 
 <router-outlet>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Injector } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Injector, Input } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { createCustomElement } from '@angular/elements';
 import { FieldComponent } from './field/field.component';
@@ -16,11 +16,12 @@ import { BoxedIndicatorComponent } from './boxed-indicator/boxed-indicator.compo
 import { StepComponent } from './char-creation/step/step.component';
 import { GravatarModule } from 'ngx-gravatar';
 import { UserService } from './user.service';
+import { AuthenticationService } from './auth.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FieldComponent, FormsModule, CommonModule, MatToolbarModule, MatButtonModule, GravatarModule, RouterModule],
+  imports: [RouterOutlet, FormsModule, CommonModule, MatToolbarModule, MatButtonModule, GravatarModule, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -30,18 +31,28 @@ export class AppComponent {
   dstatus = false;
   user:any = {};
 
+  @Input() code!: string;
+  @Input() state!: string;
+
   constructor(
     private injector: Injector, 
     private dt: DiceTowerService,
-    private u: UserService
+    private u: UserService,
+    public auth: AuthenticationService
   ) {
     dt.rolling.subscribe(status=>{
       this.dstatus = status;
     })
   }
+
+  login(){
+    this.auth.authenticate();
+  }
   ngOnInit() {
+    
     this.u.getUser().subscribe(data=>this.user=data);
 
+    
     const csfield = createCustomElement(FieldComponent, { injector: this.injector });
     customElements.define('charsheet-field', csfield);
     const csrollable = createCustomElement(RollableComponent, { injector: this.injector });
@@ -56,7 +67,6 @@ export class AppComponent {
     customElements.define('charsheet-toggle', ctoggle);
     const cboxed = createCustomElement(BoxedIndicatorComponent, { injector: this.injector });
     customElements.define('charsheet-boxed', cboxed);
-
     const ccstep = createCustomElement(StepComponent, { injector: this.injector });
     customElements.define('charsheet-creation-step', ccstep);
   }

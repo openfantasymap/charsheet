@@ -1,5 +1,8 @@
 
 
+
+{{d|json}}
+
 <div class="flex-horizontal centered black fill">
   <div class="flex-vertical">
     <div class="flex-horizontal">
@@ -9,19 +12,19 @@
     <div class="flex-vertical text-clear" id="agent-data">
       <div class="flex-vertical">
         <span class="title">Agent code:</span
-        ><span class="value alien">{{user.aotm}}</span>
+        ><span class="value alien">{{user?.aotm}}</span>
       </div>
       <div class="flex-vertical">
         <span class="title">Agent name:</span
-        ><span class="value">{{user.name}}</span>
+        ><span class="value">{{user?.name}}</span>
       </div>
       <div class="flex-vertical">
         <span class="title">Agent rank:</span
-        ><span class="value">{{user.rank}}</span>
+        ><span class="value">{{user?.rank}}</span>
       </div>
       <div class="flex-vertical">
         <span class="title">Agent nicks:</span
-        ><span class="value">{{user.nicknames.join(", ")}}</span>
+        ><span class="value">{{user.nicknames?.join(", ")}}</span>
       </div>
     </div>
   </div>

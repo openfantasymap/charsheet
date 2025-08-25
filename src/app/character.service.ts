@@ -1,21 +1,36 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs';
+import { tap, map, from } from 'rxjs';
+import PouchDB from 'pouchdb'; 
+import PouchFind from 'pouchdb-find';
+PouchDB.plugin(PouchFind);
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharacterService {
+  db: PouchDB.Database;
   constructor(
     private h: HttpClient
-  ){}
+  ){
+    this.db = new PouchDB('http://51.159.6.136:59912/characters',{auth:{username:'admin',password:'adminpw'},skip_setup: true});
+    this.db.info().then((x:any)=>console.log(x));
+  }
 
   getCharacter(charId?:string){
-    return this.h.get('/assets/character/'+charId+".json").pipe(tap(x=> this.setData(x)));
+    return from(this.db.find({selector:{aotm:charId}})).pipe(map((x:any)=> {
+      this.data = x.docs
+      return x.docs[0];
+    }));
   }
   
+
+
   getList() {
-    return this.h.get('/assets/character/list.json')
+    return from(this.db.find({selector:{owner:'sirmmo@gmail.com'}})).pipe(map((x:any)=> {
+      return x.docs;
+    }));
+    //return this.h.get('/assets/character/list.json')
   }
   private data: any;
 

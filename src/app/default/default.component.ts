@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { GravatarModule } from 'ngx-gravatar';
 import { UserService } from '../user.service';
+import { AuthenticationService } from '../auth.service';
 
 
 @Component({
@@ -18,12 +19,18 @@ import { UserService } from '../user.service';
 export class DefaultComponent {
 
   user: any = {};
+  d: any={};
 
   constructor(
-    private usr: UserService
+    private usr: UserService,
+    private auth: AuthenticationService
   ){}
 
   ngOnInit(){
+    this.auth.getOIDCUser().subscribe(data=>{
+      this.d = data;
+      console.log(data);
+    });
     this.usr.getUser().subscribe(data=>{
       this.user = data;
     })

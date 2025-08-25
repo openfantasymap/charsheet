@@ -10,22 +10,32 @@ import { CharCreationComponent } from './char-creation/char-creation.component';
 import { AddDialogComponent } from './add-dialog/add-dialog.component';
 import { CharImporterComponent } from './char-importer/char-importer.component';
 import { CreatePartyComponent } from './create-party/create-party.component';
+import { AuthcallbackComponent } from './authcallback/authcallback.component';
+import { AuthGuard } from './auth.guard';
+import { IndexComponent } from './index/index.component';
 
 export const routes: Routes = [
-    {path: 'parties/create', component: CreatePartyComponent},
-    {path: 'parties/:party/master', component: PartyMasterComponent},
-    {path: 'parties/:party', component: PartyDetailComponent},
-    {path: 'parties/:party/join', component: PartyJoinComponent},
+    {path: 'parties/create', component: CreatePartyComponent, canActivate: [AuthGuard]},
+    {path: 'parties/:party/master', component: PartyMasterComponent, canActivate: [AuthGuard]},
+    {path: 'parties/:party', component: PartyDetailComponent, canActivate: [AuthGuard]},
+    {path: 'parties/:party/join', component: PartyJoinComponent, canActivate: [AuthGuard]},
     {path: 'parties/:party/:character', component: CharViewComponent},
-    {path: 'parties', component: PartyListComponent},
+    {path: 'parties', component: PartyListComponent, canActivate: [AuthGuard]},
     
-    {path: 'sheets/:character', component: CharViewComponent},
-    {path: 'sheets', component: CharListComponent},
+    {path: 'sheets/:character', component: CharViewComponent, canActivate: [AuthGuard]},
+    {path: 'sheets', component: CharListComponent, canActivate: [AuthGuard]},
 
-    {path: 'create/:game/:type', component: CharCreationComponent},
-    {path: 'create/:game', component: CharCreationComponent},
-    {path: 'create', component: AddDialogComponent},
+    {path: 'create/:game/:type', component: CharCreationComponent, canActivate: [AuthGuard]},
+    {path: 'create/:game', component: CharCreationComponent, canActivate: [AuthGuard]},
+    {path: 'create', component: AddDialogComponent, canActivate: [AuthGuard]},
     
-    {path: 'import', component: CharImporterComponent},
-    {path: '', component: DefaultComponent}
+    {path: 'import', component: CharImporterComponent, canActivate: [AuthGuard]},
+    {path: 'agent', component: DefaultComponent, canActivate: [AuthGuard]},
+    
+    { 
+        path: 'auth/callback',
+        redirectTo: 'agent'
+    },
+
+    {path: '', component: IndexComponent}
 ];
