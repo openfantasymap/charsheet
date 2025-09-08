@@ -8,14 +8,14 @@ import { StatehandlerService } from './statehandler.service';
 })
 export class AuthenticationService { 
   authConfig: AuthConfig = {
-    scope: 'openid profile email offline_access',
+    scope: 'openid profile email offline_access urn:zitadel:iam:user:resourceowner urn:zitadel:iam:org:project:id:zitadel:aud urn:zitadel:iam:user:metadata',
     responseType: 'code',
     oidc: true,
-    clientId: '334798316946663448',
-    dummyClientSecret:"qWCZo0swUaNFUoXgB63aMrptaFcMeNpKV0ZdFtgpfUWMRmEAmWrHCu4Aq2Cvo0Ic",
-    issuer: 'https://auth.fantasymaps.org', // eg. https://acme-jdo9fs.zitadel.cloud
+    clientId: '336784454796257311',
+    dummyClientSecret:"336784454796257311",
+    issuer: 'https://auth.fantasymaps.org', 
     redirectUri: 'http://localhost:9323/auth/callback',
-    postLogoutRedirectUri: 'http://localhost:9323/signedout',
+    postLogoutRedirectUri: 'http://localhost:9323/auth/logout',
     requireHttps: false, // required for running locally
   };
    

@@ -13,6 +13,7 @@ import { CreatePartyComponent } from './create-party/create-party.component';
 import { AuthcallbackComponent } from './authcallback/authcallback.component';
 import { AuthGuard } from './auth.guard';
 import { IndexComponent } from './index/index.component';
+import { SheetEditorComponent } from './sheet-editor/sheet-editor.component';
 
 export const routes: Routes = [
     {path: 'parties/create', component: CreatePartyComponent, canActivate: [AuthGuard]},
@@ -29,6 +30,8 @@ export const routes: Routes = [
     {path: 'create/:game', component: CharCreationComponent, canActivate: [AuthGuard]},
     {path: 'create', component: AddDialogComponent, canActivate: [AuthGuard]},
     
+    {path: 'editor/:game/:ttype', component: SheetEditorComponent},
+    
     {path: 'import', component: CharImporterComponent, canActivate: [AuthGuard]},
     {path: 'agent', component: DefaultComponent, canActivate: [AuthGuard]},
     
@@ -36,6 +39,8 @@ export const routes: Routes = [
         path: 'auth/callback',
         redirectTo: 'agent'
     },
+
+    
 
     {path: '', component: IndexComponent}
 ];

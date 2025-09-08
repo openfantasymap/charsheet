@@ -18,6 +18,7 @@ import { GamerulesService } from '../gamerules.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ConnectionService } from '../connection.service';
 import { Subscription } from 'rxjs';
+import { AotmService } from '../aotm.service';
 
 @Component({
   selector: 'app-char-view',
@@ -80,6 +81,8 @@ export class CharViewComponent implements OnDestroy {
     private gr: GamerulesService,
     private conn: ConnectionService,
 
+    private aotm: AotmService,
+
     @Inject(DOCUMENT) private document: HTMLDocument
   ) {
     this.getScreenSize();
@@ -122,15 +125,15 @@ export class CharViewComponent implements OnDestroy {
             this.styleElement.appendChild(this.renderer.createText(this.style));
             this.renderer.appendChild(this.document.head, this.styleElement);
           });
-          let mobile = this.scrWidth < 800;
-          let turl  =
-          '/assets/templates/' +
-            this.charData.game +
-            '/' +
-            this.charData.type +
-            '/sheet'+//(mobile?'-mobile':'')+
-            '.html';
-            console.log(turl);
+        let mobile = this.scrWidth < 800;
+        let turl  =
+        '/assets/templates/' +
+          this.charData.game +
+          '/' +
+          this.charData.type +
+          '/sheet'+//(mobile?'-mobile':'')+
+          '.html';
+          console.log(turl);
         this.h
           .get(turl,
             { responseType: 'text' }

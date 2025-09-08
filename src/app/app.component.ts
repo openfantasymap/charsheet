@@ -49,10 +49,7 @@ export class AppComponent {
     this.auth.authenticate();
   }
   ngOnInit() {
-    
-    this.u.getUser().subscribe(data=>this.user=data);
-
-    
+        
     const csfield = createCustomElement(FieldComponent, { injector: this.injector });
     customElements.define('charsheet-field', csfield);
     const csrollable = createCustomElement(RollableComponent, { injector: this.injector });

@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { GravatarModule } from 'ngx-gravatar';
 import { UserService } from '../user.service';
 import { AuthenticationService } from '../auth.service';
+import { AotmService } from '../aotm.service';
 
 
 @Component({
@@ -23,15 +24,12 @@ export class DefaultComponent {
 
   constructor(
     private usr: UserService,
-    private auth: AuthenticationService
+    private auth: AuthenticationService,
+    private aotm: AotmService
   ){}
 
   ngOnInit(){
-    this.auth.getOIDCUser().subscribe(data=>{
-      this.d = data;
-      console.log(data);
-    });
-    this.usr.getUser().subscribe(data=>{
+    this.aotm.getAgent().subscribe(data=>{
       this.user = data;
     })
   }

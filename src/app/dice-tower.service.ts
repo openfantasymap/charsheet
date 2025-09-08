@@ -22,16 +22,17 @@ export class DiceTowerService {
   ){
   }
 
-
   initialize(box: string){
     this.selector = box;
     this.rolling.emit(true);
     
   }
+
   display(result: any) {
     console.log(result);
     this.sb.open('rolled: ' + result.value + "(" + result.rolls.map((x:any)=>x.value).join(", ") + ")");
   }
+
   roll(roll: string, set:string = "default") {
     setTimeout(()=>{
       this.diceBox = new DiceBox(this.selector, {

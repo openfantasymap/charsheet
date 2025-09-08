@@ -25,6 +25,8 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@auth0/auth0-angular": "^2.2.3",
+    "@grapesjs/studio-sdk": "^1.0.56",
+    "@grapesjs/studio-sdk-plugins": "^1.0.28",
     "@types/pouchdb": "^6.4.2",
     "ag-grid-angular": "^32.1.0",
     "ag-grid-community": "^32.1.0",

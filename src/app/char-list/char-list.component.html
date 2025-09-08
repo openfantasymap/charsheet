@@ -5,7 +5,7 @@
     *ngFor="let char of chars"
     
   >
-    <div class="folder-tab" [routerLink]="['/sheets', char.aotm]">
+    <div class="folder-tab" [routerLink]="['/sheets', char.id]">
       <div class="folder-tab-label">
         <div class="row">
           <img
@@ -29,4 +29,4 @@
 </div>
 
 <button id="add-button" (click)="addDialog()" mat-fab><mat-icon>add</mat-icon></button>
-<button id="filter-button" mat-fab><mat-icon>list_filter</mat-icon></button>
+<!--<button id="filter-button" mat-fab><mat-icon>list_filter</mat-icon></button>-->

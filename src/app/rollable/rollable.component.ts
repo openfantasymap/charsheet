@@ -62,7 +62,7 @@ export class RollableComponent {
     if (this.rollvalue === true || this.rollvalue === 'true')
       this.dt.roll(this.value+this.dice, this.char.getDice());
     else 
-      this.dt.roll(this.dice, this.char.getDice());
+      this.dt.roll(this.roll, this.char.getDice());
   }
 
   ngOnDestroy(){

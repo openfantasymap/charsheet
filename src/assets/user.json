@@ -3,7 +3,7 @@
     "name": "Marco Montanari",
     "nicknames": ["Monta", "M"],
     "aotm": "afb2845e-465f-4f3d-8ac4-2903ba6742f6",
-    "rank": "Junior Agent",
+    "rank": "Founding Agent",
     "achievements": [{
         "name": "Founder",
         "acquired": "2024-08-24",
@@ -11,19 +11,12 @@
     }],
     "friends":[{
         "name": "hyperloris",
-        "username": "lorenzo.dramis@gmail.com",
         "rank": "Junior Agent"
     },{
         "name": "ErikTheRed",
-        "username":"erikthesgrv@gmail.com",
         "rank": "Junior Agent"
     },{
         "name": "Montich",
-        "username":"leonardo.montecchiari@gmail.com",
-        "rank": "Junior Agent"
-    },{
-        "name": "ArcheoLucia",
-        "username": "marsicano.lucia@gmail.com",
         "rank": "Junior Agent"
     }]
-}
+}   

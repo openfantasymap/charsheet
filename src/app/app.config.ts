@@ -1,6 +1,6 @@
 import { APP_INITIALIZER, ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { provideAuth0 } from '@auth0/auth0-angular';
 
 import { routes } from './app.routes';
@@ -10,6 +10,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { AuthConfig, OAuthModule, OAuthStorage, provideOAuthClient } from 'angular-oauth2-oidc';
 import { StatehandlerService } from './statehandler.service';
 import { StorageService } from './storage.service';
+import { authInterceptor } from './auth.interceptor';
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'broker.hivemq.com',
@@ -29,7 +30,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()), 
     provideAnimationsAsync(),
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([authInterceptor])),
     importProvidersFrom(MqttModule.forRoot(MQTT_SERVICE_OPTIONS)),
     importProvidersFrom(QRCodeModule),
     provideOAuthClient({

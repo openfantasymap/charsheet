@@ -2,23 +2,21 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap, map, from } from 'rxjs';
 import { AuthenticationService } from './auth.service';
+import { AotmService } from './aotm.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  getUser() {
-    return this.auth.getOIDCUser();
-  }
-
   constructor(
     private h: HttpClient,
-    public auth: AuthenticationService
+    public auth: AuthenticationService,
+    private aotm: AotmService
   ) {}
 
   getAgent(){
-    this.h.get('')
+    this.aotm.getAgent();
   }
 
 
